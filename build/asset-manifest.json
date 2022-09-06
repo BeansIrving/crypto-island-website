@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6bb73ed2.css",
+    "main.js": "/static/js/main.bb08f930.js",
+    "static/media/bg-intro.webp": "/static/media/bg-intro.e79c6bed85c4849885b7.webp",
+    "static/media/cryptoisland.png": "/static/media/cryptoisland.e62671c9abd4f4120d66.png",
+    "index.html": "/index.html",
+    "main.6bb73ed2.css.map": "/static/css/main.6bb73ed2.css.map",
+    "main.bb08f930.js.map": "/static/js/main.bb08f930.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bb73ed2.css",
+    "static/js/main.bb08f930.js"
+  ]
+}

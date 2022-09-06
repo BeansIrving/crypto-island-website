@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: bluenight;
+    src: url(./fonts/BluenightRegular.ttf);
+  }
+  
+  li {
+    @apply p-4 font-[bluenight] uppercase text-[#814d20]
+    hover:text-[#fff] cursor-pointer transition duration-300 ease-out tracking-[1.5px]
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  img{
+    user-select: none;
+  }
+
+  .item{
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  .navbar-li{
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  #fadeInArtifact:hover{
+    cursor: grab;
+  }
+
+  #fadeInArtifact:active{
+    cursor: grabbing;
+  }
+
+  .custom-button {
+    @apply text-white border bg-[#181e2a] border-[#181e2a]
+    hover:bg-transparent hover:text-[#181e2a] rounded-md transition duration-300 ease-out;
+  }
+
+  .floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+}
