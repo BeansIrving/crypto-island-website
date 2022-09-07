@@ -96,15 +96,15 @@ const Hero = () => {
         className="flex justify-center items-center py-12 bg-[url('images/backgrounds/bg-intro.webp')] h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat md:pb-24"
         ref={sectionRef}
       >
-        <div className="fadeIn">
+        <div className="fadeIn select-none">
           <img
             className="w-[800px] floating select-none"
-            id="img"
+            id="crypto-island"
             src={title}
             alt="/"
           />
         </div>
-        <div className="absolute lg:top-[30%] lg:left-[30%] floating" id="artifacts">
+        {/* <div className="absolute lg:top-[30%] lg:left-[30%] floating z-100" id="artifacts">
           <motion.div
             className="bg-[url('images/hero/vitalik.webp')] bg-contain bg-center bg-no-repeat w-[10vw] h-[20vh] item"
             drag
@@ -113,7 +113,8 @@ const Hero = () => {
             id="fadeInArtifact"
           ></motion.div>
         </div>
-        <div className="absolute  lg:bottom-[30%] lg:right-[30%] floating">
+        <div className="absolute  lg:bottom-[30%] lg:right-[30%] floating z-100
+        ">
           <motion.div
             className="bg-[url('images/hero/satoshi.webp')] bg-contain bg-center bg-no-repeat w-[10vw] h-[20vh] item"
             drag
@@ -121,7 +122,7 @@ const Hero = () => {
             dragConstraints={sectionRef}
             id="fadeInArtifact"
           ></motion.div>
-        </div>
+        </div> */}
       </motion.div>
     </>
   );
