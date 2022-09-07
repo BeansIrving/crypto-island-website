@@ -11,7 +11,7 @@ const Navbar = () => {
     });
     gsap.to(element, {
       y: 0,
-      duration: 1,
+      duration: 2,
       ease: "bounce",
     });
   
