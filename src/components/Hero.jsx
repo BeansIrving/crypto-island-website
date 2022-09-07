@@ -18,10 +18,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-
-
-
-
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.2,
@@ -35,7 +31,6 @@ const Hero = () => {
       },
     });
   };
-
 
   const fadeInVines = (element) => {
     gsap.from(element, {
@@ -64,8 +59,6 @@ const Hero = () => {
       scale: 1.5,
     });
   }
-
-  
 
   function parallaxCloud() {
     gsap.set("#cloud-anim", {
@@ -96,7 +89,6 @@ const Hero = () => {
     });
   }
 
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -116,64 +108,71 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] bg-fixed h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
+        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat"
         id="section-hero"
         // ref={sectionRef}
       >
-        <div className="fadeIn select-none z-[5]">
-          <img
-            className="w-[800px] floating select-none"
-            id="crypto-island"
-            src={title}
-            alt="/"
-          />
-        </div>
-        {/* vines */}
+        <div className="hero-content h-[120vh] w-[100%]">
+          <div className="fadeIn select-none z-[5]">
+            <img
+              className="w-[800px] floating select-none"
+              id="crypto-island"
+              src={title}
+              alt="/"
+            />
+          </div>
+          {/* vines */}
 
-        <div className="absolute top-0 left-0 z-[3] grass-anim">
-          <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
-        </div>
+          <div className="absolute top-0 left-0 z-[3] grass-anim">
+            <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
+          </div>
 
-        <div className="absolute top-0 right-0 z-[3] grass-anim">
-          <img className="fadeInVines" src={vinetwo} alt="/" />
-        </div>
+          <div className="absolute top-0 right-0 z-[3] grass-anim">
+            <img className="fadeInVines" src={vinetwo} alt="/" />
+          </div>
 
-        {/* clouds */}
+          {/* clouds */}
 
-        <div className="absolute bottom-0 left-[-10%] z-[1] floating">
-          <img className="w-auto" id="cloud-anim" src={cloudone} alt="/" />
-        </div>
+          <div className="absolute bottom-0 left-[-10%] z-[1] floating">
+            <img className="w-auto" id="cloud-anim" src={cloudone} alt="/" />
+          </div>
 
-        <div className="absolute bottom-0 left-[-10%] z-[2] floating">
-          <img className="w-auto" id="cloud-anim-two" src={cloudtwo} alt="/" />
-        </div>
+          <div className="absolute bottom-0 left-[-10%] z-[2] floating">
+            <img
+              className="w-auto"
+              id="cloud-anim-two"
+              src={cloudtwo}
+              alt="/"
+            />
+          </div>
 
-        {/* sea */}
+          {/* sea */}
 
-        <div className="absolute bottom-0 z-[3]">
-          <img className="w-auto" id="crypto-island" src={sea} alt="/" />
-        </div>
+          <div className="absolute bottom-0 z-[3]">
+            <img className="w-auto" id="crypto-island" src={sea} alt="/" />
+          </div>
 
-        {/* ground */}
+          {/* ground */}
 
-        <div className="absolute bottom-0 z-[4]">
-          <img
-            className="w-[auto] h-[100px] sm:h-[150px] lg:h-[330px]"
-            id="crypto-island"
-            src={ground}
-            alt="/"
-          />
-        </div>
+          <div className="absolute bottom-0 z-[4]">
+            <img
+              className="w-[auto] h-[100px] sm:h-[150px] lg:h-[330px]"
+              id="crypto-island"
+              src={ground}
+              alt="/"
+            />
+          </div>
 
-        {/* grass right */}
+          {/* grass right */}
 
-        <div className="absolute bottom-0 right-0 z-[2]">
-          <img
-            className="w-[auto] h-[50px] sm:h-[130px] lg:h-[330px]"
-            id="crypto-island"
-            src={grassright}
-            alt="/"
-          />
+          <div className="absolute bottom-0 right-0 z-[2]">
+            <img
+              className="w-[auto] h-[50px] sm:h-[130px] lg:h-[330px]"
+              id="crypto-island"
+              src={grassright}
+              alt="/"
+            />
+          </div>
         </div>
       </motion.div>
     </>

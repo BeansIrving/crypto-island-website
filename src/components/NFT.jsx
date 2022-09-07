@@ -12,6 +12,13 @@ import nfttwo from "../images/nft/NFT2.png";
 import nftthree from "../images/nft/NFT3.png";
 import nftfour from "../images/nft/NFT4.png";
 
+// platform
+
+import platform from "../images/nft/platform.png"
+import platformtwo from "../images/nft/platform-2.png"
+import platformthree from "../images/nft/platform-3.png"
+import platformfour from "../images/nft/platform-4.png"
+
 //grass
 import grassleft from "../images/nft/grass-left.png";
 import grassright from "../images/nft/grass-right.png";
@@ -53,10 +60,10 @@ const NFT = () => {
 
   return (
     <motion.div
-      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.png')] h-[120vh] sm:h-[120vh] lg:h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.png')] h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
       ref={constraintsRef}
     >
-      <div className="nft-content h-[120vh] sm:h-[120vh] lg:h-[100vh] w-[100%]">
+      <div className="nft-content h-[130vh] w-[100%]">
         <div className="w-full max-w-[1140px] h-[100%] flex flex-col items-center py-[8rem]">
           <div className="w-[200px]">
             <img src={title} alt="/" />
@@ -118,7 +125,7 @@ const NFT = () => {
         {/* artifact 1 */}
 
         <motion.div
-          className="absolute bottom-[5%] left-[25%] z-[6]"
+          className="absolute bottom-[10%] lg:bottom-[20%] left-[25%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -130,10 +137,22 @@ const NFT = () => {
           />
         </motion.div>
 
+        <motion.div
+          className="absolute bottom-[0%] left-[25%] z-[6]"
+        
+        >
+          <img
+            className="w-[100px] lg:w-[150px]"
+            id="artifact"
+            src={platform}
+            alt="/"
+          />
+        </motion.div>
+
         {/* artifact 2 */}
 
         <motion.div
-          className="absolute bottom-[5%] left-[40%] z-[6]"
+          className="absolute bottom-[20%] left-[40%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -144,11 +163,23 @@ const NFT = () => {
             alt="/"
           />
         </motion.div>
+    
+        <motion.div
+          className="absolute bottom-[0%] left-[40%] z-[6]"
+         
+        >
+          <img
+            className="w-[100px] lg:w-[150px]"
+            id="artifact"
+            src={platformtwo}
+            alt="/"
+          />
+        </motion.div>
 
         {/* artifact 3 */}
 
         <motion.div
-          className="absolute bottom-[5%] left-[55%] z-[6]"
+          className="absolute bottom-[20%] left-[55%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -160,10 +191,22 @@ const NFT = () => {
           />
         </motion.div>
 
+        <motion.div
+          className="absolute bottom-[0%] left-[55%] z-[6]"
+     
+        >
+          <img
+            className="w-[100px] lg:w-[150px]"
+            id="artifact"
+            src={platformthree}
+            alt="/"
+          />
+        </motion.div>
+
         {/* artifact 4 */}
 
         <motion.div
-          className="absolute bottom-[5%] left-[70%] z-[6]"
+          className="absolute bottom-[20%] left-[70%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -174,6 +217,19 @@ const NFT = () => {
             alt="/"
           />
         </motion.div>
+
+        <motion.div
+          className="absolute bottom-[0%] left-[70%] z-[6]"
+       
+        >
+          <img
+            className="w-[100px] lg:w-[150px]"
+            id="artifact"
+            src={platformfour}
+            alt="/"
+          />
+        </motion.div>
+
       </div>
     </motion.div>
   );
