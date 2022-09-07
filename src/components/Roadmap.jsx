@@ -3,10 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Light from "../images/roadmap/light2nd.png";
 import Vines from "../images/roadmap/vinesfront.png";
-import Stage1 from "../images/roadmap/stage1.png";
-import Stage2 from "../images/roadmap/stage2.png";
-import Stage3 from "../images/roadmap/stage3.png";
-import Stage4 from "../images/roadmap/stage4.png";
+import Stage1 from "../images/roadmap/Stage1_1.png";
+import Stage2 from "../images/roadmap/Stage2_1.png";
+import Stage3 from "../images/roadmap/Stage3_1.png";
+import Stage4 from "../images/roadmap/Stage4_1.png";
 import Plants from "../images/roadmap/Plants.png";
 import Banner from "../images/roadmap/roadmap.webp";
 
@@ -154,17 +154,17 @@ const Roadmap = () => {
         <img src={Plants} />
       </div>
 
-      <div className="absolute mt-20">
+      <div className="absolute mt-[200px]">
           <img src={Banner} className="w-[200px]"/>
         </div>
 
       <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[-2] lg:flex hidden items-center">
 
         <div className="flex justify-center gap-10">
-          <img src={Stage1} className="w-[250px]" ref={Stone1} />
-          <img src={Stage2} className="w-[250px]" ref={Stone2} />
-          <img src={Stage3} className="w-[250px]" ref={Stone3} />
-          <img src={Stage4} className="w-[250px]" ref={Stone4} />
+          <img src={Stage1} className="w-[300px]" ref={Stone1} />
+          <img src={Stage2} className="w-[300px]" ref={Stone2} />
+          <img src={Stage3} className="w-[300px]" ref={Stone3} />
+          <img src={Stage4} className="w-[300px]" ref={Stone4} />
         </div>
       </div>
 

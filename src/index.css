@@ -12,6 +12,11 @@
     font-family: geliofasolada;
     src: url(./fonts/GelioFasolada.ttf);
   }
+  
+  @font-face {
+    font-family: redcoat;
+    src: url(./fonts/redcoat.ttf);
+  }
 
   li {
     @apply p-4 font-[bluenight] uppercase text-[#814d20]
