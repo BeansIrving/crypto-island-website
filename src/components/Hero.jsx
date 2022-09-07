@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useIntersection } from "react-use";
 
-
 // for images
 import title from "../images/hero/cryptoisland.webp";
 import ground from "../images/hero/Ground.png";
@@ -20,14 +19,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [visible, setVisible] = React.useState(false);
   const sectionRef = useRef(null);
-  const ref = useRef(null);
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.9,
-  });
 
   const fadeIn = (element) => {
     gsap.from(element, {
@@ -43,18 +35,7 @@ const Hero = () => {
     });
   };
 
-  const fadeInArtifact = (element) => {
-    gsap.from(element, {
-      scale: 0.2,
-      opacity: 0,
-    });
-    gsap.to(element, {
-      opacity: 1,
-      scale: 1,
-      duration: 2,
-      ease: "elastic",
-    });
-  };
+  
 
   const fadeOut = (element) => {
     // gsap.to(element, {
@@ -108,30 +89,16 @@ const Hero = () => {
     });
   }
 
-  //   gsap.registerPlugin(ScrollTrigger);
-
-
-    if (element) {
-      parallax();
-      parallaxCloud();
-      parallaxCloud2();
-    }
-
-    fadeIn(".fadeIn");
-    fadeInVines(".fadeInVines");
-  }, []);
-
+  gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>
       <motion.div
-
         className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] bg-fixed h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
         id="section-hero"
         // ref={sectionRef}
       >
         <div className="fadeIn select-none z-[5]">
-
           <img
             className="w-[800px] floating select-none"
             id="img"
@@ -186,7 +153,6 @@ const Hero = () => {
             src={grassright}
             alt="/"
           />
-
         </div>
       </motion.div>
     </>

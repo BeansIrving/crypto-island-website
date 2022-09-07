@@ -12,7 +12,7 @@ function App() {
       <Hero />
       <Ecosystem />
       <Staking/>
-
+      <Roadmap />
     </>
   );
 }

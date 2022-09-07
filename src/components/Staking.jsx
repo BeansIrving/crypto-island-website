@@ -38,7 +38,7 @@ const Staking = () => {
   }, []);
 
   return (
-    <div className="bg-[url('images/backgrounds/StakingBG.png')]  w-full md:h-[120vh] lg:h-[90vh] h-[160vh] bg-no-repeat bg-cover flex justify-center py-20 md:py-10 md:px-0 px-10 z-[100]">
+    <div className="bg-[url('images/backgrounds/StakingBg.png')]  w-full md:h-[120vh] lg:h-[90vh] h-[160vh] bg-no-repeat bg-cover flex justify-center py-20 md:py-10 md:px-0 px-10 z-[100]">
       <div className="w-full max-w-[1240px] h-full flex flex-col justify-center py-20 items-center">
         <div className="w-[300px] md:mt-[40px]">
           <img src={StakingImg} />
