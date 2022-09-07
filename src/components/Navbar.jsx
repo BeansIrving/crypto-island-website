@@ -10,7 +10,7 @@ const Navbar = () => {
       y: -200,
     });
     gsap.to(element, {
-      y: 0,
+      y: -10,
       duration: 2,
       ease: "bounce",
     });
@@ -23,17 +23,19 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-[100%] h-[250px] z-[10] lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
+      className="w-[100%] h-[300px] z-[10] lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
       id="fadeIn"
     >
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
         <div className="flex items-center justify-center">
-          <ul className="hidden lg:flex mt-[10%]">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platforms</li>
-            <li>Pricing</li>
+          <ul className="hidden lg:flex mt-[7%]">
+            <li>Gameplay</li>
+            <li>Ecosystem</li>
+            <li>NFT's</li>
+            <li>Staking</li>
+            <li>Roadmap</li>
+            <li>Token Sale</li>
+            <li>Partners</li>
           </ul>
         </div>
 
@@ -76,7 +78,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden animate-left margin-right"
-            : "absolute text-center bg-zinc-200 w-[100vw] h-[100vh] px-8 top-0 z-[-1]"
+            : "absolute text-center bg-zinc-200 w-[100vw] h-[110vh] px-8 top-0 left-0 z-[-1]"
         }
       >
         <div className="absolute w-full left-0 navbar-li">
