@@ -8,6 +8,11 @@
     font-family: bluenight;
     src: url(./fonts/BluenightRegular.ttf);
   }
+
+  @font-face {
+    font-family: geliofasolada;
+    src: url(./fonts/GelioFasolada.ttf);
+  }
   
   li {
     @apply p-4 font-[bluenight] uppercase text-[#814d20]
