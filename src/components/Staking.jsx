@@ -28,9 +28,9 @@ const Staking = () => {
           },
           y: 0,
           ease: "power4",
-          duration: 0.5,
+          duration: 0.3,
           opacity: 1,
-          delay: (i + 1) / 2,
+          delay: (i + 1) / 5,
         }
       );
     }

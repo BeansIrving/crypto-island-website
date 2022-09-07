@@ -1,10 +1,22 @@
 import React, { useRef, useEffect } from "react";
 import title from "../images/nft/NFTs.webp";
 import bitboy from "../images/nft/Bitboy_Website.png";
+
+// borders
+import bordertop from "../images/nft/Borderupper.png";
+import borderright from "../images/nft/Rightborder.png";
+import borderleft from "../images/nft/Leftborder.png";
+// nft
 import nftone from "../images/nft/NFT1.png";
 import nfttwo from "../images/nft/NFT2.png";
 import nftthree from "../images/nft/NFT3.png";
 import nftfour from "../images/nft/NFT4.png";
+
+//grass
+import grassleft from "../images/nft/grass-left.png";
+import grassright from "../images/nft/grass-right.png";
+
+// gsap imports
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -20,6 +32,7 @@ const NFT = () => {
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.5,
+      x: -150,
     });
     gsap.to(element, {
       scrollTrigger: {
@@ -28,23 +41,24 @@ const NFT = () => {
         markers: false,
       },
       scale: 1,
+      x: 0,
       duration: 2,
       ease: "elastic",
     });
   };
 
   useEffect(() => {
-    fadeIn(".guma");
+    fadeIn(".bitboy");
   }, []);
 
   return (
     <motion.div
-      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.png')] h-[170vh] sm:h-[120vh] lg:h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.png')] h-[120vh] sm:h-[120vh] lg:h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
       ref={constraintsRef}
     >
-      <div className="nft-content">
+      <div className="nft-content h-[120vh] sm:h-[120vh] lg:h-[100vh] w-[100%]">
         <div className="w-full max-w-[1140px] h-[100%] flex flex-col items-center py-[8rem]">
-          <div className="w-[300px]">
+          <div className="w-[200px]">
             <img src={title} alt="/" />
           </div>
 
@@ -63,7 +77,7 @@ const NFT = () => {
                     sm:bg-[url('images/ecosystem/placeholder-ecosystem.png')] 
                     lg:bg-[url('images/nft/Placeholder.png')] select-none bg-center
                     bg-contain bg-no-repeat flex justify-center items-center text-center  
-                    sm:h-[400px] w-[100%] z-[3]"
+                    sm:h-[400px] w-[100%] z-[5]"
                   >
                     <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider">
                       {text}
@@ -74,48 +88,91 @@ const NFT = () => {
             })}
           </div>
         </div>
-        <div className="absolute bottom-[-12%] lg:bottom-[0] left-0 z-[4] bitboy">
+
+        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[4] bitboy">
           <img className="w-[150px] lg:w-[300px]" src={bitboy} alt="/" />
+        </div>
+        {/* border */}
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.png')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat">
+        
+        </div>
+
+        <div className="absolute right-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderright} alt="/" />
+        </div>
+
+        <div className="absolute left-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderleft} alt="/" />
+        </div>
+
+        {/* grass */}
+
+        <div className="absolute left-0 bottom-[0%] z-[4]">
+          <img className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]" src={grassleft} alt="/" />
+        </div>
+
+        <div className="absolute right-0 bottom-[0%] z-[4]">
+          <img className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]" src={grassright} alt="/" />
         </div>
 
         {/* artifact 1 */}
 
         <motion.div
-          className="absolute bottom-[-12%] lg:bottom-[0] left-[20%] z-[4]"
+          className="absolute bottom-[5%] left-[25%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
-          <img className="w-[100px] lg:w-[150px]" id="artifact" src={nftone} alt="/" />
+          <img
+            className="w-[100px] lg:w-[150px] floating"
+            id="artifact"
+            src={nftone}
+            alt="/"
+          />
         </motion.div>
 
         {/* artifact 2 */}
 
         <motion.div
-          className="absolute bottom-[-12%] lg:bottom-[0] left-[35%] z-[4]"
+          className="absolute bottom-[5%] left-[40%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
-          <img className="w-[100px] lg:w-[150px]" id="artifact" src={nfttwo} alt="/" />
+          <img
+            className="w-[100px] lg:w-[150px] floating"
+            id="artifact"
+            src={nfttwo}
+            alt="/"
+          />
         </motion.div>
 
         {/* artifact 3 */}
 
         <motion.div
-          className="absolute bottom-[-12%] lg:bottom-[0] left-[50%] z-[4] "
+          className="absolute bottom-[5%] left-[55%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
-          <img className="w-[100px] lg:w-[150px]" id="artifact" src={nftthree} alt="/" />
+          <img
+            className="w-[100px] lg:w-[150px] floating"
+            id="artifact"
+            src={nftthree}
+            alt="/"
+          />
         </motion.div>
 
         {/* artifact 4 */}
 
         <motion.div
-          className="absolute bottom-[-12%] lg:bottom-[0] left-[65%] z-[4] bitboy"
+          className="absolute bottom-[5%] left-[70%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
-          <img className="w-[100px] lg:w-[150px]" id="artifact" src={nftfour} alt="/" />
+          <img
+            className="w-[100px] lg:w-[150px] floating"
+            id="artifact"
+            src={nftfour}
+            alt="/"
+          />
         </motion.div>
       </div>
     </motion.div>

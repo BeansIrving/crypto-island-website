@@ -65,6 +65,8 @@ const Hero = () => {
     });
   }
 
+  
+
   function parallaxCloud() {
     gsap.set("#cloud-anim", {
       x: -150,
