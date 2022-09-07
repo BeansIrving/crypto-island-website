@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useIntersection } from "react-use";
 
-
 // for images
 import title from "../images/hero/cryptoisland.webp";
 import ground from "../images/hero/Ground.png";
@@ -13,22 +12,12 @@ import cloudone from "../images/hero/Cloudone.png";
 import cloudtwo from "../images/hero/Cloudtwo.png";
 
 // gsap imports
-
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [visible, setVisible] = React.useState(false);
-  const sectionRef = useRef(null);
-  const ref = useRef(null);
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.9,
-  });
-
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.2,
@@ -43,27 +32,19 @@ const Hero = () => {
     });
   };
 
-  const fadeInArtifact = (element) => {
+  const fadeInVines = (element) => {
     gsap.from(element, {
-      scale: 0.2,
-      opacity: 0,
+      y: -500,
     });
     gsap.to(element, {
-      opacity: 1,
-      scale: 1,
+      y: 0,
       duration: 2,
-      ease: "elastic",
+      delay: 0.2,
+      ease: "bounce",
     });
   };
 
-  const fadeOut = (element) => {
-    // gsap.to(element, {
-    //   opacity: 0,
-    //   duration: 1,
-    //   y: 0,
-    //   ease: "power4.out",
-    // });
-  };
+  gsap.registerPlugin(ScrollTrigger);
 
   function parallax() {
     gsap.set(".grass-anim", {
@@ -108,8 +89,9 @@ const Hero = () => {
     });
   }
 
-  //   gsap.registerPlugin(ScrollTrigger);
-
+  useEffect(() => {
+    const id = "section-hero";
+    const element = document.getElementById(id);
 
     if (element) {
       parallax();
@@ -121,25 +103,21 @@ const Hero = () => {
     fadeInVines(".fadeInVines");
   }, []);
 
-
   return (
     <>
       <motion.div
-
         className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] bg-fixed h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
         id="section-hero"
         // ref={sectionRef}
       >
         <div className="fadeIn select-none z-[5]">
-
           <img
             className="w-[800px] floating select-none"
-            id="img"
+            id="crypto-island"
             src={title}
             alt="/"
           />
         </div>
-
         {/* vines */}
 
         <div className="absolute top-0 left-0 z-[3] grass-anim">
@@ -186,7 +164,6 @@ const Hero = () => {
             src={grassright}
             alt="/"
           />
-
         </div>
       </motion.div>
     </>
