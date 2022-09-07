@@ -12,14 +12,15 @@ import cloudone from "../images/hero/Cloudone.png";
 import cloudtwo from "../images/hero/Cloudtwo.png";
 
 // gsap imports
-
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const sectionRef = useRef(null);
+
+
+
 
   const fadeIn = (element) => {
     gsap.from(element, {
@@ -35,16 +36,20 @@ const Hero = () => {
     });
   };
 
-  
 
-  const fadeOut = (element) => {
-    // gsap.to(element, {
-    //   opacity: 0,
-    //   duration: 1,
-    //   y: 0,
-    //   ease: "power4.out",
-    // });
+  const fadeInVines = (element) => {
+    gsap.from(element, {
+      y: -500,
+    });
+    gsap.to(element, {
+      y: 0,
+      duration: 2,
+      delay: 0.2,
+      ease: "bounce",
+    });
   };
+
+  gsap.registerPlugin(ScrollTrigger);
 
   function parallax() {
     gsap.set(".grass-anim", {
@@ -89,7 +94,22 @@ const Hero = () => {
     });
   }
 
+
   gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const id = "section-hero";
+    const element = document.getElementById(id);
+
+    if (element) {
+      parallax();
+      parallaxCloud();
+      parallaxCloud2();
+    }
+
+    fadeIn(".fadeIn");
+    fadeInVines(".fadeInVines");
+  }, []);
 
   return (
     <>
@@ -101,12 +121,11 @@ const Hero = () => {
         <div className="fadeIn select-none z-[5]">
           <img
             className="w-[800px] floating select-none"
-            id="img"
+            id="crypto-island"
             src={title}
             alt="/"
           />
         </div>
-
         {/* vines */}
 
         <div className="absolute top-0 left-0 z-[3] grass-anim">
