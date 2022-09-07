@@ -16,7 +16,7 @@ const Staking = () => {
   useEffect(() => {
     const bounceRef = bounce.current;
     gsap.fromTo(
-        bounceRef,
+      bounceRef,
       { y: 200 },
       {
         y: 0,
@@ -31,21 +31,22 @@ const Staking = () => {
   }, []);
 
   return (
-    <div className="bg-[url('images/backgrounds/StakingBg.png')]  w-full md:h-[110vh] lg:h-[85vh] h-[160vh] bg-no-repeat bg-cover flex justify-center py-20 md:py-10 md:px-0 px-10">
-      <div className="w-full max-w-[1240px] h-full flex flex-col justify-center py-20 items-center">
-        <div className="w-[300px] md:mt-[80px]">
-          <img src={StakingImg} />
+    <div className="flex justify-center items-center bg-[url('images/backgrounds/StakingBg.png')] h-[160vh] w-full bg-no-repeat bg-cover bg-top pt-20  lg:h-[120vh]" id="section-staking">
+      <div className="max-w-[1240px] flex flex-col justify-center items-center">
+        <div className="w-[300px] ">
+          <img src={StakingImg} alt="/"/>
         </div>
-        <div className=" w-full h-full flex flex-wrap justify-center md:gap-8 gap-4 md:py-10">
+
+        <div className=" w-full h-full flex flex-wrap justify-center items-center md:gap-8 gap-4 md:py-10">
           {textData.map((text) => {
             return (
               <motion.div
                 ref={bounce}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="bg-[url('images/staking/StakingPlaceholder.png')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center px-[50px] text-center w-[360px] h-[300px] mt-10 "
+                className="bg-[url('images/staking/StakingPlaceholder.png')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center px-[50px] text-center w-[360px] h-[300px] "
               >
-                <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider">
+                <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider mx-10">
                   {text}
                 </h1>
               </motion.div>

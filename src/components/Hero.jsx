@@ -119,15 +119,14 @@ const Hero = () => {
           />
         </div>
         {/* vines */}
-   
-          <div className="absolute top-0 left-0 z-[3] grass-anim">
-            <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
-          </div>
 
-          <div className="absolute top-0 right-0 z-[3] grass-anim">
-            <img className="fadeInVines" src={vinetwo} alt="/" />
-          </div>
-        
+        <div className="absolute top-0 left-0 z-[3] grass-anim">
+          <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
+        </div>
+
+        <div className="absolute top-0 right-0 z-[3] grass-anim">
+          <img className="fadeInVines" src={vinetwo} alt="/" />
+        </div>
 
         {/* clouds */}
 

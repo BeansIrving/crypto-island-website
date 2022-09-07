@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   @font-face {
     font-family: bluenight;
     src: url(./fonts/BluenightRegular.ttf);
@@ -13,18 +12,18 @@
     font-family: geliofasolada;
     src: url(./fonts/GelioFasolada.ttf);
   }
-  
+
   li {
     @apply p-4 font-[bluenight] uppercase text-[#814d20]
-    hover:text-[#fff] cursor-pointer transition duration-300 ease-out tracking-[1.5px]
+    hover:text-[#fff] cursor-pointer transition duration-300 ease-out tracking-[1.5px];
   }
 
-  body{
+  body {
     overflow-x: hidden;
     box-sizing: border-box;
   }
 
-  #crypto-island{
+  #crypto-island {
     user-select: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -33,22 +32,22 @@
     -ms-user-select: none;
   }
 
-  .item{
+  .item {
     width: auto;
     height: auto;
     z-index: -1;
   }
 
-  .navbar-li{
+  .navbar-li {
     top: 50%;
     transform: translate(0, -50%);
   }
 
-  #fadeInArtifact:hover{
+  #fadeInArtifact:hover {
     cursor: grab;
   }
 
-  #fadeInArtifact:active{
+  #fadeInArtifact:active {
     cursor: grabbing;
   }
 
@@ -75,4 +74,12 @@
       transform: translate(0, -0px);
     }
   }
+
+  @media screen and (min-width: 1223px) {
+    #section-staking {
+      height: 90vh;
+    }
+  }
+
+
 }
