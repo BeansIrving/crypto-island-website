@@ -15,7 +15,6 @@ const Staking = () => {
   const itemEls = useRef({});
 
   useEffect(() => {
-
     for (let i = 0; i < 3; i++) {
       gsap.fromTo(
         itemEls.current[i],
@@ -38,15 +37,16 @@ const Staking = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center bg-[url('images/backgrounds/StakingBg.png')] h-[160vh] w-full bg-no-repeat bg-cover bg-top pt-20  lg:h-[120vh]" id="section-staking">
+    <div
+      className="flex justify-center items-center bg-[url('images/backgrounds/StakingBg.png')] h-[160vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[120vh]"
+      id="section-staking"
+    >
       <div className="max-w-[1240px] flex flex-col justify-center items-center">
         <div className="w-[300px] ">
-          <img src={StakingImg} alt="/"/>
+          <img src={StakingImg} alt="/" />
         </div>
         <div className=" w-full h-full flex flex-wrap justify-center md:gap-8 gap-4 md:py-10">
           {textData.map((text, index) => {
-
-    
             return (
               <motion.div
                 key={text}
