@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-[100%] h-[250px] z-10 lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed drop-shadow-lg sm:px-0 lg:px-10"
+      className="w-[100%] h-[250px] z-[10] lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
       id="fadeIn"
     >
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
