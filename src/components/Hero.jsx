@@ -15,6 +15,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+
+
+  
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.2,
@@ -52,7 +55,7 @@ const Hero = () => {
         trigger: ".rock",
         start: "-40% 40%",
         toggleActions: "restart pause reverse pause",
-        markers: true,
+        markers: false,
         scrub: 1,
       },
       x: 150,
