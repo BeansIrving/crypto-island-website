@@ -23,17 +23,19 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-[100%] h-[250px] z-[10] lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
+      className="w-[100%] h-[320px] z-[10] lg:bg-[url('images/navbar/navbar.png')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
       id="fadeIn"
     >
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
         <div className="flex items-center justify-center">
-          <ul className="hidden lg:flex mt-[10%]">
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>Platforms</li>
-            <li>Pricing</li>
+          <ul className="hidden lg:flex mt-[7%]">
+            <li>Gameplay</li>
+            <li>Ecosystem</li>
+            <li>NFT's</li>
+            <li>Staking</li>
+            <li>Roadmap</li>
+            <li>Token Sale</li>
+            <li>Partners</li>
           </ul>
         </div>
 

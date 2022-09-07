@@ -24,7 +24,7 @@ const Staking = () => {
         ease: "elastic",
         scrollTrigger: {
           trigger: bounceRef.current,
-          markers: true,
+          markers: false,
         },
       }
     );

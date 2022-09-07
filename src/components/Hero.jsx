@@ -3,10 +3,13 @@ import { useIntersection } from "react-use";
 
 // for images
 import title from "../images/hero/cryptoisland.webp";
-import grass from "../images/hero/Grassfield.webp";
+import ground from "../images/hero/Ground.png";
 import vineone from "../images/hero/Vine1.png";
 import vinetwo from "../images/hero/Vine2.png";
 import grassright from "../images/hero/Grass.png";
+import sea from "../images/hero/Sea.png";
+import cloudone from "../images/hero/Cloudone.png";
+import cloudtwo from "../images/hero/Cloudtwo.png";
 
 // gsap imports
 import gsap from "gsap";
@@ -44,18 +47,45 @@ const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   function parallax() {
-    gsap.set(".rock", {
-      x: -10,
+    gsap.set(".grass-anim", {
+      scale: 0.5,
     });
-    gsap.to(".rock", {
+    gsap.to(".grass-anim", {
       scrollTrigger: {
-        trigger: ".rock",
-        start: "-40% 40%",
-        toggleActions: "restart pause reverse pause",
-        markers: true,
+        trigger: ".grass-anim",
+        start: "-20% 20%",
         scrub: 1,
       },
-      x: 150,
+      scale: 1.5,
+    });
+  }
+
+  function parallaxCloud() {
+    gsap.set("#cloud-anim", {
+      x: -150,
+    });
+    gsap.to("#cloud-anim", {
+      scrollTrigger: {
+        trigger: "#cloud-anim",
+        start: "top center",
+        scrub: 1,
+      },
+      x: 200,
+    });
+  }
+
+  function parallaxCloud2() {
+    gsap.set("#cloud-anim-two", {
+      x: 200,
+    });
+    gsap.to("#cloud-anim-two", {
+      scrollTrigger: {
+        trigger: "#cloud-anim-two",
+        start: "top center",
+
+        scrub: 1,
+      },
+      x: -150,
     });
   }
 
@@ -65,20 +95,22 @@ const Hero = () => {
 
     if (element) {
       parallax();
+      parallaxCloud();
+      parallaxCloud2();
     }
 
     fadeIn(".fadeIn");
-    fadeInVines("#fadeInVines");
+    fadeInVines(".fadeInVines");
   }, []);
 
   return (
     <>
       <motion.div
-        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat md:pb-24"
+        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] bg-fixed h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
         id="section-hero"
         // ref={sectionRef}
       >
-        <div className="fadeIn select-none z-[3]">
+        <div className="fadeIn select-none z-[5]">
           <img
             className="w-[800px] floating select-none"
             id="crypto-island"
@@ -86,28 +118,49 @@ const Hero = () => {
             alt="/"
           />
         </div>
+        {/* vines */}
+   
+          <div className="absolute top-0 left-0 z-[3] grass-anim">
+            <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
+          </div>
 
-        <div className="absolute top-0 left-0 z-[2]" id="fadeInVines">
-          <img className="h-[500px]" src={vineone} alt="/" />
-        </div>
-
-        <div className="absolute top-0 right-0 z-[2]" id="fadeInVines">
-          <img className=" rock" src={vinetwo} alt="/" />
-        </div>
+          <div className="absolute top-0 right-0 z-[3] grass-anim">
+            <img className="fadeInVines" src={vinetwo} alt="/" />
+          </div>
         
-        {/* 
-        <div className="absolute bottom-0 z-1">
+
+        {/* clouds */}
+
+        <div className="absolute bottom-0 left-[-10%] z-[1] floating">
+          <img className="w-auto" id="cloud-anim" src={cloudone} alt="/" />
+        </div>
+
+        <div className="absolute bottom-0 left-[-10%] z-[2] floating">
+          <img className="w-auto" id="cloud-anim-two" src={cloudtwo} alt="/" />
+        </div>
+
+        {/* sea */}
+
+        <div className="absolute bottom-0 z-[3]">
+          <img className="w-auto" id="crypto-island" src={sea} alt="/" />
+        </div>
+
+        {/* ground */}
+
+        <div className="absolute bottom-0 z-[4]">
           <img
-            className="w-[auto] h-[130px] sm:h-[330px]"
+            className="w-[auto] h-[100px] sm:h-[150px] lg:h-[330px]"
             id="crypto-island"
-            src={grass}
+            src={ground}
             alt="/"
           />
-        </div> */}
+        </div>
 
-        <div className="absolute bottom-0 right-0 z-1">
+        {/* grass right */}
+
+        <div className="absolute bottom-0 right-0 z-[2]">
           <img
-            className="w-[auto] h-[130px] sm:h-[330px]"
+            className="w-[auto] h-[50px] sm:h-[130px] lg:h-[330px]"
             id="crypto-island"
             src={grassright}
             alt="/"
