@@ -10,8 +10,7 @@ function App() {
       <Navbar />
       <Hero />
       <Staking/>
-      <Roadmap/>
-      <Tokenomics/>
+
     </>
   );
 }
