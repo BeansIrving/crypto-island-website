@@ -161,10 +161,10 @@ const Roadmap = () => {
       <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[-2] lg:flex hidden items-center">
 
         <div className="flex justify-center gap-10">
-          <img src={Stage1} className="w-[250px]" ref={Stone1} />
-          <img src={Stage2} className="w-[250px]" ref={Stone2} />
-          <img src={Stage3} className="w-[250px]" ref={Stone3} />
-          <img src={Stage4} className="w-[250px]" ref={Stone4} />
+          <img src={Stage1} className="w-[300px]" ref={Stone1} />
+          <img src={Stage2} className="w-[300px]" ref={Stone2} />
+          <img src={Stage3} className="w-[300px]" ref={Stone3} />
+          <img src={Stage4} className="w-[300px]" ref={Stone4} />
         </div>
       </div>
 
