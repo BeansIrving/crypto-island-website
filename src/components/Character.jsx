@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, EffectCoverflow } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -54,8 +54,18 @@ const Character = () => {
             <Swiper
               slidesPerView={"auto"}
               spaceBetween={30}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+              }}
               thumbs={{ swiper: thumbsSwiper }}
-              modules={[FreeMode, Navigation, Thumbs]}
+              modules={[EffectCoverflow,FreeMode, Navigation, Thumbs,]}
               className="mySwiperTeam"
             >
               {character.map((item) => {
