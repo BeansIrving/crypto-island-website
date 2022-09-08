@@ -132,39 +132,42 @@ const Roadmap = () => {
     console.log(imgIndex);
   };
 
-
   useEffect(() => {
-
     setImage(images[imgIndex]);
-
-  }, [imgIndex])
-
+  }, [imgIndex]);
 
   return (
-    <div className="w-full h-[100vh]  bg-[url(images/roadmap/bg1st.png)] bg-no-repeat bg-cover relative z-[3] flex justify-center">
+    <div
+      className="w-full h-[100vh]  bg-[url(images/roadmap/bg1st.png)] bg-no-repeat bg-cover relative z-[3] flex justify-center"
+      id="roadmap-section"
+    >
       <div className="absolute right-0 z-[-1]">
-        <img src={Light} ref={light} className="md:w-full md:h-full h-[70vh]" />
+        <img
+          src={Light}
+          ref={light}
+          className="md:w-full md:h-full h-[70vh]"
+          alt="/"
+        />
       </div>
 
       <div className="absolute left-0 top-0 z-[0] md:flex hidden">
-        <img src={Vines} className="h-[100vh] " />
+        <img src={Vines} className="h-[100vh] " alt="/" />
       </div>
 
       <div className="absolute bottom-0 z-[1]">
-        <img src={Plants} />
+        <img src={Plants} alt="/" />
       </div>
 
       <div className="absolute mt-[200px]">
-          <img src={Banner} className="w-[200px]"/>
-        </div>
+        <img src={Banner} className="w-[200px]" alt="/" />
+      </div>
 
       <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[-2] lg:flex hidden items-center">
-
         <div className="flex justify-center gap-10">
-          <img src={Stage1} className="w-[300px]" ref={Stone1} />
-          <img src={Stage2} className="w-[300px]" ref={Stone2} />
-          <img src={Stage3} className="w-[300px]" ref={Stone3} />
-          <img src={Stage4} className="w-[300px]" ref={Stone4} />
+          <img src={Stage1} className="w-[300px]" ref={Stone1} alt="/" />
+          <img src={Stage2} className="w-[300px]" ref={Stone2} alt="/" />
+          <img src={Stage3} className="w-[300px]" ref={Stone3} alt="/" />
+          <img src={Stage4} className="w-[300px]" ref={Stone4} alt="/" />
         </div>
       </div>
 
@@ -176,7 +179,7 @@ const Roadmap = () => {
           >
             &lt;
           </h1>
-          <img src={image} className="w-[300px] select-none" />
+          <img src={image} className="w-[300px] select-none" alt="/" />
           <h1
             className="font-bold text-3xl text-[#eb7a45] p-2 bg-[#ffffffe0] rounded-2xl text-center pb-4 shadow-xl select-none"
             onClick={onRightChangeHandler}

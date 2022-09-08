@@ -1,15 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useIntersection } from "react-use";
 
 // for images
 import title from "../images/hero/cryptoisland.webp";
-import ground from "../images/hero/Ground.png";
-import vineone from "../images/hero/Vine1.png";
-import vinetwo from "../images/hero/Vine2.png";
-import grassright from "../images/hero/Grass.png";
-import sea from "../images/hero/Sea.png";
-import cloudone from "../images/hero/Cloudone.png";
-import cloudtwo from "../images/hero/Cloudtwo.png";
+import ground from "../images/hero/Ground.webp";
+import vineone from "../images/hero/Vine1.webp";
+import vinetwo from "../images/hero/Vine2.webp";
+import grassright from "../images/hero/Grass.webp";
+import sea from "../images/hero/Sea.webp";
+import cloudone from "../images/hero/Cloudone.webp";
+import cloudtwo from "../images/hero/Cloudtwo.webp";
 
 // gsap imports
 import gsap from "gsap";
@@ -108,7 +107,7 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/Sky.png')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat"
+        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/sky.webp')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat"
         id="section-hero"
         // ref={sectionRef}
       >

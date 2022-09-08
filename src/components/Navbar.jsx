@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import gsap from "gsap";
+import { Link as LinkS } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -14,7 +15,6 @@ const Navbar = () => {
       duration: 2,
       ease: "bounce",
     });
-  
   };
 
   useEffect(() => {
@@ -29,13 +29,81 @@ const Navbar = () => {
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
         <div className="flex items-center justify-center">
           <ul className="hidden lg:flex mt-[7%]">
-            <li>Gameplay</li>
-            <li>Ecosystem</li>
-            <li>NFT's</li>
-            <li>Staking</li>
-            <li>Roadmap</li>
-            <li>Token Sale</li>
-            <li>Partners</li>
+            <LinkS
+              to="gameplay-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Gameplay</li>
+            </LinkS>
+            <LinkS
+              to="ecosystem-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Ecosystem</li>
+            </LinkS>
+
+            <LinkS
+              to="nft-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>NFT's</li>
+            </LinkS>
+
+            <LinkS
+              to="staking-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Staking</li>
+            </LinkS>
+
+            <LinkS
+              to="roadmap-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Roadmap</li>
+            </LinkS>
+
+            <LinkS
+              to="tokenomics-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Tokenomics</li>
+            </LinkS>
+
+            <LinkS
+              to="partner-section"
+              smooth={true}
+              duration={1000}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              <li>Partners</li>
+            </LinkS>
           </ul>
         </div>
 

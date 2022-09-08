@@ -59,8 +59,9 @@ const NFT = () => {
 
   return (
     <motion.div
-      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.png')] h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.webp')] h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
       ref={constraintsRef}
+      id="nft-section"
     >
       <div className="nft-content h-[130vh] w-[100%]">
         <div className="w-full max-w-[1140px] h-[100%] flex flex-col items-center py-[8rem]">
@@ -70,7 +71,7 @@ const NFT = () => {
 
           <div
             className="w-full flex flex-wrap justify-center py-[30px] sm:py-[15px] lg:flex-nowrap lg:justify-end lg:py-[20px]"
-            id="nft-section"
+            id="nft-card"
           >
             {textData.map((text) => {
               return (
@@ -142,7 +143,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[25%] z-[6]">
+        <motion.div className="absolute bottom-[0%] left-[25%] z-[5]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -166,7 +167,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[40%] z-[6]">
+        <motion.div className="absolute bottom-[0%] left-[40%] z-[5]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -190,7 +191,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[55%] z-[6]">
+        <motion.div className="absolute bottom-[0%] left-[55%] z-[5]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -214,7 +215,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[70%] z-[6]">
+        <motion.div className="absolute bottom-[0%] left-[70%] z-[5]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"

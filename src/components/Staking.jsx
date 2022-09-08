@@ -38,8 +38,8 @@ const Staking = () => {
 
   return (
     <div
-      className="flex justify-center items-center bg-[url('images/backgrounds/StakingBg.png')] h-[160vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[120vh]"
-      id="section-staking"
+      className="flex justify-center items-center bg-[url('images/backgrounds/bg-staking.webp')] h-[160vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[120vh]"
+      id="staking-section"
     >
       <div className="max-w-[1240px] flex flex-col justify-center items-center">
         <div className="w-[300px] ">

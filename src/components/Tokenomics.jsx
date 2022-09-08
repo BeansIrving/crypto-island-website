@@ -4,7 +4,7 @@ import Banner from "../images/tokenomics/banner.png";
 
 const Tokenomics = () => {
   return (
-    <div className=" w-full h-[150vh] md:h-[150vh] xl:h-[70vh] bg-cover bg-[url(images/tokenomics/BG.png)] bg-no-repeat flex justify-center py-20">
+    <div className=" w-full h-[150vh] md:h-[150vh] xl:h-[70vh] bg-cover bg-[url(images/tokenomics/BG.png)] bg-no-repeat flex justify-center py-20" id="tokenomics-section">
       <div className=" w-full max-w-[1240px] flex py-20 items-center flex-wrap justify-center ">
 
         <div className="order-2" id="section-tokenomics">
