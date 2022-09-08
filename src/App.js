@@ -1,3 +1,4 @@
+import Character from "./components/Character";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -16,6 +17,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Character />
       <Ecosystem />
       <NFT />
       <Staking/>

@@ -3,7 +3,6 @@ import title from "../images/nft/NFTs.webp";
 import bitboy from "../images/nft/Bitboy_Website.png";
 
 // borders
-import bordertop from "../images/nft/Borderupper.png";
 import borderright from "../images/nft/Rightborder.png";
 import borderleft from "../images/nft/Leftborder.png";
 // nft
@@ -14,10 +13,10 @@ import nftfour from "../images/nft/NFT4.png";
 
 // platform
 
-import platform from "../images/nft/platform.png"
-import platformtwo from "../images/nft/platform-2.png"
-import platformthree from "../images/nft/platform-3.png"
-import platformfour from "../images/nft/platform-4.png"
+import platform from "../images/nft/platform.png";
+import platformtwo from "../images/nft/platform-2.png";
+import platformthree from "../images/nft/platform-3.png";
+import platformfour from "../images/nft/platform-4.png";
 
 //grass
 import grassleft from "../images/nft/grass-left.png";
@@ -100,9 +99,7 @@ const NFT = () => {
           <img className="w-[150px] lg:w-[300px]" src={bitboy} alt="/" />
         </div>
         {/* border */}
-        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.png')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat">
-        
-        </div>
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.png')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute right-0 top-[0%] z-[4] border-lr">
           <img className="w-[100%]" src={borderright} alt="/" />
@@ -115,11 +112,19 @@ const NFT = () => {
         {/* grass */}
 
         <div className="absolute left-0 bottom-[0%] z-[4]">
-          <img className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]" src={grassleft} alt="/" />
+          <img
+            className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]"
+            src={grassleft}
+            alt="/"
+          />
         </div>
 
         <div className="absolute right-0 bottom-[0%] z-[4]">
-          <img className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]" src={grassright} alt="/" />
+          <img
+            className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]"
+            src={grassright}
+            alt="/"
+          />
         </div>
 
         {/* artifact 1 */}
@@ -137,10 +142,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="absolute bottom-[0%] left-[25%] z-[6]"
-        
-        >
+        <motion.div className="absolute bottom-[0%] left-[25%] z-[6]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -163,11 +165,8 @@ const NFT = () => {
             alt="/"
           />
         </motion.div>
-    
-        <motion.div
-          className="absolute bottom-[0%] left-[40%] z-[6]"
-         
-        >
+
+        <motion.div className="absolute bottom-[0%] left-[40%] z-[6]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -191,10 +190,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="absolute bottom-[0%] left-[55%] z-[6]"
-     
-        >
+        <motion.div className="absolute bottom-[0%] left-[55%] z-[6]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -218,10 +214,7 @@ const NFT = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="absolute bottom-[0%] left-[70%] z-[6]"
-       
-        >
+        <motion.div className="absolute bottom-[0%] left-[70%] z-[6]">
           <img
             className="w-[100px] lg:w-[150px]"
             id="artifact"
@@ -229,7 +222,6 @@ const NFT = () => {
             alt="/"
           />
         </motion.div>
-
       </div>
     </motion.div>
   );

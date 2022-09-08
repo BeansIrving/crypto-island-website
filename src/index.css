@@ -12,7 +12,7 @@
     font-family: geliofasolada;
     src: url(./fonts/GelioFasolada.ttf);
   }
-  
+
   @font-face {
     font-family: redcoat;
     src: url(./fonts/redcoat.ttf);
@@ -48,7 +48,7 @@
     transform: translate(0, -50%);
   }
 
-  #artifact{
+  #artifact {
     user-select: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -97,41 +97,206 @@
 
   @media screen and (min-width: 1221px) {
     #nft-section {
-      margin-left:5rem;
+      margin-left: 5rem;
     }
   }
 
-  @media screen and (min-width:1159px){
-    #section-tokenomics{
-      order:1;
+  @media screen and (min-width: 1159px) {
+    #section-tokenomics {
+      order: 1;
     }
   }
 
-  .nft-content{
+  .nft-content {
     z-index: 3;
     position: absolute;
     padding: 0vw;
-    width:100vw;
-    height:auto;
+    width: 100vw;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .hero-content{
+  .hero-content {
     z-index: 3;
     position: absolute;
     padding: 0vw;
-    width:100vw;
-    height:auto;
+    width: 100vw;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  @media screen and (max-width:811px){
-    .border-lr{
+  @media screen and (max-width: 811px) {
+    .border-lr {
       visibility: hidden;
     }
   }
+
+  .mySwiperTeam:hover {
+    cursor: grab;
+  }
+
+  .mySwiperTeam:active {
+    cursor: grabbing;
+  }
+
+
+  
+.mySwiperTeam {
+  cursor: -webkit-grab; cursor: grab;
+  width: 70vw;
+  height: 75%;
+  margin: 0vh 15vh;
+  position: relative;
+  -webkit-mask-image: 
+  linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 1%, 
+  rgba(0, 0, 0, 1) 99%, transparent 100%);
+}
+
+.mySwiperTeam-slide {
+  text-align: left;
+  font-size: 25px;
+  color: #633922;
+  padding: 0vh 5vh;
+  /* Center slide text vertically */
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-center;
+  justify-content:center;
+
+
+}
+
+.mySwiperTeam-slide img {
+  display: flex;
+  justify-content: center;
+}
+
+.mySwiperTeam-slide:nth-child(1n) {
+  width:31%;
+}
+
+.mySwiperTeam-slide:nth-child(2n) {
+  width:31%;
+}
+
+.mySwiperTeam-slide:nth-child(3n) {
+  width:31%;
+}
+
+
+@media screen and (max-width:1366px){
+  .mySwiperTeam {
+    cursor: -webkit-grab; cursor: grab;
+    width: 75vw;
+    height: 75%;
+    margin: 0vh 15vh;
+    position: relative;
+   
+  }
+
+
+  .mySwiperTeam-slide:nth-child(1n) {
+    width:31%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(2n) {
+    width:31%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(3n) {
+    width:31%;
+  }
+}
+
+@media screen and (max-width:1024px){
+
+
+  .mySwiperTeam {
+    cursor: -webkit-grab; cursor: grab;
+    width: 90vw;
+    height: 75%;
+    margin: 0vh 0vh;
+    position: relative;
+   
+  }
+
+
+  .mySwiperTeam-slide:nth-child(1n) {
+    width:31%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(2n) {
+    width:31%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(3n) {
+    width:31%;
+  }
+}
+
+
+@media screen and (max-width:768px){
+
+  .mySwiperTeam {
+    cursor: -webkit-grab; cursor: grab;
+    width: 90vw;
+    height: 75%;
+    padding: 0vh 2vh;
+    position: relative;
+   
+  }
+
+  .mySwiperTeam-slide:nth-child(1n) { 
+    width:100%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(2n) {
+    width:100%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(3n) {
+    width:100%;
+  }
+}
+
+
+
+@media screen and (max-width:468px){
+  .mySwiperTeam {
+    cursor: -webkit-grab; cursor: grab;
+    width: 95vw;
+    height: 75%;
+    padding: 0vh 2vh;
+    position: relative;
+    right: 0vh;
+  }
+
+
+  .mySwiperTeam-slide:nth-child(1n) {
+    width:100%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(2n) {
+    width:100%;
+  }
+  
+  .mySwiperTeam-slide:nth-child(3n) {
+    width:100%;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #eb102e !important;
+}
+
+.swiper-button-next { color: #eb102e !important; }
+
+.swiper-button-prev { color: #eb102e !important; }
+
+
+
+
 }
