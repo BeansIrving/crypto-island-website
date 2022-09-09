@@ -53,7 +53,7 @@ const Ecosystem = () => {
               <>
                 <div
                   key={text}
-                  className="bg-[url('images/ecosystem/mv-ecosystem-placeholder.webp')] sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px]"
+                  className="bg-[url('images/ecosystem/mv-ecosystem-placeholder.webp')] sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6"
                 >
                   <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider mx-[50px] sm:mx-[60px] md:mx-[90px]">
                     {text}

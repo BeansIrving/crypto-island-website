@@ -87,7 +87,7 @@ const NFT = () => {
                     sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] 
                     lg:bg-[url('images/nft/Placeholder.webp')] select-none bg-center
                     bg-contain bg-no-repeat flex justify-center items-center text-center  
-                    sm:h-[400px] w-[100%] z-[5]"
+                    sm:h-[400px] w-[100%] z-[5] mx-6"
                   >
                     <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider">
                       {text}
