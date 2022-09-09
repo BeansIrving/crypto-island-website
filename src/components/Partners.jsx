@@ -22,11 +22,12 @@ const Partners = () => {
           
           <img
             src={Coingecko}
-            className="md:w-[250px] w-[150px] h-auto"
+            className="md:w-[250px] w-[150px] h-auto md:order-1 order-2"
             alt="/"
+          
           />
-          <img src={Cmc} className="lg:w-[250px] w-[150px] h-auto" alt="/" />
-          <img src={Bsc} className="lg:w-[250px] w-[150px] h-auto" alt="/" />
+          <img src={Cmc} className="lg:w-[250px] w-[150px] h-auto md:order-2 order-1" alt="/"/>
+          <img src={Bsc} className="lg:w-[250px] w-[150px] h-auto md:order-3 order-3" alt="/" />
         </div>
       </div>
     </div>
