@@ -150,11 +150,83 @@ const Navbar = () => {
         }
       >
         <div className="absolute w-full left-0 navbar-li">
-          <li className="border-b-2 border-zinc-300 w-full">Home</li>
-          <li className="border-b-2 border-zinc-300 w-full">About</li>
-          <li className="border-b-2 border-zinc-300 w-full">Support</li>
-          <li className="border-b-2 border-zinc-300 w-full">Platforms</li>
-          <li className="border-b-2 border-zinc-300 w-full">Pricing</li>
+          <LinkS
+            to="gameplay-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Gameplay</li>
+          </LinkS>
+          <LinkS
+            to="ecosystem-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Ecosystem</li>
+          </LinkS>
+          <LinkS
+            to="nft-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">NFTS</li>
+          </LinkS>
+          <LinkS
+            to="staking-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Staking</li>
+          </LinkS>
+          <LinkS
+            to="roadmap-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Roadmap</li>
+          </LinkS>
+          <LinkS
+            to="tokenomics-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Tokenomics</li>
+          </LinkS>
+          <LinkS
+            to="partner-section"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact="true"
+            offset={0}
+            onClick={handleClick}
+          >
+            <li className="border-b-2 border-zinc-300 w-full">Partners</li>
+          </LinkS>
         </div>
       </ul>
     </div>
