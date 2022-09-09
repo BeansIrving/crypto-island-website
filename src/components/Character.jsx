@@ -45,7 +45,7 @@ const Character = () => {
     },
 
     {
-      name: "Elo Musk",
+      name: "Elon Musk",
       description:
         "DOGE lover, memer, philantropist, and the wealthiest person on the planet as we speak!",
       avatar: characterframe,
