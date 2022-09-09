@@ -1,26 +1,29 @@
 import React, { useRef, useEffect } from "react";
+
+// images 
+
 import title from "../images/nft/NFTs.webp";
-import bitboy from "../images/nft/Bitboy_Website.png";
+import bitboy from "../images/nft/Bitboy_Website.webp";
 
 // borders
-import borderright from "../images/nft/Rightborder.png";
-import borderleft from "../images/nft/Leftborder.png";
+import borderright from "../images/nft/Rightborder.webp";
+import borderleft from "../images/nft/Leftborder.webp";
 // nft
-import nftone from "../images/nft/NFT1.png";
-import nfttwo from "../images/nft/NFT2.png";
-import nftthree from "../images/nft/NFT3.png";
-import nftfour from "../images/nft/NFT4.png";
+import nftone from "../images/nft/NFT1.webp";
+import nfttwo from "../images/nft/NFT2.webp";
+import nftthree from "../images/nft/NFT3.webp";
+import nftfour from "../images/nft/NFT4.webp";
 
 // platform
 
-import platform from "../images/nft/platform.png";
-import platformtwo from "../images/nft/platform-2.png";
-import platformthree from "../images/nft/platform-3.png";
-import platformfour from "../images/nft/platform-4.png";
+import platform from "../images/nft/platform.webp";
+import platformtwo from "../images/nft/platform-2.webp";
+import platformthree from "../images/nft/platform-3.webp";
+import platformfour from "../images/nft/platform-4.webp";
 
 //grass
-import grassleft from "../images/nft/grass-left.png";
-import grassright from "../images/nft/grass-right.png";
+import grassleft from "../images/nft/grass-left.webp";
+import grassright from "../images/nft/grass-right.webp";
 
 // gsap imports
 import { gsap } from "gsap";
@@ -81,8 +84,8 @@ const NFT = () => {
                     className="bg-gradient-to-r from-[#efd5a2] to-[#dcbe83] 
                     border-[15px] border-[#a56631] py-12 px-12 sm:px-[5rem] 
                     md:px-[12rem] lg:px-[10rem] h-[auto] sm:border-0 
-                    sm:bg-[url('images/ecosystem/placeholder-ecosystem.png')] 
-                    lg:bg-[url('images/nft/Placeholder.png')] select-none bg-center
+                    sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] 
+                    lg:bg-[url('images/nft/Placeholder.webp')] select-none bg-center
                     bg-contain bg-no-repeat flex justify-center items-center text-center  
                     sm:h-[400px] w-[100%] z-[5]"
                   >
@@ -100,7 +103,7 @@ const NFT = () => {
           <img className="w-[150px] lg:w-[300px]" src={bitboy} alt="/" />
         </div>
         {/* border */}
-        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.png')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute right-0 top-[0%] z-[4] border-lr">
           <img className="w-[100%]" src={borderright} alt="/" />

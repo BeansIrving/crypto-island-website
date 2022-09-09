@@ -1,19 +1,35 @@
 import React, { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Light from "../images/roadmap/light2nd.png";
-import Vines from "../images/roadmap/vinesfront.png";
-import Stage1 from "../images/roadmap/Stage1_1.png";
-import Stage2 from "../images/roadmap/Stage2_1.png";
-import Stage3 from "../images/roadmap/Stage3_1.png";
-import Stage4 from "../images/roadmap/Stage4_1.png";
-import Plants from "../images/roadmap/Plants.png";
+
+// images
+
+import Light from "../images/roadmap/light2nd.webp";
+import Vines from "../images/roadmap/vinesfront.webp";
+import Stage1 from "../images/roadmap/Stage1_1.webp";
+import Stage2 from "../images/roadmap/Stage2_1.webp";
+import Stage3 from "../images/roadmap/Stage3_1.webp";
+import Stage4 from "../images/roadmap/Stage4_1.webp";
+import Plants from "../images/roadmap/Plants.webp";
 import Banner from "../images/roadmap/roadmap.webp";
 
-gsap.registerPlugin(ScrollTrigger);
+// Swiper Import
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs, EffectCoverflow } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// imports
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Roadmap = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   const light = useRef(null);
+
   useEffect(() => {
     gsap.fromTo(
       light.current,
@@ -62,8 +78,8 @@ const Roadmap = () => {
       {
         scrollTrigger: {
           trigger: Stone1.current,
-          start: "-600px center",
-          end: "top center",
+          start: "-200px bottom",
+          end: "100px center",
           scrub: 1,
           markers: false,
         },
@@ -76,8 +92,8 @@ const Roadmap = () => {
       {
         scrollTrigger: {
           trigger: Stone2.current,
-          start: "-600px center",
-          end: "top center",
+          start: "-200px bottom",
+          end: "100px center",
           scrub: 2,
           markers: false,
         },
@@ -90,8 +106,8 @@ const Roadmap = () => {
       {
         scrollTrigger: {
           trigger: Stone3.current,
-          start: "-600px center",
-          end: "top center",
+          start: "-200px bottom",
+          end: "100px center",
           scrub: 3,
           markers: false,
         },
@@ -104,8 +120,8 @@ const Roadmap = () => {
       {
         scrollTrigger: {
           trigger: Stone4.current,
-          start: "-600px center",
-          end: "top center",
+          start: "-200px bottom",
+          end: "100px center",
           scrub: 4,
           markers: false,
         },
@@ -138,30 +154,97 @@ const Roadmap = () => {
 
   return (
     <div
-      className="w-full h-[100vh]  bg-[url(images/roadmap/bg1st.png)] bg-no-repeat bg-cover relative z-[3] flex justify-center"
+      className="flex justify-center items-center w-[100%] h-[100vh]  bg-[url(images/roadmap/bg1st.webp)] bg-no-repeat bg-cover z-[3]"
       id="roadmap-section"
     >
-      <div className="absolute right-0 z-[-1]">
-        <img
-          src={Light}
-          ref={light}
-          className="md:w-full md:h-full h-[70vh]"
-          alt="/"
-        />
-      </div>
+      <div className="nft-content h-[100vh] ">
+        <div className="absolute top-0 mt-[200px]">
+          <img src={Banner} className="w-[200px]" alt="/" />
+        </div>
 
-      <div className="absolute left-0 top-0 z-[0] md:flex hidden">
-        <img src={Vines} className="h-[100vh] " alt="/" />
-      </div>
+        <div className="absolute top-0 right-0 z-[-1]">
+          <img
+            src={Light}
+            ref={light}
+            className="md:w-full md:h-full h-[70vh]"
+            alt="/"
+          />
+        </div>
 
-      <div className="absolute bottom-0 z-[1]">
-        <img src={Plants} alt="/" />
-      </div>
+        <div className="absolute bottom-0 z-[2]">
+          <img src={Plants} alt="/" />
+        </div>
 
-      <div className="absolute mt-[200px]">
-        <img src={Banner} className="w-[200px]" alt="/" />
-      </div>
+        {/* desktop version */}
+        <div>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            grabCursor={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
+            className="mySwiperTeamV2 mt-[300px] hidden 2xl:inline-grid"
+          >
+            <SwiperSlide className="mySwiperTeam-slide" ref={Stone1}>
+              <img src={Stage1} className="w-[300px]" alt="/" />
+            </SwiperSlide>
 
+            <SwiperSlide className="mySwiperTeam-slide" ref={Stone2}>
+              <img src={Stage2} className="w-[300px]" alt="/" />
+            </SwiperSlide>
+
+            <SwiperSlide className="mySwiperTeam-slide" ref={Stone3}>
+              <img src={Stage3} className="w-[300px]" alt="/" />
+            </SwiperSlide>
+
+            <SwiperSlide className="mySwiperTeam-slide" ref={Stone4}>
+              <img src={Stage4} className="w-[300px]" alt="/" />
+            </SwiperSlide>
+          </Swiper>
+
+          {/* tablet version */}
+
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
+            className="mySwiperTeamV2-tablet mt-[300px] z-[4] inline-grid 2xl:hidden"
+          >
+            <SwiperSlide className="mySwiperTeamV2-tablet-slide z-[]">
+              <img src={Stage1} alt="/" ref={Stone1} />
+            </SwiperSlide>
+
+            <SwiperSlide className="mySwiperTeamV2-tablet-slide">
+              <img src={Stage2} alt="/" ref={Stone2} />
+            </SwiperSlide>
+
+            <SwiperSlide className="mySwiperTeamV2-tablet-slide">
+              <img src={Stage3} alt="/" ref={Stone3} />
+            </SwiperSlide>
+
+            <SwiperSlide className="mySwiperTeamV2-tablet-slide">
+              <img src={Stage4} alt="/" ref={Stone4} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        {/* 
       <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[-2] lg:flex hidden items-center">
         <div className="flex justify-center gap-10">
           <img src={Stage1} className="w-[300px]" ref={Stone1} alt="/" />
@@ -169,9 +252,9 @@ const Roadmap = () => {
           <img src={Stage3} className="w-[300px]" ref={Stone3} alt="/" />
           <img src={Stage4} className="w-[300px]" ref={Stone4} alt="/" />
         </div>
-      </div>
+      </div> */}
 
-      <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[100] lg:hidden flex">
+        {/* <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[100] lg:hidden flex">
         <div className="flex justify-center gap-2 items-center px-4">
           <h1
             className="font-bold text-3xl text-[#eb7a45] p-2 bg-[#ffffffe0] rounded-2xl text-center pb-4 shadow-xl select-none"
@@ -186,6 +269,10 @@ const Roadmap = () => {
           >
             &gt;
           </h1>
+        </div>
+      </div> */}
+        <div className="absolute left-0 top-0 z-[3] hidden 2xl:inline-grid">
+          <img src={Vines} className="h-[100vh] " alt="/" />
         </div>
       </div>
     </div>

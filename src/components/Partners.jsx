@@ -1,13 +1,16 @@
 import React from "react";
-import Partner from "../images/partners/Partners.png";
-import Cmc from "../images/partners/cmc.png";
-import Coingecko from "../images/partners/coingecko.png";
-import Bsc from "../images/partners/bsc.png";
+
+// Images 
+
+import Partner from "../images/partners/Partners.webp";
+import Cmc from "../images/partners/cmc.webp";
+import Coingecko from "../images/partners/coingecko.webp";
+import Bsc from "../images/partners/bsc.webp";
 
 const Partners = () => {
   return (
     <div
-      className="w-full lg:h-[56.2vh] h-[90vh] bg-[url(images/partners/partnermobile.png)] mv:bg-[url(images/partners/partnerbg.png)] 
+      className="w-full lg:h-[56.2vh] h-[90vh] bg-[url(images/partners/partnermobile.webp)] mv:bg-[url(images/partners/partnerbg.webp)] 
       bg-cover bg-top mv:bg-center mv:bg-cover bg-no-repeat flex justify-center p-5"
       id="partner-section"
     >
