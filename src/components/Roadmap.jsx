@@ -132,25 +132,25 @@ const Roadmap = () => {
 
   const images = [Stage1, Stage2, Stage3, Stage4];
   const [imgIndex, setImgIndex] = useState(0);
-  const [image, setImage] = useState(Stage1);
+  // const [image, setImage] = useState(Stage1);
 
-  const onLeftChangeHandler = () => {
-    if (imgIndex > 0) {
-      setImgIndex(imgIndex - 1);
-    }
-    console.log(imgIndex);
-  };
+  // const onLeftChangeHandler = () => {
+  //   if (imgIndex > 0) {
+  //     setImgIndex(imgIndex - 1);
+  //   }
+  //   console.log(imgIndex);
+  // };
 
-  const onRightChangeHandler = () => {
-    if (imgIndex < 3) {
-      setImgIndex(imgIndex + 1);
-    }
-    console.log(imgIndex);
-  };
+  // const onRightChangeHandler = () => {
+  //   if (imgIndex < 3) {
+  //     setImgIndex(imgIndex + 1);
+  //   }
+  //   console.log(imgIndex);
+  // };
 
-  useEffect(() => {
-    setImage(images[imgIndex]);
-  }, [imgIndex]);
+  // useEffect(() => {
+  //   setImage(images[imgIndex]);
+  // }, [imgIndex]);
 
   return (
     <div
@@ -176,7 +176,7 @@ const Roadmap = () => {
         </div>
 
         {/* desktop version */}
-        <div>
+        <div className="absolute bottom-[8%]">
           <Swiper
             slidesPerView={4}
             spaceBetween={30}
@@ -190,7 +190,7 @@ const Roadmap = () => {
             }}
             thumbs={{ swiper: thumbsSwiper }}
             modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
-            className="mySwiperTeamV2 mt-[300px] hidden 2xl:inline-grid"
+            className="mySwiperTeamV2 hidden 2xl:inline-grid "
           >
             <SwiperSlide className="mySwiperTeam-slide" ref={Stone1}>
               <img src={Stage1} className="w-[300px]" alt="/" />
