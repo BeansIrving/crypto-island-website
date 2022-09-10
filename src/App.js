@@ -1,6 +1,7 @@
 import Character from "./components/Character";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
+import Gameplay from "./components/Gameplay";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Gameplay />
       <Character />
       <Ecosystem />
       <NFT />
