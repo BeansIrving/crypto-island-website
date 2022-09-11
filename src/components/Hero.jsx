@@ -107,7 +107,7 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/sky.webp')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat"
+        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/sky.webp')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat z-40"
         id="section-hero"
         // ref={sectionRef}
       >

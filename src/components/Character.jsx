@@ -21,6 +21,7 @@ import characterthree from "../images/character/characterframe3.webp";
 import characterframe from "../images/character/characterframe.webp";
 
 
+import CZ from "../images/character/CZ.webp";
 import Elon from "../images/character/Elon.webp";
 import Vitalik from "../images/character/Vitalik.webp";
 import Charles from "../images/character/Charles.webp";
@@ -84,7 +85,7 @@ const Character = () => {
       name: "CZ",
       description:
         "Founder of the most catering and biggest cryptocurrency exchange in the world as we speak, Funds and GUMA are Safu when it comes to this guy!",
-      avatar: "",
+      avatar: CZ,
     },
 
     {
@@ -146,7 +147,7 @@ const Character = () => {
     <div
       className="flex justify-center items-center 
     bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
-    h-[100vh]"
+    h-[100vh] z-40"
     >
       <div className="nft-content h-[100vh] max-w-[1240px]">
         <div className="flex-col justify-center items-center">

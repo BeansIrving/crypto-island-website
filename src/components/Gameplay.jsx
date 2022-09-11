@@ -8,10 +8,10 @@ const Gameplay = () => {
   const constraintsRef = useRef(null);
   return (
     <div
-      className="flex justify-center items-center bg-[#885018] h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh]"
-      ref={constraintsRef}
+      className="flex justify-center items-center bg-[#885018] h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh] -z-50"
+      id="gameplay-section"
     >
-      <div className="nft-content h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh]">
+      <div className="nft-content h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh]"  ref={constraintsRef} >
 
         <motion.div
           className="absolute top-50% hidden lg:inline-block"
@@ -27,7 +27,7 @@ const Gameplay = () => {
         </motion.div>
 
         <motion.div
-          className="absolute top-0% inline-block lg:hidden"
+          className="absolute top-0% left-[50%] inline-block lg:hidden"
           drag
           dragConstraints={constraintsRef}
         >

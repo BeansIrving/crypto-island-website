@@ -39,7 +39,7 @@ const Ecosystem = () => {
   return (
     <div
       className="flex justify-center items-center pb-[30vh] lg:pb-0 bg-[url('images/backgrounds/bg-ecosystem.webp')] h-[170vh] 
-      sm:h-[120vh] lg:h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      sm:h-[120vh] lg:h-[100vh] w-[100%] bg-cover bg-center bg-no-repeat z-40"
       id="ecosystem-section"
     >
       <div className="w-full max-w-[1140px] h-[100%] flex flex-col justify-center items-center">
