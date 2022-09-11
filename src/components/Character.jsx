@@ -20,6 +20,14 @@ import charactertwo from "../images/character/characterframe2.webp";
 import characterthree from "../images/character/characterframe3.webp";
 import characterframe from "../images/character/characterframe.webp";
 
+
+import Elon from "../images/character/Elon.webp";
+import Vitalik from "../images/character/Vitalik.webp";
+import Charles from "../images/character/Charles.webp";
+import Mark from "../images/character/Mark.webp";
+import Ross from "../images/character/Ross.webp";
+import Wendy from "../images/character/Wendy.webp";
+
 const Character = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -41,14 +49,14 @@ const Character = () => {
       name: "Vitalik",
       description:
         "WarCraft enthusiast turned Ethereum Founder, he made everything possible for the cryptocurrency space!",
-      avatar: characterframe,
+      avatar: Vitalik,
     },
 
     {
       name: "Elon Musk",
       description:
         "DOGE lover, memer, philantropist, and the wealthiest person on the planet as we speak!",
-      avatar: characterframe,
+      avatar: Elon,
     },
 
     {
@@ -57,6 +65,42 @@ const Character = () => {
         "Crypto Youtuber, the ol' reliable for everything crypto on youtube!",
       avatar: charactertwo,
     },
+
+    {
+      name: "Charles Hoskinson",
+      description:
+        "Techpreneur and a Blockchain visionary, he co-founded multiple groundbreaking cryptocurrency platforms like Cardano, Ethereum, and Input Output",
+      avatar: Charles,
+    },
+
+    {
+      name: "Mark Cuban",
+      description:
+        "The sale of MicroSolutions, release of his videobroadcasting website Broadcast.com, appearances in SharkTank, and multiple other ventures cemented his fame and success!",
+      avatar: Mark,
+    },
+
+    {
+      name: "CZ",
+      description:
+        "Founder of the most catering and biggest cryptocurrency exchange in the world as we speak, Funds and GUMA are Safu when it comes to this guy!",
+      avatar: "",
+    },
+
+    {
+      name: "Ross Ulbricht",
+      description:
+        "aka Dread Pirate Roberts. The founder of the infamous goods exchange Silk Road, he spearheaded the use of cryptocurrencies for purchase of goods and services, albeit not in the best of ways.",
+      avatar: Ross,
+    },
+
+    {
+      name: "Wendy",
+      description:
+        "Host of the O show, a cryptocurrency media outlet, and a successful cryptocurrency analyst, she became the biggest female crypto YouTuber as we speak!",
+      avatar: Wendy,
+    },
+    
   ];
 
   gsap.registerPlugin(ScrollTrigger);
