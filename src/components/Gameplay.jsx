@@ -1,19 +1,63 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
-import gameplay from "../images/gameplay/Gameplay.png";
-import mobile from "../images/gameplay/Gameplay_mobile.png";
+import gameplay from "../images/gameplay/gameplay_asset_landscape.webp";
+import mobile from "../images/gameplay/gameplay_asset_portrait.webp";
 
 const Gameplay = () => {
-  const constraintsRef = useRef(null);
   return (
     <div
-      className="flex justify-center items-center bg-[#885018] h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh] -z-50"
+      className="flex justify-center items-center
+      bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-center
+      h-[auto] lg:h-[115.5vh] w-[100%] -z-50 px-[2rem] lg:px-[10rem] py-[5rem]"
       id="gameplay-section"
     >
-      <div className="nft-content h-[145vh] sm:h-[160vh] lg:h-[75vh] 2xl:h-[114.3vh]"  ref={constraintsRef} >
+      <div className="flex-col justify-center items-center">
+        <div>
+          <h1
+            className="text-left font-[roboto] font-bold uppercase 
+          text-5xl text-[#513318] pb-10"
+          >
+            Gameplay
+          </h1>
+          <p
+            className="text-left font-[roboto] 
+            text-xl 2xl:text-3xl text-[#5a3b1d]"
+          >
+            Cryptolslands is an Adventure/Fantasy P2E game set on a special
+            cluster of islands, each with their own quirks and charm. Players
+            are expected to cooperate, compete, and collaborate with each other
+            in the various mini-games present in each island for $GUMA. Prizes
+            are given in the form of precious $GUMA tokens which can then be
+            converted to crypto.
+          </p>
+        </div>
 
-        <motion.div
+        <div>
+          <h1
+            className="text-left font-[geliofasolada] font-bold uppercase 
+          text-5xl text-[#513318] py-10"
+          >
+            <span className="text-[#7d642f]">&#124;</span>
+            <span className="pl-5">Game Mechanics and Perks</span>
+          </h1>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <img
+            src={gameplay}
+            alt="/"
+            className="h-[auto] 2xl:h-[500px] hidden lg:inline-grid"
+          ></img>
+          <img
+            src={mobile}
+            alt="/"
+            className="h-[auto] 2xl:h-[400px] inline-grid lg:hidden"
+          ></img>
+        </div>
+      </div>
+
+      {/* <motion.div
           className="absolute top-50% hidden lg:inline-block"
           drag
           dragConstraints={constraintsRef}
@@ -37,12 +81,7 @@ const Gameplay = () => {
             src={mobile}
             alt="/"
           />
-        </motion.div>
-
-        
-
-      </div>
-
+        </motion.div> */}
     </div>
   );
 };

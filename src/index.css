@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+
+  @font-face {
+    font-family: roboto;
+    src: url(./fonts/robotoslab.ttf)
+  }
+
   @font-face {
     font-family: bluenight;
     src: url(./fonts/BluenightRegular.ttf);
@@ -17,6 +23,8 @@
     font-family: redcoat;
     src: url(./fonts/redcoat.ttf);
   }
+
+
 
   li {
     @apply p-4 font-[bluenight] uppercase text-[#814d20]
