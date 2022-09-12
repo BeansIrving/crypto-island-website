@@ -1,14 +1,17 @@
 import React, { useRef, useEffect } from "react";
 
-// images 
+// images
 
 import title from "../images/nft/NFTs.webp";
 import bitboy from "../images/nft/Bitboy_Website.webp";
 
 // borders
+
 import borderright from "../images/nft/Rightborder.webp";
 import borderleft from "../images/nft/Leftborder.webp";
+
 // nft
+
 import nftone from "../images/nft/NFT1.webp";
 import nfttwo from "../images/nft/NFT2.webp";
 import nftthree from "../images/nft/NFT3.webp";
@@ -22,19 +25,18 @@ import platformthree from "../images/nft/platform-3.webp";
 import platformfour from "../images/nft/platform-4.webp";
 
 //grass
+
 import grassleft from "../images/nft/grass-left.webp";
 import grassright from "../images/nft/grass-right.webp";
 
 // gsap imports
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 
 const NFT = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const textData = [
-    "NFTs (Non-Fungible Tokens) can exist in many forms in Crypto Islands; from the artifacts players will hunt down, to the characters and accessories used to customize them, Crypto islands is not just a game, but essentially an NFT use-case.",
-  ];
 
   const constraintsRef = useRef(null);
 
@@ -62,11 +64,11 @@ const NFT = () => {
 
   return (
     <motion.div
-      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.webp')] h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.webp')] h-[150vh] sm:h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
       ref={constraintsRef}
       id="nft-section"
     >
-      <div className="nft-content h-[130vh] w-[100%]">
+      <div className="nft-content h-[150vh] sm:h-[130vh] w-[100%]">
         <div className="w-full max-w-[1140px] h-[100%] flex flex-col items-center py-[8rem]">
           <div className="w-[200px]">
             <img src={title} alt="/" />
@@ -76,31 +78,27 @@ const NFT = () => {
             className="w-full flex flex-wrap justify-center py-[30px] sm:py-[15px] lg:flex-nowrap lg:justify-end lg:py-[20px]"
             id="nft-card"
           >
-            {textData.map((text) => {
-              return (
-                <>
-                  <div
-                    key={text}
-                    className="bg-gradient-to-r from-[#efd5a2] to-[#dcbe83] 
-                    border-[15px] border-[#a56631] py-12 px-12 sm:px-[5rem] 
-                    md:px-[12rem] lg:px-[10rem] h-[auto] sm:border-0 
-                    sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] 
-                    lg:bg-[url('images/nft/Placeholder.webp')] select-none bg-center
+            <div
+              className="py-12 px-12 sm:px-[5rem] lg:mx-[5rem]
+                    md:px-[12rem] lg:px-[10rem] sm:border-0 
+                    bg-[url('images/nft/NFTs_mobile.png')] 
+                    lg:bg-[url('images/nft/NFTs.png')] select-none bg-center
                     bg-contain bg-no-repeat flex justify-center items-center text-center  
-                    sm:h-[400px] w-[100%] z-[5] mx-6"
-                  >
-                    <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider">
-                      {text}
-                    </h1>
-                  </div>
-                </>
-              );
-            })}
+                    h-[400px] w-[100%] z-[5] mx-6"
+            >
+              {/* <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider">
+             
+              </h1> */}
+            </div>
           </div>
         </div>
 
         <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[4] bitboy">
-          <img className="w-[150px] lg:w-[300px]" src={bitboy} alt="/" />
+          <img
+            className="w-[150px] lg:w-[200px] 2xl:w-[300px]"
+            src={bitboy}
+            alt="/"
+          />
         </div>
         {/* border */}
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -134,21 +132,25 @@ const NFT = () => {
         {/* artifact 1 */}
 
         <motion.div
-          className="absolute bottom-[10%] lg:bottom-[20%] left-[25%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] 
+          left-[15%] lg:left-[25%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
           <img
-            className="w-[100px] lg:w-[150px] floating"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px] floating"
             id="artifact"
             src={nftone}
             alt="/"
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[25%] z-[5]">
+        <motion.div
+          className="absolute bottom-[0%] 
+        left-[15%] lg:left-[25%] z-[5]"
+        >
           <img
-            className="w-[100px] lg:w-[150px]"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px]"
             id="artifact"
             src={platform}
             alt="/"
@@ -158,21 +160,21 @@ const NFT = () => {
         {/* artifact 2 */}
 
         <motion.div
-          className="absolute bottom-[20%] left-[40%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[35%] lg:left-[40%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
           <img
-            className="w-[100px] lg:w-[150px] floating"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px] floating"
             id="artifact"
             src={nfttwo}
             alt="/"
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[40%] z-[5]">
+        <motion.div className="absolute bottom-[0%] left-[35%] lg:left-[40%] z-[5]">
           <img
-            className="w-[100px] lg:w-[150px]"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px]"
             id="artifact"
             src={platformtwo}
             alt="/"
@@ -182,21 +184,21 @@ const NFT = () => {
         {/* artifact 3 */}
 
         <motion.div
-          className="absolute bottom-[20%] left-[55%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[52%] 2xl:left-[55%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
           <img
-            className="w-[100px] lg:w-[150px] floating"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px] floating"
             id="artifact"
             src={nftthree}
             alt="/"
           />
         </motion.div>
 
-        <motion.div className="absolute bottom-[0%] left-[55%] z-[5]">
+        <motion.div className="absolute bottom-[0%] left-[52%] 2xl:left-[55%] z-[5]">
           <img
-            className="w-[100px] lg:w-[150px]"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px]"
             id="artifact"
             src={platformthree}
             alt="/"
@@ -206,12 +208,12 @@ const NFT = () => {
         {/* artifact 4 */}
 
         <motion.div
-          className="absolute bottom-[20%] left-[70%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[70%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
           <img
-            className="w-[100px] lg:w-[150px] floating"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px] floating"
             id="artifact"
             src={nftfour}
             alt="/"
@@ -220,7 +222,7 @@ const NFT = () => {
 
         <motion.div className="absolute bottom-[0%] left-[70%] z-[5]">
           <img
-            className="w-[100px] lg:w-[150px]"
+            className="w-[50px] sm:w-[100px] 2xl:w-[150px]"
             id="artifact"
             src={platformfour}
             alt="/"

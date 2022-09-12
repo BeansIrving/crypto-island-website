@@ -47,7 +47,7 @@ const Gameplay = () => {
           <img
             src={gameplay}
             alt="/"
-            className="h-[auto] 2xl:h-[500px] hidden lg:inline-grid"
+            className="h-[auto] 2xl:h-[700px] hidden lg:inline-grid"
           ></img>
           <img
             src={mobile}

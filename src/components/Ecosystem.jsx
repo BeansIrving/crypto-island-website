@@ -12,9 +12,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Ecosystem = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const textData = [
-    "The Guma is a mystical, magical fruit in the Crypto Islands that also acts as the game’s native token, $GUMA. It is a source of sustenance and magic as it helps power and heal players, along with unlocking special abilities and enhancing effectiveness.",
-  ];
 
   const fadeIn = (element) => {
     gsap.from(element, {
@@ -48,27 +45,16 @@ const Ecosystem = () => {
         </div>
 
         <div className="w-full flex flex-wrap justify-center py-[30px] lg:flex-nowrap lg:justify-start lg:py-[20px]">
-          {textData.map((text) => {
-            return (
-              <>
-                <div
-                  key={text}
-                  className="bg-[url('images/ecosystem/mv-ecosystem-placeholder.webp')] sm:bg-[url('images/ecosystem/placeholder-ecosystem.webp')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6"
-                >
-                  <h1 className="font-[geliofasolada] text-xl lg:text-xl uppercase text-[#633922] tracking-wider mx-[50px] sm:mx-[60px] md:mx-[90px]">
-                    {text}
-                  </h1>
-                </div>
-                <div className="guma">
-                  <img
-                    className="h-[100%] w-[250px] pt:[20px] lg:relative lg:top-[10vh] lg:left-[-10vh] lg:w-[450px]"
-                    src={guma}
-                    alt="/"
-                  />
-                </div>
-              </>
-            );
-          })}
+          <div className="bg-[url('images/ecosystem/ecosystem_mobile.png')] sm:bg-[url('images/ecosystem/ecosystem_pc.png')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6">
+      
+          </div>
+          <div className="guma mt-12">
+            <img
+              className="h-[100%] w-[250px] pt:[20px] lg:relative lg:top-[10vh] lg:left-[-10vh] lg:w-[450px]"
+              src={guma}
+              alt="/"
+            />
+          </div>
         </div>
       </div>
     </div>

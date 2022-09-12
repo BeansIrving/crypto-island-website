@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Hero />
       <Gameplay />
-      <Character />
+      <Character /> 
       <Ecosystem />
       <NFT />
       <Staking/>

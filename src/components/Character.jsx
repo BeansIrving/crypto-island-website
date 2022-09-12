@@ -13,12 +13,21 @@ import "swiper/css/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// borders
+
+import borderright from "../images/character/RightBorder.png";
+import borderleft from "../images/character/Left_border.png";
+import vinesright from "../images/character/vines2.png";
+import vinesleft from "../images/character/vines1.png";
+
+
 // Character Images
 
 import characterone from "../images/character/characterframe1.webp";
 import charactertwo from "../images/character/characterframe2.webp";
 import characterthree from "../images/character/characterframe3.webp";
 import characterframe from "../images/character/characterframe.webp";
+
 
 
 import CZ from "../images/character/CZ.webp";
@@ -101,7 +110,6 @@ const Character = () => {
         "Host of the O show, a cryptocurrency media outlet, and a successful cryptocurrency analyst, she became the biggest female crypto YouTuber as we speak!",
       avatar: Wendy,
     },
-    
   ];
 
   gsap.registerPlugin(ScrollTrigger);
@@ -140,16 +148,37 @@ const Character = () => {
 
   useEffect(() => {
     fadeInDown(".frame-anim");
-    fadeInUp(".text-anim")
+    fadeInUp(".text-anim");
   }, []);
 
   return (
     <div
       className="flex justify-center items-center 
-      bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
-      h-[120vh] z-40"
+      bg-[url('images/backgrounds/bg-character.png')] bg-cover bg-center
+      h-[110vh] z-40"
     >
-      <div className="nft-content h-[120vh] max-w-[1240px]">
+      <div className="nft-content h-[110vh]">
+
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+
+        <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.png')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+
+        <div className="absolute right-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderright} alt="/" />
+        </div>
+
+        <div className="absolute left-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderleft} alt="/" />
+        </div>
+
+        <div className="absolute right-0 top-[5%] z-[4] border-lr">
+          <img className="w-[100%]" src={vinesright} alt="/" />
+        </div>
+
+        <div className="absolute left-0 top-[5%] z-[4] border-lr">
+          <img className="w-[100%]" src={vinesleft} alt="/" />
+        </div>
+
         <div className="flex-col justify-center items-center">
           <div className="my-0 sm:my-10">
             <h1
@@ -189,14 +218,16 @@ const Character = () => {
                         py-0 sm:py-5 frame-anim"
                       >
                         <img
-                          className="h-[100px] w-[100px] sm:h-[350px]"
+                          className="h-[100px] w-[100px] sm:h-[500px]"
                           src={item.avatar}
                           alt="/"
                         ></img>
                       </div>
 
                       <div className="text-anim">
-                        <h1 className="font-[bluenight] uppercase tracking-widest text-[#652706]">{item.name}</h1>
+                        <h1 className="font-[bluenight] uppercase tracking-widest text-[#652706]">
+                          {item.name}
+                        </h1>
                         <p>{item.description}</p>
                       </div>
                     </div>
