@@ -183,7 +183,7 @@ const Character = () => {
           <div className="my-0 sm:my-10">
             <h1
               className="text-center font-[bluenight] text-[#652706] text-2xl uppercase
-            px-[25rem] sm:px-[25rem]"
+            px-[25rem] sm:px-[25rem] frame-anim"
             >
               Play as your favorite crypto personalities in different game
               modes!
