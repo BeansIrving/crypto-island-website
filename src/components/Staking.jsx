@@ -3,6 +3,9 @@ import StakingImg from "../images/staking/Staking and Yield.webp";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import OwnLandText from '../images/staking/OwnLandText.png';
+import PlayingText from '../images/staking/PlayingText.png';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Staking = () => {
