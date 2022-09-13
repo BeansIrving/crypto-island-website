@@ -49,7 +49,7 @@ const NFT = () => {
       scrollTrigger: {
         trigger: element,
         start: "bottom bottom",
-        markers: true,
+        markers: false,
       },
       scale: 1,
       x: 0,
