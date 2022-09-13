@@ -213,6 +213,7 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+   
     -webkit-mask-image: linear-gradient(
       90deg,
       transparent 5%,

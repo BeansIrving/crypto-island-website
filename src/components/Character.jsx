@@ -26,7 +26,7 @@ import vinesleft from "../images/character/vines1.png";
 import characterone from "../images/character/characterframe1.webp";
 import charactertwo from "../images/character/characterframe2.webp";
 import characterthree from "../images/character/characterframe3.webp";
-import characterframe from "../images/character/characterframe.webp";
+
 
 
 
@@ -159,9 +159,9 @@ const Character = () => {
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.png')] bg-cover bg-center
-      h-[105vh] z-40"
+      h-[130vh] sm:h-[105vh] z-40"
     >
-      <div className="nft-content h-[105vh]">
+      <div className="nft-content h-[130vh] sm:h-[105vh]">
 
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 

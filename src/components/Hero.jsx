@@ -17,8 +17,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { motion } from "framer-motion";
 
-
-
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
   const fadeIn = (element) => {
@@ -76,7 +74,7 @@ const Hero = () => {
     });
   }
 
-  function parallaxCloud2(){
+  function parallaxCloud2() {
     gsap.set("#cloud-anim-two", {
       x: 200,
     });
@@ -123,11 +121,11 @@ const Hero = () => {
           {/* vines */}
 
           <div className="absolute top-0 left-0 z-[3] grass-anim">
-            <img className="h-[350px] fadeInVines" src={vineone} alt="/" />
+            <img className="h-[250px] sm:h-[350px] fadeInVines" src={vineone} alt="/" />
           </div>
 
           <div className="absolute top-0 right-0 z-[3] grass-anim">
-            <img className="fadeInVines w-[250px]" src={vinetwo} alt="/" />
+            <img className="fadeInVines w-[150px] sm:w-[250px]" src={vinetwo} alt="/" />
           </div>
 
           {/* clouds */}
