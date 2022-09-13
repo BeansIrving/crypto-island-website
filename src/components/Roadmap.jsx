@@ -141,7 +141,7 @@ const Roadmap = () => {
         scrollTrigger: {
           trigger: Stone5.current,
           start: "-200px bottom",
-          end: "100px center",
+          end: "0px center",
           scrub: 1,
           markers: false,
         },
@@ -155,7 +155,7 @@ const Roadmap = () => {
         scrollTrigger: {
           trigger: Stone6.current,
           start: "-200px bottom",
-          end: "100px center",
+          end: "0px center",
           scrub: 2,
           markers: false,
         },
@@ -169,7 +169,7 @@ const Roadmap = () => {
         scrollTrigger: {
           trigger: Stone7.current,
           start: "-200px bottom",
-          end: "100px center",
+          end: "0px center",
           scrub: 3,
           markers: false,
         },
@@ -183,9 +183,9 @@ const Roadmap = () => {
         scrollTrigger: {
           trigger: Stone8.current,
           start: "-200px bottom",
-          end: "100px center",
+          end: "0px center",
           scrub: 4,
-          markers: false,
+          markers: true,
         },
         y: 0,
       }
@@ -194,10 +194,10 @@ const Roadmap = () => {
 
   return (
     <div
-      className="flex justify-center items-center w-[100%] h-[100vh]  bg-[url(images/roadmap/bg1st.webp)] bg-no-repeat bg-cover z-[3]"
+      className="flex justify-center items-center w-[100%] h-[140vh] mb:h-[100vh]  bg-[url(images/roadmap/bg1st.webp)] bg-no-repeat bg-cover z-[3]"
       id="roadmap-section"
     >
-      <div className="nft-content h-[100vh] ">
+      <div className="nft-content h-[140vh] mb:h-[100vh] ">
         <div className="absolute top-0 mt-[200px]">
           <img src={Banner} className="w-[200px]" alt="/" />
         </div>
