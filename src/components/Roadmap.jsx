@@ -70,6 +70,10 @@ const Roadmap = () => {
   const Stone2 = useRef(null);
   const Stone3 = useRef(null);
   const Stone4 = useRef(null);
+  const Stone5 = useRef(null);
+  const Stone6 = useRef(null);
+  const Stone7 = useRef(null);
+  const Stone8 = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -128,29 +132,64 @@ const Roadmap = () => {
         y: 0,
       }
     );
+
+    gsap.fromTo(
+      Stone5.current,
+      { y: 200 },
+      {
+        scrollTrigger: {
+          trigger: Stone5.current,
+          start: "-200px bottom",
+          end: "100px center",
+          scrub: 1,
+          markers: false,
+        },
+        y: 0,
+      }
+    );
+    gsap.fromTo(
+      Stone6.current,
+      { y: 200 },
+      {
+        scrollTrigger: {
+          trigger: Stone6.current,
+          start: "-200px bottom",
+          end: "100px center",
+          scrub: 2,
+          markers: false,
+        },
+        y: 0,
+      }
+    );
+    gsap.fromTo(
+      Stone7.current,
+      { y: 200 },
+      {
+        scrollTrigger: {
+          trigger: Stone7.current,
+          start: "-200px bottom",
+          end: "100px center",
+          scrub: 3,
+          markers: false,
+        },
+        y: 0,
+      }
+    );
+    gsap.fromTo(
+      Stone8.current,
+      { y: 200 },
+      {
+        scrollTrigger: {
+          trigger: Stone8.current,
+          start: "-200px bottom",
+          end: "100px center",
+          scrub: 4,
+          markers: false,
+        },
+        y: 0,
+      }
+    );
   }, []);
-
-  const images = [Stage1, Stage2, Stage3, Stage4];
-  const [imgIndex, setImgIndex] = useState(0);
-  // const [image, setImage] = useState(Stage1);
-
-  // const onLeftChangeHandler = () => {
-  //   if (imgIndex > 0) {
-  //     setImgIndex(imgIndex - 1);
-  //   }
-  //   console.log(imgIndex);
-  // };
-
-  // const onRightChangeHandler = () => {
-  //   if (imgIndex < 3) {
-  //     setImgIndex(imgIndex + 1);
-  //   }
-  //   console.log(imgIndex);
-  // };
-
-  // useEffect(() => {
-  //   setImage(images[imgIndex]);
-  // }, [imgIndex]);
 
   return (
     <div
@@ -228,49 +267,22 @@ const Roadmap = () => {
             className="mySwiperTeamV2-tablet mt-[300px] z-[4] inline-grid 2xl:hidden"
           >
             <SwiperSlide className="mySwiperTeamV2-tablet-slide z-[]">
-              <img src={Stage1} alt="/" ref={Stone1} />
+              <img src={Stage1} alt="/" ref={Stone5} />
             </SwiperSlide>
 
             <SwiperSlide className="mySwiperTeamV2-tablet-slide">
-              <img src={Stage2} alt="/" ref={Stone2} />
+              <img src={Stage2} alt="/" ref={Stone6} />
             </SwiperSlide>
 
             <SwiperSlide className="mySwiperTeamV2-tablet-slide">
-              <img src={Stage3} alt="/" ref={Stone3} />
+              <img src={Stage3} alt="/" ref={Stone7} />
             </SwiperSlide>
 
             <SwiperSlide className="mySwiperTeamV2-tablet-slide">
-              <img src={Stage4} alt="/" ref={Stone4} />
+              <img src={Stage4} alt="/" ref={Stone8} />
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* 
-      <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[-2] lg:flex hidden items-center">
-        <div className="flex justify-center gap-10">
-          <img src={Stage1} className="w-[300px]" ref={Stone1} alt="/" />
-          <img src={Stage2} className="w-[300px]" ref={Stone2} alt="/" />
-          <img src={Stage3} className="w-[300px]" ref={Stone3} alt="/" />
-          <img src={Stage4} className="w-[300px]" ref={Stone4} alt="/" />
-        </div>
-      </div> */}
-
-        {/* <div className="w-full max-w-[1240px] h-full justify-end flex-col p-[60px] z-[100] lg:hidden flex">
-        <div className="flex justify-center gap-2 items-center px-4">
-          <h1
-            className="font-bold text-3xl text-[#eb7a45] p-2 bg-[#ffffffe0] rounded-2xl text-center pb-4 shadow-xl select-none"
-            onClick={onLeftChangeHandler}
-          >
-            &lt;
-          </h1>
-          <img src={image} className="w-[300px] select-none" alt="/" />
-          <h1
-            className="font-bold text-3xl text-[#eb7a45] p-2 bg-[#ffffffe0] rounded-2xl text-center pb-4 shadow-xl select-none"
-            onClick={onRightChangeHandler}
-          >
-            &gt;
-          </h1>
-        </div>
-      </div> */}
         <div className="absolute left-0 top-0 z-[3] hidden 2xl:inline-grid">
           <img src={Vines} className="h-[100vh] " alt="/" />
         </div>
