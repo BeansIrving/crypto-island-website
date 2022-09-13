@@ -3,13 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 // images
 
 import Light from "../images/roadmap/light2nd.webp";
-import Vines from "../images/roadmap/vinesfront.webp";
-import Stage1 from "../images/roadmap/Stage1_1.webp";
+import Vines from "../images/roadmap/vinesfront.png";
+import Stage1 from "../images/roadmap/Stage1_1.png";
 import Stage2 from "../images/roadmap/Stage2_1.webp";
 import Stage3 from "../images/roadmap/Stage3_1.webp";
 import Stage4 from "../images/roadmap/Stage4_1.webp";
 import Plants from "../images/roadmap/Plants.webp";
 import Banner from "../images/roadmap/roadmap.webp";
+import Arrow from "../images/roadmap/arrow.png";
 
 // Swiper Import
 
@@ -283,6 +284,14 @@ const Roadmap = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+
+        {/* <div>
+          <img
+            src={Arrow}
+            className="z-[100] absolute w-[60px] right-[20px] bottom-[35%] floating-x lg:hidden"
+            alt="/"
+          />
+        </div> */}
         <div className="absolute left-0 top-0 z-[3] hidden 2xl:inline-grid">
           <img src={Vines} className="h-[100vh] " alt="/" />
         </div>
