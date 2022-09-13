@@ -1,34 +1,72 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
+import BuyTax from "../images/tokenomics/BuyTax.png";
+import SellTax from "../images/tokenomics/SellTax.png";
+import SymbolOne from "../images/tokenomics/SymbolOne.png";
+import SymbolTwo from "../images/tokenomics/SymbolTwo.png";
 // images
 
 import Guma from "../images/tokenomics/guma.webp";
 import Banner from "../images/tokenomics/banner.webp";
 
-const Tokenomics = () => {
-  return (
-    <div className=" w-full h-[150vh] md:h-[150vh] xl:h-[70vh] bg-cover bg-[url(images/backgrounds/bg-tokenomics.webp)] bg-no-repeat flex justify-center py-20" id="tokenomics-section">
-      <div className=" w-full max-w-[1240px] flex py-20 items-center flex-wrap justify-center ">
 
-        <div className="order-2" id="section-tokenomics">
-          <img src={Guma} className="md:w-[400px] w-[350px] rounded-3xl" alt="/"/>
+const Tokenomics = () => {
+
+  return (
+    <div
+      className=" w-full h-[155vh] md:h-[140vh] lg:h-[140vh] xl:h-[100vh] bg-cover bg-[url(images/backgrounds/bg-tokenomics.webp)] bg-no-repeat flex justify-center py-20"
+      id="tokenomics-section"
+    >
+      <div className=" w-full max-w-[1240px] flex py-[150px] items-center flex-wrap justify-center lg:px-10 p-5">
+        <div className="lg:order-2 order-1" id="section-tokenomics">
+          <img
+            src={Guma}
+            className="md:w-[400px] w-[320px] rounded-3xl"
+            alt="/"
+          />
         </div>
 
-        <div className=" flex flex-col lg:flex-col md:justify-center justify-center items-center md:items-center py-10 md:pl-10 gap-10 flex-wrap p-5 order-1 " id="section-tokenomics">
-          <div>
-            <img src={Banner} className="w-[400px]" alt="/"/>
+        <div
+          className="  order-2 lg:order-1 flex flex-col lg:flex-col md:justify-center justify-center items-center md:items-center md:pl-10 flex-wrap px-5  "
+          id="section-tokenomics"
+        >
+          <div className="md:my-[50px]">
+            <img src={Banner} className="w-[400px]" alt="/" />
           </div>
-          <div className="p-[60px] bg-[url(images/tokenomics/placeholder2.webp)] 
-          bg-contain bg-no-repeat bg-center h-[300px] text-center flex items-center 
-          font-bold text-[16px] text-[#744123] xsm:h-[400px] xsm:p-[100px] 
-          sm:p-[140px] md:p-[100px] md:bg-[url(images/tokenomics/placeholder.webp)] 
-          lg:w-[700px] lg:p-5 lg:h-[150px]">
-            <h1 >
-              A private sale will be held for players and supporters to buy
-              $GUMA which will jumpstart their CryptoIsland journeys! More plans
-              to list $GUMA on A-list exchange sites are laid in adherence to
-              CryptoIsland's roadmap!
-            </h1>
+          <div className="sm:w-[500px]  sm:h-[400px] w-[300px] h-[300px] flex-col gap-4 flex relative">
+            <div className="w-full flex flex-col justify-center items-center font-[geliofasolada] text-white text-2xl text-center tracking-wider gap-2 z-[1]">
+              <img src={BuyTax} className="w-[150px] md:w-[200px]" alt="/" />
+              <h1 className=" drop-shadow-lg">
+                <span className="text-3xl">
+                  3
+                </span>
+                % Marketing
+              </h1>
+              <h1 className=" drop-shadow-lg">
+                <span className="text-3xl">1</span>% Liquidity
+              </h1>
+              <h1 className=" drop-shadow-lg">
+                <span className="text-3xl">1</span>% Buyback, Burn + Lotteries &
+                Competitions
+              </h1>
+            </div>
+            <div className="w-full flex flex-col justify-center items-center font-[geliofasolada]  text-white text-2xl text-center tracking-wider gap-2 z-[1]">
+              <img src={SellTax} className="w-[150px] md:w-[200px]" alt="/" />
+              <h1 className=" drop-shadow-lg">
+                <span className="text-3xl">3</span>% Marketing
+              </h1>
+              <h1 className=" drop-shadow-lg">
+                <span className="text-3xl">2</span>%Liquidity
+              </h1>
+            </div>
+
+            <img
+              src={SymbolOne}
+              className="absolute w-[80px] md:w-[130px] z-[0] md:right-[20px] right-[0px]"
+            />
+            <img
+              src={SymbolTwo}
+              className="absolute w-[80px] md:w-[130px] z-[0] md:left-[20px] left-[0px] md:bottom-[20px] bottom-[0px]"
+            />
           </div>
         </div>
       </div>

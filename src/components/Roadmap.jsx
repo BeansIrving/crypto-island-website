@@ -185,7 +185,7 @@ const Roadmap = () => {
           start: "-200px bottom",
           end: "0px center",
           scrub: 4,
-          markers: true,
+          markers: false,
         },
         y: 0,
       }
