@@ -48,8 +48,8 @@ const NFT = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "-70% center",
-        markers: false,
+        start: "bottom bottom",
+        markers: true,
       },
       scale: 1,
       x: 0,
