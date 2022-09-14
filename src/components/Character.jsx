@@ -119,8 +119,10 @@ const Character = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "23% center",
+        start: "1050% center",
+        end: "1050%",
         markers: false,
+     
       },
       opacity: 1,
       y: 0,
@@ -137,8 +139,10 @@ const Character = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "-790% center",
+        start: "-550% center",
+        end: "-547%",
         markers: false,
+      
       },
       opacity: 1,
       y: 0,
