@@ -9,14 +9,14 @@ const Gameplay = () => {
     <div
       className="flex justify-center items-center
       bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-center
-      h-[auto] lg:h-[115.5vh] w-[100%] -z-50 px-[2rem] lg:px-[10rem] py-[5rem]"
+      h-[auto]  w-[100%] -z-50 px-[2rem] lg:px-[10rem] py-[5rem]"
       id="gameplay-section"
     >
       <div className="flex-col justify-center items-center">
         <div>
           <h1
             className="text-left font-[roboto] font-bold uppercase 
-          text-5xl text-[#513318] pb-10"
+          text-5xl text-[#513318] py-10"
           >
             Gameplay
           </h1>

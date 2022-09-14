@@ -61,14 +61,14 @@ const Hero = () => {
 
   function parallaxCloud() {
     gsap.set("#cloud-anim", {
-      x: -150,
+      x: -250,
     });
     gsap.to("#cloud-anim", {
       scrollTrigger: {
         trigger: "#cloud-anim",
         start: "top top",
         markers: false,
-        scrub: 1,
+        scrub: 5,
       },
       x: 300,
     });
@@ -76,14 +76,14 @@ const Hero = () => {
 
   function parallaxCloud2() {
     gsap.set("#cloud-anim-two", {
-      x: 200,
+      x: 250,
     });
     gsap.to("#cloud-anim-two", {
       scrollTrigger: {
         trigger: "#cloud-anim-two",
         start: "top top",
         markers: false,
-        scrub: 1,
+        scrub: 5,
       },
       x: -100,
     });

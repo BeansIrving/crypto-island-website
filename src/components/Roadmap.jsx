@@ -10,12 +10,18 @@ import Stage3 from "../images/roadmap/Stage3_1.webp";
 import Stage4 from "../images/roadmap/Stage4_1.webp";
 import Plants from "../images/roadmap/Plants.webp";
 import Banner from "../images/roadmap/roadmap.webp";
-import Arrow from "../images/roadmap/arrow.png";
+import Signage from "../images/roadmap/Signage.png";
 
 // Swiper Import
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs, EffectCoverflow } from "swiper";
+import {
+  FreeMode,
+  Navigation,
+  Thumbs,
+  EffectCoverflow,
+  Pagination,
+} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -30,6 +36,9 @@ const Roadmap = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const light = useRef(null);
+
+  const [showResults, setShowResults] = React.useState(true);
+  const onClick = () => setShowResults(false);
 
   useEffect(() => {
     gsap.fromTo(
@@ -254,7 +263,7 @@ const Roadmap = () => {
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            grabCursor={true}
+            pagination={true}
             centeredSlides={true}
             coverflowEffect={{
               rotate: 0,
@@ -264,10 +273,11 @@ const Roadmap = () => {
               slideShadows: false,
             }}
             thumbs={{ swiper: thumbsSwiper }}
-            modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
+            modules={[EffectCoverflow, FreeMode, Thumbs, Pagination]}
+            onClick={onClick}
             className="mySwiperTeamV2-tablet mt-[300px] z-[4] inline-grid 2xl:hidden"
           >
-            <SwiperSlide className="mySwiperTeamV2-tablet-slide z-[]">
+            <SwiperSlide className="mySwiperTeamV2-tablet-slide">
               <img src={Stage1} alt="/" ref={Stone5} />
             </SwiperSlide>
 
@@ -292,9 +302,17 @@ const Roadmap = () => {
             alt="/"
           />
         </div> */}
+        
         <div className="absolute left-0 top-0 z-[3] hidden 2xl:inline-grid">
           <img src={Vines} className="h-[100vh] " alt="/" />
         </div>
+        {showResults ? (
+          <div className="absolute bottom-5 left-0 ml-2 z-[1] inline-grid 2xl:hidden z-[4] floating">
+            <img src={Signage} className="w-[150px]" alt="/" />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

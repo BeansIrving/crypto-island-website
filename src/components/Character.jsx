@@ -20,15 +20,11 @@ import borderleft from "../images/character/Left_border.png";
 import vinesright from "../images/character/vines2.png";
 import vinesleft from "../images/character/vines1.png";
 
-
 // Character Images
 
 import characterone from "../images/character/characterframe1.webp";
 import charactertwo from "../images/character/characterframe2.webp";
 import characterthree from "../images/character/characterframe3.webp";
-
-
-
 
 import CZ from "../images/character/CZ.webp";
 import Elon from "../images/character/Elon.webp";
@@ -39,6 +35,7 @@ import Ross from "../images/character/Ross.webp";
 import Wendy from "../images/character/Wendy.webp";
 
 const Character = () => {
+  
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const character = [
@@ -117,7 +114,7 @@ const Character = () => {
   const fadeInDown = (element) => {
     gsap.from(element, {
       y: -300,
-      opacity:0,
+      opacity: 0,
     });
     gsap.to(element, {
       scrollTrigger: {
@@ -125,7 +122,7 @@ const Character = () => {
         start: "23% center",
         markers: false,
       },
-      opacity:1,
+      opacity: 1,
       y: 0,
       duration: 1,
       ease: "bounce",
@@ -135,7 +132,7 @@ const Character = () => {
   const fadeInUp = (element) => {
     gsap.from(element, {
       y: 250,
-      opacity:0,
+      opacity: 0,
     });
     gsap.to(element, {
       scrollTrigger: {
@@ -143,7 +140,7 @@ const Character = () => {
         start: "-790% center",
         markers: false,
       },
-      opacity:1,
+      opacity: 1,
       y: 0,
       duration: 1,
       ease: "bounce",
@@ -162,7 +159,6 @@ const Character = () => {
       h-[130vh] sm:h-[105vh] z-40"
     >
       <div className="nft-content h-[130vh] sm:h-[105vh]">
-
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.png')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -216,7 +212,7 @@ const Character = () => {
               {character.map((item) => {
                 return (
                   <SwiperSlide className="mySwiperTeam-slide">
-                    <div key={item.name} className="px-7">
+                    <div key={item} className="px-7">
                       <div
                         className="flex justify-center 
                         py-0 sm:py-5 frame-anim"
