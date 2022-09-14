@@ -39,11 +39,13 @@ const Gameplay = () => {
           text-5xl text-[#513318] py-10"
           >
             <span className="text-[#7d642f]">&#124;</span>
-            <span className="pl-5">Game Mechanics and Perks</span>
+            <span className="pl-5 tracking-widest">
+              Game Mechanics and Perks
+            </span>
           </h1>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center floating">
           <img
             src={gameplay}
             alt="/"
