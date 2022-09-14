@@ -1,4 +1,5 @@
 import Character from "./components/Character";
+import Cryptobridge from "./components/Cryptobridge";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import Gameplay from "./components/Gameplay";
@@ -18,6 +19,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Cryptobridge />
       <Gameplay />
       <Character /> 
       <Ecosystem />

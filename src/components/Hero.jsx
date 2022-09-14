@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
+  
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.2,

@@ -307,7 +307,7 @@ const Roadmap = () => {
           <img src={Vines} className="h-[100vh] " alt="/" />
         </div>
         {showResults ? (
-          <div className="absolute bottom-5 left-0 ml-2 z-[1] inline-grid 2xl:hidden z-[4] floating">
+          <div className="absolute bottom-5 left-0 ml-2 inline-grid 2xl:hidden z-[4] floating">
             <img src={Signage} className="w-[150px]" alt="/" />
           </div>
         ) : (
