@@ -4,6 +4,10 @@ import React from "react";
 
 import cross from "../images/cryptobridge/cross.webp";
 
+// Imports
+
+import { motion } from "framer-motion";
+
 const Modal = ({ open, onClose }) => {
   if (!open) return null;
   return (
@@ -16,12 +20,14 @@ const Modal = ({ open, onClose }) => {
         <div className="floating">
           <div className="select-non max-w-[1240px] flex justify-end">
             <div className="absolute top-[4rem] mr-[4rem]">
-              <img
-                className="w-[40px] cursor-pointer drop-shadow-2xl"
-                src={cross}
-                alt="/"
-                onClick={onClose}
-              />
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <img
+                  className="w-[40px] cursor-pointer drop-shadow-2xl"
+                  src={cross}
+                  alt="/"
+                  onClick={onClose}
+                />
+              </motion.div>
             </div>
             <div
               className=" bg-[#cfba89] m-5 sm:m-12 

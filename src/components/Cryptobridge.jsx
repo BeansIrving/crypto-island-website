@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 // for images
 
-import title from "../images/cryptobridge/CRYPTOBRIDGEV3.png";
+import title from "../images/cryptobridge/CRYPTOBRIDGEV3.webp";
 import titleClick from "../images/cryptobridge/CRYPTOBRIDGECLICK.webp";
 import fog from "../images/cryptobridge/fog.png";
 import arrow from "../images/cryptobridge/arrow.webp";
