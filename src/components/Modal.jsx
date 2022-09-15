@@ -19,10 +19,10 @@ const Modal = ({ open, onClose }) => {
       <div className="nft-content">
         <div className="floating">
           <div className="select-non max-w-[1240px] flex justify-end">
-            <div className="absolute top-[4rem] mr-[4rem]">
+            <div className="absolute top-[3.5rem] mr-[3.5rem]">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <img
-                  className="w-[40px] cursor-pointer drop-shadow-2xl"
+                  className="w-[65px] cursor-pointer drop-shadow-2xl"
                   src={cross}
                   alt="/"
                   onClick={onClose}
