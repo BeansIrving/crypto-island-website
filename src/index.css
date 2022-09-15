@@ -187,6 +187,10 @@
     .border-lr {
       visibility: hidden;
     }
+
+    ::-webkit-scrollbar {
+      width: 1.5vh;
+    }
   }
 
   .mySwiperTeam:hover {

@@ -34,8 +34,8 @@ import Mark from "../images/character/Mark.webp";
 import Ross from "../images/character/Ross.webp";
 import Wendy from "../images/character/Wendy.webp";
 
-const Character = () => {
-  
+const Character = ({ open, onClose }) => {
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const character = [
@@ -155,12 +155,15 @@ const Character = () => {
     fadeInDown(".frame-anim");
     fadeInUp(".text-anim");
   }, []);
-
+  
+  if(!open) return null;
+  
   return (
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.png')] bg-cover bg-center
       h-[130vh] sm:h-[105vh] z-40"
+   
     >
       <div className="nft-content h-[130vh] sm:h-[105vh]">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -212,6 +215,7 @@ const Character = () => {
               thumbs={{ swiper: thumbsSwiper }}
               modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
               className="mySwiperTeam"
+          
             >
               {character.map((item) => {
                 return (

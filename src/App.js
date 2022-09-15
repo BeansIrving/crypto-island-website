@@ -1,3 +1,5 @@
+
+
 import Character from "./components/Character";
 import Cryptobridge from "./components/Cryptobridge";
 import Ecosystem from "./components/Ecosystem";
@@ -15,6 +17,7 @@ import Staking from "./components/Staking";
 import Tokenomics from "./components/Tokenomics";
 
 function App() {
+
   return (
     <>
       <Navbar />

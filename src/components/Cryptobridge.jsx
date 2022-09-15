@@ -3,18 +3,29 @@ import React, { useEffect, useState, useRef } from "react";
 // for images
 
 import title from "../images/cryptobridge/CRYPTOBRIDGEV3.png";
+import titleClick from "../images/cryptobridge/CRYPTOBRIDGECLICK.webp";
 import fog from "../images/cryptobridge/fog.png";
+import arrow from "../images/cryptobridge/arrow.webp";
 
 // gsap imports
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { motion } from "framer-motion";
 
-const Cryptobridge = () => {
-  gsap.registerPlugin(ScrollTrigger);
+//
 
-  const [showResults, setShowResults] = React.useState(true);
+import Character from "./Character";
+import Modal from "./Modal";
+
+const Cryptobridge = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const [visible, setVisible] = useState(false);
+  const onClick = () => setVisible(true);
+
+  gsap.registerPlugin(ScrollTrigger);
 
   function parallaxCloudRight() {
     gsap.set("#cloud-anim-right", {
@@ -24,7 +35,7 @@ const Cryptobridge = () => {
     gsap.to("#cloud-anim-right", {
       scrollTrigger: {
         trigger: "#cloud-anim-right",
-        start: "10% center",
+        start: "20% center",
         end: "50% 35%",
         markers: false,
         scrub: 3,
@@ -42,7 +53,7 @@ const Cryptobridge = () => {
     gsap.to("#cloud-anim-left", {
       scrollTrigger: {
         trigger: "#cloud-anim-left",
-        start: "10% center",
+        start: "20% center",
         end: "50% 35%",
         markers: false,
         scrub: 3,
@@ -50,31 +61,30 @@ const Cryptobridge = () => {
       opacity: 0,
       x: -750,
     });
-    setShowResults(true);
   }
 
-    function fadeInLogo(element) {
-      gsap.set(element, {
-        scale: 0.8,
-        opacity: 0,
-      });
-      gsap.to(element, {
-        scrollTrigger: {
-          trigger: element,
-          start: "-10% center",
-          end: "20%",
-          markers: false,
-          scrub: 1,
-        },
-        opacity: 1,
-        scale: 1,
-        duration: 2,
-        ease: "elastic",
-        stagger: {
-          amount: 0.3,
-        },
-      });
-    }
+  function fadeInLogo(element) {
+    gsap.set(element, {
+      scale: 0.8,
+      opacity: 0,
+    });
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "-40% center",
+        end: "-20%",
+        markers: false,
+        scrub: 1,
+      },
+      opacity: 1,
+      scale: 1,
+      duration: 2,
+      ease: "elastic",
+      stagger: {
+        amount: 0.3,
+      },
+    });
+  }
 
   useEffect(() => {
     const id = "section-bridge";
@@ -86,9 +96,9 @@ const Cryptobridge = () => {
     }
   }, []);
 
-    useEffect(() => {
-      fadeInLogo("#crypto-bridge");
-    }, []);
+  useEffect(() => {
+    fadeInLogo("#crypto-bridge");
+  }, []);
 
   return (
     <div
@@ -96,29 +106,57 @@ const Cryptobridge = () => {
             bg-[url('images/backgrounds/bg-bridge.png')] bg-cover bg-center bg-no-repeat
             h-[112vh] w-[100%]"
     >
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
       <div className="hero-content h-[112vh] w-[100%]" id="section-bridge">
-        
-        <motion.div
-          className="select-none z-[2]"
+        <motion.button
+          className="select-none z-[2] hidden lg:inline-block"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => setOpenModal(true)}
+          id="crypto-bridge"
         >
           <div className="floating">
             <img
               className="w-[500px] select-none cursor-pointer"
-              id="crypto-bridge"
               src={title}
               alt="/"
             />
           </div>
-        </motion.div>
+        </motion.button>
 
-        <div className="absolute bottom-[30%] left-[20%] z-[1] floating">
-          <img className="w-[1000px]" id="cloud-anim-left" src={fog} alt="/" />
+        <motion.button
+          className="select-none z-[2]"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setOpenModal(true)}
+          id="crypto-bridge"
+        >
+          <div className="floating">
+            {visible ? (
+              <img
+                className="w-[500px] select-none cursor-pointer inline-block lg:hidden"
+                id="crypto-bridge"
+                src={title}
+                alt="/"
+              />
+            ) : (
+              <img
+                className="w-[500px] select-none cursor-pointer inline-block lg:hidden"
+                id="crypto-bridge"
+                src={titleClick}
+                alt="/"
+                onClick={() => setVisible(true)}
+              />
+            )}
+          </div>
+        </motion.button>
+
+        <div className="absolute bottom-[25%] left-[0%] z-[1] floating">
+          <img className="w-[1400px]" id="cloud-anim-left" src={fog} alt="/" />
         </div>
 
-        <div className="absolute bottom-[30%] right-[10] z-[1]">
-          <img className="w-[1000px]" id="cloud-anim-right" src={fog} alt="/" />
+        <div className="absolute bottom-[25%] right-[0%] z-[1]">
+          <img className="w-[1400px]" id="cloud-anim-right" src={fog} alt="/" />
         </div>
       </div>
     </div>
