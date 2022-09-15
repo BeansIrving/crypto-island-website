@@ -22,6 +22,12 @@ module.exports = {
 
       '2xl': '1500px',
       // => @media (min-width: 1536px) { ... }
+
+      '3xl': '1600px',
+      // => @media (min-width: 1536px) { ... }
+
+      '4xl': '1700px',
+      // => @media (min-width: 1536px) { ... }
     },
     
   },

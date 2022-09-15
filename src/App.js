@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import NFT from "./components/NFT";
 
 import Partners from "./components/Partners";
+import PlayNow from "./components/PlayNow";
 
 import Roadmap from "./components/Roadmap";
 import Staking from "./components/Staking";
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <Hero />
       <Cryptobridge />
+      <PlayNow/>
       <Gameplay />
       <Character /> 
       <Ecosystem />
