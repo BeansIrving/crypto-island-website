@@ -132,20 +132,20 @@ const PlayNow = () => {
       </div>
 
       <div
-        className="z-[10] absolute bottom-[80px] sm:bottom-[50px] md:bottom-[30px] lg:bottom-[10px]"
+        className="z-[10] md:flex hidden absolute bottom-[80px] sm:bottom-[50px] md:bottom-[30px] lg:bottom-[10px]"
         ref={satoshi}
       >
         <img src={[Satoshi]} className="w-[900px]" />
       </div>
 
-      <div className="flex flex-row-reverse w-full h-full z-[100] absolute">
+      <div className="flex flex-row md:flex-row-reverse w-full h-full z-[100] absolute justify-center md:justify-start ">
         <VideoModal
           open={open}
           onClose={() => {
             setOpen(false);
           }}
         />
-        <div className="flex flex-col p-[150px] w-[50%] gap-10 justify-center items-center">
+        <div className="flex flex-col md:p-[150px] md:w-[50%] gap-10 justify-center items-center">
           <motion.div
             ref={play}
             whileHover={{ scale: 1.05 }}
