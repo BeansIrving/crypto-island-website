@@ -1,28 +1,28 @@
-import React from "react";
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-import Light from "../images/playnow/Light2.png";
-import Satoshi from "../images/playnow/satoshi.png";
-import Play2D from "../images/playnow/play2d.png";
-import Play3D from "../images/playnow/play3dbeta.png";
-import Sc1 from "../images/playnow/screenshots/sc1.PNG";
-import Play from "../images/playnow/play.png";
-import Play2 from "../images/playnow/play2.png";
-import { motion } from "framer-motion";
-import cross from "../images/cryptobridge/cross.webp";
-import { useState } from "react";
-import Video from "../images/playnow/CryptoVideo.mp4";
+import React from "react"
+import { useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect } from "react"
+import Light from "../images/playnow/Light2.png"
+import Satoshi from "../images/playnow/satoshi.png"
+import Play2D from "../images/playnow/play2d.png"
+import Play3D from "../images/playnow/play3dbeta.png"
+import Sc1 from "../images/playnow/screenshots/sc1.PNG"
+import Play from "../images/playnow/play.png"
+import Play2 from "../images/playnow/play2.png"
+import { motion } from "framer-motion"
+import cross from "../images/cryptobridge/cross.webp"
+import { useState } from "react"
+import Video from "../images/playnow/CryptoVideo.mp4"
 
 const PlayNow = () => {
-  const light = useRef(null);
-  const opacity = useRef(null);
-  const platform = useRef(null);
-  const satoshi = useRef(null);
-  const play = useRef(null);
+  const light = useRef(null)
+  const opacity = useRef(null)
+  const platform = useRef(null)
+  const satoshi = useRef(null)
+  const play = useRef(null)
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     gsap.fromTo(
@@ -38,8 +38,8 @@ const PlayNow = () => {
         },
         x: 0,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -55,8 +55,8 @@ const PlayNow = () => {
         },
         opacity: 0,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -71,8 +71,8 @@ const PlayNow = () => {
         },
         y: 0,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -88,8 +88,8 @@ const PlayNow = () => {
         },
         x: 0,
       }
-    );
-  }, []);
+    )
+  }, [])
 
   useEffect(() => {
     gsap.fromTo(
@@ -105,8 +105,8 @@ const PlayNow = () => {
         scale: 1,
         ease: "bounce",
       }
-    );
-  }, []);
+    )
+  }, [])
 
   return (
     <div className="w-full h-[125vh] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
@@ -142,7 +142,7 @@ const PlayNow = () => {
         <VideoModal
           open={open}
           onClose={() => {
-            setOpen(false);
+            setOpen(false)
           }}
         />
         <div className="flex flex-col md:p-[150px] md:w-[50%] gap-10 justify-center items-center">
@@ -153,7 +153,7 @@ const PlayNow = () => {
           >
             <img
               onClick={() => {
-                setOpen(true);
+                setOpen(true)
               }}
               alt="/"
               src={Play}
@@ -189,27 +189,27 @@ const PlayNow = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PlayNow;
+export default PlayNow
 
 // Images
 
 // Imports
 
 const VideoModal = ({ open, onClose }) => {
-  if (!open) return null;
+  if (!open) return null
   return (
     <div
       className="flex justify-center items-center
                  bg-slate-900/50 
-                   h-[118vh] w-[100%] z-[5] absolute"
+                md:h-[118vh] w-[100%] z-[5] absolute"
       onClick={onClose}
     >
       <div className="nft-content">
         <div>
-          <div className="select-non max-w-[1240px] flex justify-end">
+          <div className="select-non max-w-[1240px] flex justify-end mt-[1000px] h-[50vh] md:h-[auto] md:mt-[0] items-center">
             <div className="absolute top-[4rem] mr-[4rem]">
               {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <img
@@ -222,8 +222,8 @@ const VideoModal = ({ open, onClose }) => {
             </div>
             <div
               className=" bg-[#cfba89] m-5 sm:m-12 
-                overflow-y-scroll lg:overflow-y-hidden h-[400px] 
-                lg:w-[900px] lg:h-[auto] rounded-lg"
+                overflow-y-scroll lg:overflow-y-hidden  sm:h-[250px] md:h-[350px]
+                h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
             >
               <div className="custom-video-player flex justify-center items-center">
                 <video controls src={Video} autoPlay></video>
@@ -233,5 +233,5 @@ const VideoModal = ({ open, onClose }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
