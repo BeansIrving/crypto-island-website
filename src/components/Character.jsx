@@ -34,7 +34,7 @@ import Mark from "../images/character/Mark.webp";
 import Ross from "../images/character/Ross.webp";
 import Wendy from "../images/character/Wendy.webp";
 
-const Character = ({ open, onClose }) => {
+const Character = () => {
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -156,7 +156,7 @@ const Character = ({ open, onClose }) => {
     fadeInUp(".text-anim");
   }, []);
   
-  if(!open) return null;
+
   
   return (
     <div
