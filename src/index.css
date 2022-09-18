@@ -295,3 +295,15 @@
 #gameplay-section{
   z-index: 99999999;
 }
+
+
+@media screen and (max-height:700px){
+  #gameplay-section{
+    height: 150vh;
+  }
+}
+
+body{
+  background-color: #8d7a41;
+}
+

@@ -94,9 +94,7 @@ const Cryptobridge = () => {
       parallaxCloudRight();
       parallaxCloudLeft();
     }
-  }, []);
 
-  useEffect(() => {
     fadeInLogo("#crypto-bridge");
   }, []);
 

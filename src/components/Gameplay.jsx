@@ -7,7 +7,7 @@ import mobile from "../images/gameplay/gameplay_asset_portrait.webp";
 const Gameplay = () => {
   return (
     <div
-      className="flex justify-center items-center
+      className="flex justify-center items-center mt-[5rem]
       bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-center
       h-[auto]  w-[100%] px-[2rem] lg:px-[10rem] py-[5rem]"
       id="gameplay-section"

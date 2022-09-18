@@ -67,7 +67,7 @@ const PlayNow = () => {
           trigger: platform.current,
           start: "-220% center",
           end: "center center",
-          markers: true,
+          markers: false,
         },
         y: 0,
       }
@@ -77,17 +77,19 @@ const PlayNow = () => {
   useEffect(() => {
     gsap.fromTo(
       satoshi.current,
-      { x: -1200 },
+      { x: -1200, scale: 0.5 },
       {
         scrollTrigger: {
           trigger: satoshi.current,
-          start: "50% center",
+          start: "0% center",
           end: "center center",
-          markers: true,
+          markers: false,
+    
         },
-        ease: "elastic",
-        duration: 2,
-        x: -600,
+        ease: "spring",
+        duration: .5,
+        x: 0,
+        scale: 1,
         stagger: {
           amount: 3,
         },
@@ -113,8 +115,8 @@ const PlayNow = () => {
   }, []);
 
   return (
-    <div className="w-full h-[125vh] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px] bg-[#8d7a41]">
-      <div className="nft-content w-full h-[125vh]">
+    <div className="h-[180vh] mb:h-[140vh]  md:h-[125vh] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
+      <div className="nft-content h-[180vh] mb:h-[140vh]  md:h-[125vh]">
         <div
           className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.png)] bg-cover bg-top bg-no-repeat z-[5]"
           ref={opacity}
@@ -137,20 +139,20 @@ const PlayNow = () => {
         </div>
 
         <div
-          className="z-[10] md:flex hidden absolute bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px]"
+          className="z-[10] md:flex absolute left-0 bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px]"
           ref={satoshi}
         >
-          <img src={[Satoshi]} className="w-[600px]" />
+          <img src={[Satoshi]} className="w-[300px] lg:w-[600px]" />
         </div>
 
-        <div className="flex flex-row md:flex-row-reverse w-full h-full z-[100] absolute justify-center md:justify-start ">
+        <div className="flex flex-row lg:flex-row-reverse w-full h-full z-[100] absolute justify-center lg:justify-start">
           <VideoModal
             open={open}
             onClose={() => {
               setOpen(false);
             }}
           />
-          <div className="flex flex-col md:p-[150px] md:w-[50%] gap-10 justify-center items-center">
+          <div className="flex flex-col lg:p-[150px] lg:w-[50%] gap-10 justify-center items-center ">
             <motion.div
               ref={play}
               whileHover={{ scale: 1.05 }}
@@ -209,7 +211,7 @@ const VideoModal = ({ open, onClose }) => {
   return (
     <div
       className="flex justify-center items-center
-                 bg-slate-900/50 
+            
                 md:h-[118vh] w-[100%] z-[5] absolute"
       onClick={onClose}
     >
