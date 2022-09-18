@@ -291,3 +291,7 @@
 .swiper-pagination-bullet-active {
   background-color: #975a35 !important;
 }
+
+#gameplay-section{
+  z-index: 99999999;
+}
