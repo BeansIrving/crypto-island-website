@@ -42,8 +42,8 @@ const NFT = () => {
 
   const fadeIn = (element) => {
     gsap.from(element, {
-      scale: 0.5,
-      x: -150,
+      scale: 0,
+      x: -350,
     });
     gsap.to(element, {
       scrollTrigger: {

@@ -23,7 +23,7 @@ const Modal = ({ open, onClose }) => {
             <div className="absolute top-[3.5rem] mr-[3.5rem]">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <img
-                  className="w-[40px] sm:w-[65px] cursor-pointer drop-shadow-2xl"
+                  className="w-[40px] sm:w-[50px] cursor-pointer drop-shadow-2xl"
                   src={cross}
                   alt="/"
                   onClick={onClose}

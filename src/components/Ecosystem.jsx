@@ -15,12 +15,12 @@ const Ecosystem = () => {
 
   const fadeIn = (element) => {
     gsap.from(element, {
-      scale: 0.5,
+      scale: 0,
     });
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "-70% center",
+        start: "top 60%",
         markers: false,
       },
       scale: 1,
