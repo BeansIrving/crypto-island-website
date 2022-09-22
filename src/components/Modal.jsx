@@ -15,6 +15,7 @@ const Modal = ({ open, onClose }) => {
       className="flex justify-center items-center
                bg-slate-900/50 
                  h-[112vh] w-[100%] z-[5] absolute faded-edges"
+      onClick={onClose}
     >
       <div className="nft-content">
         <div className="floating">
@@ -22,7 +23,7 @@ const Modal = ({ open, onClose }) => {
             <div className="absolute top-[3.5rem] mr-[3.5rem]">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                 <img
-                  className="w-[65px] cursor-pointer drop-shadow-2xl"
+                  className="w-[40px] sm:w-[65px] cursor-pointer drop-shadow-2xl"
                   src={cross}
                   alt="/"
                   onClick={onClose}
@@ -30,11 +31,12 @@ const Modal = ({ open, onClose }) => {
               </motion.div>
             </div>
             <div
-              className=" bg-[#cfba89] m-5 sm:m-12 
-              overflow-y-scroll lg:overflow-y-hidden h-[400px] 
+              className=" bg-[#cfba89] m-12 
+              h-[400px] 
+              overflow-y-scroll lg:overflow-y-hidden
               lg:w-[800px] lg:h-[auto] rounded-lg"
             >
-              <p className="text-[#563a20] text-justify font-[roboto] p-7 sm:p-[4rem] text-xl sm:text-2xl">
+              <p className="text-[#563a20]  sm:text-justify font-[roboto] p-[3rem] text-xl sm:text-2xl">
                 Team co-op getting help from another player carrying big and
                 heavy artifact while dodging the cannon balls in the brige. Get
                 hit, Die and take the cannon position (first person shooter) in

@@ -99,10 +99,10 @@ const Cryptobridge = () => {
     <div
       className="flex justify-center items-center
             bg-[url('images/backgrounds/bg-bridge.png')] bg-cover bg-center bg-no-repeat
-            h-[112vh] w-[100%]"
+            h-[112vh] sm:h-[112vh] w-[100%]"
     >
       <Modal open={openModal} onClose={() => setOpenModal(false)} />
-      <div className="hero-content h-[112vh] w-[100%]" id="section-bridge">
+      <div className="hero-content h-[112vh] sm:h-[112vh] w-[100%]" id="section-bridge">
         <motion.button
           className="select-none z-[2] hidden lg:inline-block"
           whileHover={{ scale: 1.1 }}

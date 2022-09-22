@@ -2,13 +2,10 @@ import React, { useEffect, useState, useRef } from "react";
 
 // for images
 import title from "../images/hero/cryptoisland.webp";
-import ground from "../images/hero/Ground.webp";
 import vineone from "../images/hero/Vines1.png";
 import vinetwo from "../images/hero/Vines2.png";
-import grassright from "../images/hero/Grass.webp";
-import sea from "../images/hero/Sea.webp";
-import cloudone from "../images/hero/cloud.png";
 import cloudtwo from "../images/hero/cloud2.png";
+import gumanucleos from "../images/hero/GumaNucleos.webp"
 
 // gsap imports
 import gsap from "gsap";
@@ -19,7 +16,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const fadeIn = (element) => {
     gsap.from(element, {
       scale: 0.2,
@@ -122,11 +119,19 @@ const Hero = () => {
           {/* vines */}
 
           <div className="absolute top-0 left-0 z-[3] grass-anim">
-            <img className="h-[250px] sm:h-[350px] fadeInVines" src={vineone} alt="/" />
+            <img
+              className="h-[250px] sm:h-[350px] fadeInVines"
+              src={vineone}
+              alt="/"
+            />
           </div>
 
           <div className="absolute top-0 right-0 z-[3] grass-anim">
-            <img className="fadeInVines w-[150px] sm:w-[250px]" src={vinetwo} alt="/" />
+            <img
+              className="fadeInVines w-[150px] sm:w-[250px]"
+              src={vinetwo}
+              alt="/"
+            />
           </div>
 
           {/* clouds */}
@@ -144,6 +149,16 @@ const Hero = () => {
             />
           </div>
         </div>
+
+        {/* guma nucleos */}
+
+        <div className="absolute bottom-0 left-40 z-[3] grass-anim">
+            <img
+              className="fadeInVines w-[150px] sm:w-[100px]"
+              src={gumanucleos}
+              alt="/"
+            />
+          </div>
       </motion.div>
     </>
   );

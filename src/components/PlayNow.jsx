@@ -247,7 +247,7 @@ const PlayNow = () => {
                 </a>
               </motion.div>
 
-              <img alt="/" src={Play2D} className="w-[250px]" />
+              <img alt="/" src={Play2D} className="w-[250px] cursor-no-drop" />
             </div>
           </div>
         </div>
