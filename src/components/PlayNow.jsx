@@ -7,13 +7,32 @@ import Light from "../images/playnow/Light2.png";
 import Satoshi from "../images/playnow/satoshi.png";
 import Play2D from "../images/playnow/play2d.png";
 import Play3D from "../images/playnow/play3dbeta.png";
-import Sc1 from "../images/playnow/screenshots/sc1.PNG";
+
 import Play from "../images/playnow/play.png";
 import Play2 from "../images/playnow/play2.png";
 import { motion } from "framer-motion";
 import cross from "../images/cryptobridge/cross.webp";
 import { useState } from "react";
 import Video from "../images/playnow/CryptoVideo.mp4";
+
+// Screen shots
+
+import Sc1 from "../images/playnow/screenshots/sc1.PNG";
+import Sc2 from "../images/playnow/screenshots/sc2.PNG";
+import Sc3 from "../images/playnow/screenshots/sc3.PNG";
+import Sc4 from "../images/playnow/screenshots/sc4.PNG";
+import Sc5 from "../images/playnow/screenshots/sc5.PNG";
+import Sc6 from "../images/playnow/screenshots/sc6.PNG";
+import Sc7 from "../images/playnow/screenshots/sc7.PNG";
+import Sc8 from "../images/playnow/screenshots/sc8.PNG";
+
+// Swiper Imports
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs, EffectCoverflow } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const PlayNow = () => {
   const light = useRef(null);
@@ -23,6 +42,7 @@ const PlayNow = () => {
   const play = useRef(null);
 
   const [open, setOpen] = useState(false);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -65,8 +85,8 @@ const PlayNow = () => {
       {
         scrollTrigger: {
           trigger: platform.current,
-          start: "-220% center",
-          end: "center center",
+          start: "-325% center",
+          end: "-260% center",
           markers: false,
         },
         y: 0,
@@ -81,13 +101,12 @@ const PlayNow = () => {
       {
         scrollTrigger: {
           trigger: satoshi.current,
-          start: "0% center",
-          end: "center center",
+          start: "-50% center",
+          end: "0% center",
           markers: false,
-    
         },
         ease: "spring",
-        duration: .5,
+        duration: 0.5,
         x: 0,
         scale: 1,
         stagger: {
@@ -142,17 +161,19 @@ const PlayNow = () => {
           className="z-[10] md:flex absolute left-0 bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px]"
           ref={satoshi}
         >
-          <img src={[Satoshi]} className="w-[300px] lg:w-[600px]" />
-        </div>
-
-        <div className="flex flex-row lg:flex-row-reverse w-full h-full z-[100] absolute justify-center lg:justify-start">
-          <VideoModal
-            open={open}
-            onClose={() => {
-              setOpen(false);
-            }}
+          <img
+            src={[Satoshi]}
+            className="w-[300px] lg:w-[400px] xl:w-[600px]"
           />
-          <div className="flex flex-col lg:p-[150px] lg:w-[50%] gap-10 justify-center items-center ">
+        </div>
+        <VideoModal
+          open={open}
+          onClose={() => {
+            setOpen(false);
+          }}
+        />
+        <div className="flex flex-row z-[100] absolute justify-center lg:ml-[500px]">
+          <div className="flex flex-col gap-10 justify-center items-center">
             <motion.div
               ref={play}
               whileHover={{ scale: 1.05 }}
@@ -168,11 +189,46 @@ const PlayNow = () => {
               />
             </motion.div>
 
-            <img
-              alt="/"
-              src={Sc1}
-              className="w-[350px] drop-shadow-xl outline outline-white cursor-pointer"
-            />
+            {/* Input Swiper Here */}
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={10}
+              effect={"coverflow"}
+              grabCursor={true}
+              loop={true}
+              centeredSlides={true}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+              }}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
+              className="mySwiperTeam"
+            >
+              {/* insert image here */}
+              {videoimages.map((item) => {
+                return (
+                  <SwiperSlide className="mySwiperGame-slide">
+                    <div key={item} className="px-7">
+                      <div
+                        className="flex justify-center 
+                        py-0 sm:py-5"
+                      >
+                        <img
+                          className="border-[6px]"
+                          src={item.videoimage}
+                          alt="/"
+                        ></img>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+
             <div className="flex flex-col gap-5">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -202,35 +258,48 @@ const PlayNow = () => {
 
 export default PlayNow;
 
-// Images
-
-// Imports
+const videoimages = [
+  {
+    videoimage: Sc1,
+  },
+  {
+    videoimage: Sc2,
+  },
+  {
+    videoimage: Sc3,
+  },
+  {
+    videoimage: Sc4,
+  },
+  {
+    videoimage: Sc5,
+  },
+  {
+    videoimage: Sc6,
+  },
+  {
+    videoimage: Sc7,
+  },
+  {
+    videoimage: Sc8,
+  },
+];
 
 const VideoModal = ({ open, onClose }) => {
   if (!open) return null;
   return (
     <div
       className="flex justify-center items-center
-            
-                md:h-[118vh] w-[100%] z-[5] absolute"
+              bg-slate-900/50 
+              h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute faded-edgesv2"
       onClick={onClose}
     >
       <div className="nft-content">
         <div>
-          <div className="select-non max-w-[1240px] flex justify-end mt-[1000px] h-[50vh] md:h-[auto] md:mt-[0] items-center">
-            <div className="absolute top-[4rem] mr-[4rem]">
-              {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  className="w-[40px] cursor-pointer drop-shadow-2xl z-[100]"
-                  src={cross}
-                  alt="/"
-                  onClick={onClose}
-                />
-              </motion.div> */}
-            </div>
+          <div className="select-non max-w-[1240px] flex justify-center h-[50vh] md:h-[auto] md:mt-[0] items-center">
             <div
               className=" bg-[#cfba89] m-5 sm:m-12 
-                overflow-y-scroll lg:overflow-y-hidden  sm:h-[250px] md:h-[350px]
+                 sm:h-[250px] md:h-[350px]
                 h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
             >
               <div className="custom-video-player flex justify-center items-center">

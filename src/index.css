@@ -240,6 +240,13 @@
     object-fit: contain;
   }
 
+  .mySwiperGame-slide img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
   .mySwiperTeamV2 {
     width: 1200px;
     height: auto;
@@ -285,25 +292,42 @@
   .text-shadow {
     text-shadow: 2px 2px 4px #000;
   }
-
 }
 
 .swiper-pagination-bullet-active {
   background-color: #975a35 !important;
 }
 
-#gameplay-section{
+#gameplay-section {
   z-index: 99999999;
 }
 
-
-@media screen and (max-height:700px){
-  #gameplay-section{
+@media screen and (max-height: 700px) {
+  #gameplay-section {
     height: 150vh;
   }
 }
 
-body{
+body {
   background-color: #8d7a41;
 }
 
+.faded-edges {
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 95%,
+    transparent 100%
+  );
+}
+
+.faded-edgesv2 {
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 2%,
+    rgba(0, 0, 0, 1) 16%,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+}

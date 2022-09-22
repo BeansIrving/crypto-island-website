@@ -4,8 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 import title from "../images/cryptobridge/CRYPTOBRIDGEV3.webp";
 import titleClick from "../images/cryptobridge/CRYPTOBRIDGECLICK.webp";
-import fog from "../images/cryptobridge/fog.png";
-import arrow from "../images/cryptobridge/arrow.webp";
+import fog from "../images/cryptobridge/fog.webp";
 
 // gsap imports
 
@@ -16,14 +15,12 @@ import { motion } from "framer-motion";
 
 //
 
-import Character from "./Character";
 import Modal from "./Modal";
 
 const Cryptobridge = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const [visible, setVisible] = useState(false);
-  const onClick = () => setVisible(true);
 
   gsap.registerPlugin(ScrollTrigger);
 

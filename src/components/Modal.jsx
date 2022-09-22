@@ -14,7 +14,7 @@ const Modal = ({ open, onClose }) => {
     <div
       className="flex justify-center items-center
                bg-slate-900/50 
-                 h-[112vh] w-[100%] z-[5] absolute"
+                 h-[112vh] w-[100%] z-[5] absolute faded-edges"
     >
       <div className="nft-content">
         <div className="floating">
