@@ -207,7 +207,7 @@ const PlayNow = () => {
         >
           <img
             src={[Satoshi]}
-            className="w-[300px] lg:w-[400px] xl:w-[480px]"
+            className="w-[300px] lg:w-[400px] xl:w-[700px]"
           />
         </div>
 
@@ -215,7 +215,7 @@ const PlayNow = () => {
           className="z-[10] md:flex absolute right-0 bottom-[50px]"
           ref={right}
         >
-          <img src={[Right]} className="w-[300px] lg:w-[400px] xl:w-[450px]" />
+          <img src={[Right]} className="w-[300px] lg:w-[400px] xl:w-[650px]" />
         </div>
 
         <VideoModal
@@ -224,7 +224,7 @@ const PlayNow = () => {
             setOpen(false);
           }}
         />
-        <div className="flex flex-row z-[100] absolute justify-center ">
+        <div className="flex flex-row z-[100] absolute top-[10%] justify-center ">
           <div className="flex flex-col gap-10 justify-center items-center">
             <motion.div
               className="springIn"
