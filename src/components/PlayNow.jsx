@@ -1,5 +1,5 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useState, useRef } from "react";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -12,7 +12,6 @@ import Play from "../images/playnow/play.png";
 import Play2 from "../images/playnow/play2.png";
 import { motion } from "framer-motion";
 import cross from "../images/cryptobridge/cross.webp";
-import { useState } from "react";
 import Video from "../images/playnow/CryptoVideo.mp4";
 
 // Screen shots
@@ -25,6 +24,8 @@ import Sc5 from "../images/playnow/screenshots/sc5.PNG";
 import Sc6 from "../images/playnow/screenshots/sc6.PNG";
 import Sc7 from "../images/playnow/screenshots/sc7.PNG";
 import Sc8 from "../images/playnow/screenshots/sc8.PNG";
+
+import Right from "../images/playnow/beepleandmcfee.png";
 
 // Swiper Imports
 
@@ -39,10 +40,29 @@ const PlayNow = () => {
   const opacity = useRef(null);
   const platform = useRef(null);
   const satoshi = useRef(null);
+  const right = useRef(null);
   const play = useRef(null);
 
   const [open, setOpen] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const springIn = (element) => {
+    gsap.fromTo(
+      element,
+      { scale: 0 },
+      {
+        scrollTrigger: {
+          trigger: play.current,
+          start: "-500 center",
+          end: "center center",
+          markers: false,
+        },
+        scale: 1,
+        duration:1.5,
+        ease: "bounce",
+      }
+    );
+  };
 
   useEffect(() => {
     gsap.fromTo(
@@ -118,6 +138,28 @@ const PlayNow = () => {
 
   useEffect(() => {
     gsap.fromTo(
+      right.current,
+      { x: 1200, scale: 0.5 },
+      {
+        scrollTrigger: {
+          trigger: right.current,
+          start: "-63% center",
+          end: "-5% center",
+          markers: false,
+        },
+        ease: "spring",
+        duration: 0.5,
+        x: 0,
+        scale: 1,
+        stagger: {
+          amount: 3,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
       play.current,
       { scale: 0 },
       {
@@ -131,6 +173,8 @@ const PlayNow = () => {
         ease: "bounce",
       }
     );
+
+    springIn(".springIn");
   }, []);
 
   return (
@@ -163,19 +207,27 @@ const PlayNow = () => {
         >
           <img
             src={[Satoshi]}
-            className="w-[300px] lg:w-[400px] xl:w-[600px]"
+            className="w-[300px] lg:w-[400px] xl:w-[480px]"
           />
         </div>
+
+        <div
+          className="z-[10] md:flex absolute right-0 bottom-[50px]"
+          ref={right}
+        >
+          <img src={[Right]} className="w-[300px] lg:w-[400px] xl:w-[450px]" />
+        </div>
+
         <VideoModal
           open={open}
           onClose={() => {
             setOpen(false);
           }}
         />
-        <div className="flex flex-row z-[100] absolute justify-center lg:ml-[500px]">
+        <div className="flex flex-row z-[100] absolute justify-center ">
           <div className="flex flex-col gap-10 justify-center items-center">
             <motion.div
-              ref={play}
+              className="springIn"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
@@ -190,47 +242,54 @@ const PlayNow = () => {
             </motion.div>
 
             {/* Input Swiper Here */}
-            <Swiper
-              slidesPerView={3}
-              spaceBetween={10}
-              effect={"coverflow"}
-              grabCursor={true}
-              loop={true}
-              centeredSlides={true}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
-              }}
-              thumbs={{ swiper: thumbsSwiper }}
-              modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
-              className="mySwiperTeam"
+            <motion.div
+              className="springIn"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              {/* insert image here */}
-              {videoimages.map((item) => {
-                return (
-                  <SwiperSlide className="mySwiperGame-slide">
-                    <div key={item} className="px-7">
-                      <div
-                        className="flex justify-center 
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={10}
+                effect={"coverflow"}
+                grabCursor={true}
+                loop={true}
+                centeredSlides={true}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: false,
+                }}
+                thumbs={{ swiper: thumbsSwiper }}
+                modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
+                className="mySwiperTeam"
+              >
+                {/* insert image here */}
+                {videoimages.map((item) => {
+                  return (
+                    <SwiperSlide className="mySwiperGame-slide">
+                      <div key={item} className="px-7">
+                        <div
+                          className="flex justify-center 
                         py-0 sm:py-5"
-                      >
-                        <img
-                          className="border-[6px]"
-                          src={item.videoimage}
-                          alt="/"
-                        ></img>
+                        >
+                          <img
+                            className="border-[6px]"
+                            src={item.videoimage}
+                            alt="/"
+                          ></img>
+                        </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </motion.div>
 
             <div className="flex flex-col gap-5">
               <motion.div
+                className="springIn"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -247,7 +306,7 @@ const PlayNow = () => {
                 </a>
               </motion.div>
 
-              <img alt="/" src={Play2D} className="w-[250px] cursor-no-drop" />
+              {/* <img alt="/" src={Play2D} className="w-[250px] cursor-no-drop" /> */}
             </div>
           </div>
         </div>
