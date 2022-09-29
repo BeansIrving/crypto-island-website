@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Images
 
 import cross from "../images/cryptobridge/cross.webp";
+import angelcannon from "../images/cryptobridge/Vitalik_Angel_Cannon.webp";
 
 // Imports
 
 import { motion } from "framer-motion";
 
+
+
 const Modal = ({ open, onClose }) => {
+
   if (!open) return null;
   return (
     <div
@@ -17,7 +21,11 @@ const Modal = ({ open, onClose }) => {
                  h-[112vh] w-[100%] z-[5] absolute faded-edges"
       onClick={onClose}
     >
-      <div className="nft-content">
+      <div className="nft-content h-[112vh]">
+        <div className="absolute bottom-20 left-20 xl:bottom-10 xl:left-10 z-[2] floating">
+          <img src={angelcannon} className="h-[250px] xl:h-[500px] " alt="/" />
+        </div>
+
         <div className="floating">
           <div className="select-non max-w-[1240px] flex justify-end">
             <div className="absolute top-[3.5rem] mr-[3.5rem]">
@@ -40,11 +48,14 @@ const Modal = ({ open, onClose }) => {
                 Team co-op getting help from another player carrying big and
                 heavy artifact while dodging the cannon balls in the brige. Get
                 hit, Die and take the cannon position (first person shooter) in
-                an afterlife Angel form. Mission is, shooting the opposite team
-                players that are crossing the bridge. Bridge players getting to
-                the other side at redeem chaimber, redeeming artifacts and
-                getting rewarded with GINA + MOKU Buying digital land with "OKU
-                and lease it out to receive Gl-P•tA or BNB.
+                an afterlife Angel form.
+                <br></br>
+                <br></br>
+                Mission is, shooting the opposite team players that are crossing
+                the bridge. Bridge players getting to the other side at redeem
+                chaimber, redeeming artifacts and getting rewarded with GINA +
+                MOKU Buying digital land with "OKU and lease it out to receive
+                Gl-P•tA or BNB.
               </p>
             </div>
           </div>

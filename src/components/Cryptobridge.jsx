@@ -37,6 +37,7 @@ const Cryptobridge = () => {
         markers: false,
         scrub: 3,
       },
+      ease: "slow",
       opacity: 0,
       x: 750,
     });
@@ -55,6 +56,7 @@ const Cryptobridge = () => {
         markers: false,
         scrub: 3,
       },
+      ease: "slow",
       opacity: 0,
       x: -750,
     });
@@ -68,8 +70,8 @@ const Cryptobridge = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "-40% center",
-        end: "-20%",
+        start: "0% center",
+        end: "0%",
         markers: false,
         scrub: 1,
       },
@@ -77,9 +79,7 @@ const Cryptobridge = () => {
       scale: 1,
       duration: 2,
       ease: "elastic",
-      stagger: {
-        amount: 0.3,
-      },
+    
     });
   }
 
@@ -99,7 +99,7 @@ const Cryptobridge = () => {
     <div
       className="flex justify-center items-center
             bg-[url('images/backgrounds/bg-bridge.png')] bg-cover bg-center bg-no-repeat
-            h-[112vh] sm:h-[112vh] w-[100%]"
+            h-[112vh] sm:h-[112vh] w-[100%] "
     >
       <Modal open={openModal} onClose={() => setOpenModal(false)} />
       <div className="hero-content h-[112vh] sm:h-[112vh] w-[100%]" id="section-bridge">
@@ -112,7 +112,7 @@ const Cryptobridge = () => {
         >
           <div className="floating">
             <img
-              className="w-[500px] select-none cursor-pointer"
+              className="w-[700px] select-none cursor-pointer"
               src={title}
               alt="/"
             />
@@ -129,14 +129,14 @@ const Cryptobridge = () => {
           <div className="floating">
             {visible ? (
               <img
-                className="w-[500px] select-none cursor-pointer inline-block lg:hidden"
+                className="w-[700px] select-none cursor-pointer inline-block lg:hidden"
                 id="crypto-bridge"
                 src={title}
                 alt="/"
               />
             ) : (
               <img
-                className="w-[500px] select-none cursor-pointer inline-block lg:hidden"
+                className="w-[700px] select-none cursor-pointer inline-block lg:hidden"
                 id="crypto-bridge"
                 src={titleClick}
                 alt="/"

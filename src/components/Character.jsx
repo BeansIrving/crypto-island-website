@@ -33,9 +33,9 @@ import Charles from "../images/character/Charles.webp";
 import Mark from "../images/character/Mark.webp";
 import Ross from "../images/character/Ross.webp";
 import Wendy from "../images/character/Wendy.webp";
+import johnmcafee from "../images/character/johnmcafee.webp";
 
 const Character = () => {
-
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const character = [
@@ -107,6 +107,13 @@ const Character = () => {
         "Host of the O show, a cryptocurrency media outlet, and a successful cryptocurrency analyst, she became the biggest female crypto YouTuber as we speak!",
       avatar: Wendy,
     },
+
+    {
+      name: "John McAfee",
+      description:
+        "a prolific Programmer, Businessman, and a Presidential Candidate who also founded one of the biggest anti-virus software on the market, John Mcafee's lead a dangerous, complicated, and an eventful life ahead of him.",
+      avatar: johnmcafee,
+    },
   ];
 
   gsap.registerPlugin(ScrollTrigger);
@@ -122,7 +129,6 @@ const Character = () => {
         start: "1050% center",
         end: "1050%",
         markers: false,
-     
       },
       opacity: 1,
       y: 0,
@@ -142,7 +148,6 @@ const Character = () => {
         start: "-550% center",
         end: "-547%",
         markers: false,
-      
       },
       opacity: 1,
       y: 0,
@@ -155,15 +160,12 @@ const Character = () => {
     fadeInDown(".frame-anim");
     fadeInUp(".text-anim");
   }, []);
-  
 
-  
   return (
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.png')] bg-cover bg-center
       h-[130vh] sm:h-[105vh] z-40"
-   
     >
       <div className="nft-content h-[130vh] sm:h-[105vh]">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -215,7 +217,6 @@ const Character = () => {
               thumbs={{ swiper: thumbsSwiper }}
               modules={[EffectCoverflow, FreeMode, Navigation, Thumbs]}
               className="mySwiperTeam"
-          
             >
               {character.map((item) => {
                 return (

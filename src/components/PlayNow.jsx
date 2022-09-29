@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Light from "../images/playnow/Light2.png";
-import Satoshi from "../images/playnow/satoshi.png";
+import Satoshi from "../images/playnow/satoshi.webp";
 import Play2D from "../images/playnow/play2d.png";
 import Play3D from "../images/playnow/play3dbeta.png";
 
@@ -25,7 +25,7 @@ import Sc6 from "../images/playnow/screenshots/sc6.PNG";
 import Sc7 from "../images/playnow/screenshots/sc7.PNG";
 import Sc8 from "../images/playnow/screenshots/sc8.PNG";
 
-import Right from "../images/playnow/beepleandmcfee.png";
+import Right from "../images/playnow/beepleandmcfeecannon.webp";
 
 // Swiper Imports
 
@@ -108,6 +108,7 @@ const PlayNow = () => {
           start: "-325% center",
           end: "-260% center",
           markers: false,
+          
         },
         y: 0,
       }
@@ -121,9 +122,10 @@ const PlayNow = () => {
       {
         scrollTrigger: {
           trigger: satoshi.current,
-          start: "-50% center",
-          end: "0% center",
+          start: "-84% center",
+          end: "-20% center",
           markers: false,
+          scrub: 1,
         },
         ease: "spring",
         duration: 0.5,
@@ -146,6 +148,7 @@ const PlayNow = () => {
           start: "-63% center",
           end: "-5% center",
           markers: false,
+          scrub: 1,
         },
         ease: "spring",
         duration: 0.5,
@@ -202,12 +205,12 @@ const PlayNow = () => {
         </div>
 
         <div
-          className="z-[10] md:flex absolute left-0 bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px]"
+          className="z-[10] md:flex absolute bottom-11 left-0 m:left-10 m:bottom-[60px]"
           ref={satoshi}
         >
           <img
             src={[Satoshi]}
-            className="w-[300px] lg:w-[400px] xl:w-[700px]"
+            className="w-[100px] lg:w-[275px] xl:w-[350px]"
           />
         </div>
 
@@ -215,7 +218,7 @@ const PlayNow = () => {
           className="z-[10] md:flex absolute right-0 bottom-[50px]"
           ref={right}
         >
-          <img src={[Right]} className="w-[300px] lg:w-[400px] xl:w-[650px]" />
+          <img src={[Right]} className="w-[300px] lg:w-[700px] xl:w-[950px]" />
         </div>
 
         <VideoModal
@@ -224,8 +227,8 @@ const PlayNow = () => {
             setOpen(false);
           }}
         />
-        <div className="flex flex-row z-[100] absolute top-[10%] justify-center ">
-          <div className="flex flex-col gap-10 justify-center items-center">
+        <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[1%] justify-center ">
+          <div className="flex flex-col gap-5 justify-center items-center">
             <motion.div
               className="springIn"
               whileHover={{ scale: 1.05 }}
@@ -244,8 +247,6 @@ const PlayNow = () => {
             {/* Input Swiper Here */}
             <motion.div
               className="springIn"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <Swiper
                 slidesPerView={3}
