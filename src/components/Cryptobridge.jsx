@@ -98,7 +98,7 @@ const Cryptobridge = () => {
   return (
     <div
       className="flex justify-center items-center
-            bg-[url('images/backgrounds/bg-bridge.png')] bg-cover bg-center bg-no-repeat
+            bg-[url('images/backgrounds/bg-bridge.webp')] bg-cover bg-center bg-no-repeat
             h-[112vh] sm:h-[112vh] w-[100%] "
     >
       <Modal open={openModal} onClose={() => setOpenModal(false)} />

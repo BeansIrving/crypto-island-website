@@ -164,7 +164,7 @@ const Character = () => {
   return (
     <div
       className="flex justify-center items-center 
-      bg-[url('images/backgrounds/bg-character.png')] bg-cover bg-center
+      bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
       h-[130vh] sm:h-[105vh] z-40"
     >
       <div className="nft-content h-[130vh] sm:h-[105vh]">
