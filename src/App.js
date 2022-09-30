@@ -5,6 +5,7 @@ import Cryptobridge from "./components/Cryptobridge";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import Gameplay from "./components/Gameplay";
+import Guma from "./components/Guma";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -27,6 +28,7 @@ function App() {
       <PlayNow/>
       <Gameplay />
       <Character /> 
+      <Guma />
       <Ecosystem />
       <NFT />
       <Staking/>

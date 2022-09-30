@@ -5,7 +5,7 @@ import title from "../images/hero/cryptoisland.webp";
 import vineone from "../images/hero/Vines1.webp";
 import vinetwo from "../images/hero/Vines2.webp";
 import cloudtwo from "../images/hero/cloud2.webp";
-import gumanucleos from "../images/hero/GumaNucleos.webp";
+
 
 // gsap imports
 import gsap from "gsap";
@@ -104,13 +104,13 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="flex justify-center items-center py-12 bg-[url('images/backgrounds/BG-hero.png')] h-[120vh] w-[100%] bg-cover bg-center bg-no-repeat z-40"
+        className="flex justify-center items-center 
+        py-12 h-[120vh] w-[100%] z-40
+        bg-[url('images/backgrounds/BG-hero.png')] bg-cover bg-center bg-no-repeat"
         // ref={sectionRef}
       >
         <div className="hero-content h-[120vh] w-[100%]" id="section-hero">
-          <div className="absolute bottom-[8%] left-[12%] z-[3]">
-            <img className="w-[150px] sm:w-[100px]" src={gumanucleos} alt="/" />
-          </div>
+    
           <div className="fadeIn select-none z-[5]">
             <img
               className="w-[800px] floating select-none"
