@@ -45,7 +45,7 @@ const Ecosystem = () => {
         </div>
 
         <div className="w-full flex flex-wrap justify-center py-[30px] lg:flex-nowrap lg:justify-start lg:py-[20px]">
-          <div className="bg-[url('images/ecosystem/ecosystem_mobile.png')] sm:bg-[url('images/ecosystem/ecosystem_pc.png')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6">
+          <div className="bg-[url('images/ecosystem/ecosystem_mobile.webp')] sm:bg-[url('images/ecosystem/ecosystem_pc.webp')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6">
       
           </div>
           <div className="guma mt-12">

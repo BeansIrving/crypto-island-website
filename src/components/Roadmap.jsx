@@ -3,14 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 // images
 
 import Light from "../images/roadmap/light2nd.webp";
-import Vines from "../images/roadmap/vinesfront.png";
-import Stage1 from "../images/roadmap/Stage1_1.png";
-import Stage2 from "../images/roadmap/Stage2_1.webp";
-import Stage3 from "../images/roadmap/Stage3_1.webp";
-import Stage4 from "../images/roadmap/Stage4_1.webp";
+import Vines from "../images/roadmap/vinesfront.webp";
+import Stage1 from "../images/roadmap/Stage1.webp";
+import Stage2 from "../images/roadmap/Stage2.webp";
+import Stage3 from "../images/roadmap/Stage3.webp";
+import Stage4 from "../images/roadmap/Stage4.webp";
 import Plants from "../images/roadmap/Plants.webp";
 import Banner from "../images/roadmap/roadmap.webp";
-import Signage from "../images/roadmap/Signage.png";
+import Signage from "../images/roadmap/Signage.webp";
 
 // Swiper Import
 

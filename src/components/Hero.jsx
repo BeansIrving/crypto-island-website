@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 
 // for images
 import title from "../images/hero/cryptoisland.webp";
-import vineone from "../images/hero/Vines1.png";
-import vinetwo from "../images/hero/Vines2.png";
-import cloudtwo from "../images/hero/cloud2.png";
+import vineone from "../images/hero/Vines1.webp";
+import vinetwo from "../images/hero/Vines2.webp";
+import cloudtwo from "../images/hero/cloud2.webp";
 import gumanucleos from "../images/hero/GumaNucleos.webp";
 
 // gsap imports

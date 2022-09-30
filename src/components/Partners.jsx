@@ -18,7 +18,7 @@ const Partners = () => {
         <div>
           <img src={Partner} className="w-[250px] h-auto" alt="/" />
         </div>
-        <div className="flex justify-center w-full gap-10 lg:gap-20 md:gap-5 items-center flex-row flex-wrap">
+        <div className="flex justify-center w-full gap-10 lg:gap-20 md:gap-5 p-5 items-center flex-row flex-wrap">
           
           <img
             src={Coingecko}
@@ -26,7 +26,7 @@ const Partners = () => {
             alt="/"
           
           />
-          <img src={Cmc} className="lg:w-[250px] w-[150px] h-auto md:order-2 order-1" alt="/"/>
+          <img src={Cmc} className="lg:w-[150px] w-[80px] h-auto md:order-2 order-1" alt="/"/>
           <img src={Bsc} className="lg:w-[250px] w-[150px] h-auto md:order-3 order-3" alt="/" />
         </div>
       </div>

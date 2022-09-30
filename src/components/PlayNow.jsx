@@ -1,29 +1,29 @@
 import React, { useState, useRef } from "react";
 
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-import Light from "../images/playnow/Light2.png";
-import Satoshi from "../images/playnow/satoshi.webp";
-import Play2D from "../images/playnow/play2d.png";
-import Play3D from "../images/playnow/play3dbeta.png";
 
-import Play from "../images/playnow/play.png";
-import Play2 from "../images/playnow/play2.png";
+import { useEffect } from "react";
+import Light from "../images/playnow/Light2.webp";
+import Satoshi from "../images/playnow/satoshi.webp";
+
+import Play3D from "../images/playnow/play3dbeta.webp";
+
+import Play from "../images/playnow/play.webp";
+
 import { motion } from "framer-motion";
 import cross from "../images/cryptobridge/cross.webp";
 import Video from "../images/playnow/CryptoVideo.mp4";
 
 // Screen shots
 
-import Sc1 from "../images/playnow/screenshots/sc1.PNG";
-import Sc2 from "../images/playnow/screenshots/sc2.PNG";
-import Sc3 from "../images/playnow/screenshots/sc3.PNG";
-import Sc4 from "../images/playnow/screenshots/sc4.PNG";
-import Sc5 from "../images/playnow/screenshots/sc5.PNG";
-import Sc6 from "../images/playnow/screenshots/sc6.PNG";
-import Sc7 from "../images/playnow/screenshots/sc7.PNG";
-import Sc8 from "../images/playnow/screenshots/sc8.PNG";
+import Sc1 from "../images/playnow/screenshots/sc1.webp";
+import Sc2 from "../images/playnow/screenshots/sc2.webp";
+import Sc3 from "../images/playnow/screenshots/sc3.webp";
+import Sc4 from "../images/playnow/screenshots/sc4.webp";
+import Sc5 from "../images/playnow/screenshots/sc5.webp";
+import Sc6 from "../images/playnow/screenshots/sc6.webp";
+import Sc7 from "../images/playnow/screenshots/sc7.webp";
+import Sc8 from "../images/playnow/screenshots/sc8.webp";
 
 import Right from "../images/playnow/beepleandmcfeecannon.webp";
 
@@ -76,6 +76,7 @@ const PlayNow = () => {
           scrub: 1,
           markers: false,
         },
+        ease: "slow",
         x: 0,
       }
     );
@@ -108,8 +109,9 @@ const PlayNow = () => {
           start: "-325% center",
           end: "-260% center",
           markers: false,
-          
+          scrub: 1,
         },
+        ease: "slow",
         y: 0,
       }
     );
@@ -127,8 +129,8 @@ const PlayNow = () => {
           markers: false,
           scrub: 1,
         },
-        ease: "spring",
-        duration: 0.5,
+        ease: "slow",
+        duration: 1,
         x: 0,
         scale: 1,
         stagger: {
@@ -150,8 +152,8 @@ const PlayNow = () => {
           markers: false,
           scrub: 1,
         },
-        ease: "spring",
-        duration: 0.5,
+        ease: "slow",
+        duration: 1,
         x: 0,
         scale: 1,
         stagger: {
@@ -184,14 +186,14 @@ const PlayNow = () => {
     <div className="h-[180vh] mb:h-[140vh]  md:h-[125vh] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
       <div className="nft-content h-[180vh] mb:h-[140vh]  md:h-[125vh]">
         <div
-          className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.png)] bg-cover bg-top bg-no-repeat z-[5]"
+          className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover bg-top bg-no-repeat z-[5]"
           ref={opacity}
         ></div>
 
-        <div className=" blur-sm w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.png)] bg-cover 3xl:bg-cover bg-top bg-no-repeat z-[2]"></div>
+        <div className=" blur-sm w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover 3xl:bg-cover bg-top bg-no-repeat z-[2]"></div>
 
         <div
-          className="w-full h-[120px] lg:h-[160px] xl:h-[170px] z-[10] absolute bottom-[0px] bg-[url(images/playnow/Platform.png)] bg-cover bg-no-repeat"
+          className="w-full h-[120px] lg:h-[160px] xl:h-[160px] z-[10] absolute bottom-[0px] bg-[url(images/playnow/Platform.webp)] bg-cover bg-no-repeat"
           ref={platform}
         ></div>
 

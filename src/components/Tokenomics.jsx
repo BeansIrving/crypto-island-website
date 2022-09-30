@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import BuyTax from "../images/tokenomics/BuyTax.png";
-import SellTax from "../images/tokenomics/SellTax.png";
-import SymbolOne from "../images/tokenomics/SymbolOne.png";
-import SymbolTwo from "../images/tokenomics/SymbolTwo.png";
+import BuyTax from "../images/tokenomics/BuyTax.webp";
+import SellTax from "../images/tokenomics/SellTax.webp";
+import SymbolOne from "../images/tokenomics/SymbolOne.webp";
+import SymbolTwo from "../images/tokenomics/SymbolTwo.webp";
 // images
 
 import Guma from "../images/tokenomics/guma.webp";

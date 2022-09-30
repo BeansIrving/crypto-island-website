@@ -15,10 +15,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // borders
 
-import borderright from "../images/character/RightBorder.png";
-import borderleft from "../images/character/Left_border.png";
-import vinesright from "../images/character/vines2.png";
-import vinesleft from "../images/character/vines1.png";
+import borderright from "../images/character/RightBorder.webp";
+import borderleft from "../images/character/Left_border.webp";
+import vinesright from "../images/character/vines2.webp";
+import vinesleft from "../images/character/vines1.webp";
 
 // Character Images
 
@@ -168,9 +168,9 @@ const Character = () => {
       h-[130vh] sm:h-[105vh] z-40"
     >
       <div className="nft-content h-[130vh] sm:h-[105vh]">
-        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.png')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.webp')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
-        <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.png')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.webp')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute right-0 top-[0%] z-[4] border-lr">
           <img className="w-[100%]" src={borderright} alt="/" />

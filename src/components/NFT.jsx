@@ -81,8 +81,8 @@ const NFT = () => {
             <div
               className="py-12 px-12 sm:px-[5rem] lg:mx-[5rem]
                     md:px-[12rem] lg:px-[10rem] sm:border-0 
-                    bg-[url('images/nft/NFTs_mobile.png')] 
-                    lg:bg-[url('images/nft/NFTs.png')] select-none bg-center
+                    bg-[url('images/nft/NFT_Banner_Mobile.webp')] 
+                    lg:bg-[url('images/nft/NFT_Banner.webp')] select-none bg-center
                     bg-contain bg-no-repeat flex justify-center items-center text-center  
                     h-[400px] w-[100%] z-[5] mx-6"
             >
