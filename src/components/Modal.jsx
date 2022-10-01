@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 // Images
 
@@ -9,9 +9,8 @@ import angelcannon from "../images/cryptobridge/Vitalik_Angel_Cannon.webp";
 
 import { motion } from "framer-motion";
 
-
-
 const Modal = ({ open, onClose }) => {
+  const constraintsRef = useRef(null);
 
   if (!open) return null;
   return (
@@ -19,12 +18,17 @@ const Modal = ({ open, onClose }) => {
       className="flex justify-center items-center
                bg-slate-900/50 
                  h-[112vh] w-[100%] z-[5] absolute faded-edges"
-      onClick={onClose}
+      ref={constraintsRef}
     >
       <div className="nft-content h-[112vh]">
-        <div className="absolute bottom-20 left-20 xl:bottom-10 xl:left-10 z-[2] floating">
-          <img src={angelcannon} className="h-[250px] xl:h-[500px] " alt="/" />
-        </div>
+        <motion.div
+          className="absolute bottom-20 left-20 xl:bottom-[30%] xl:left-10 z-[6]"
+          drag
+          dragConstraints={constraintsRef}
+          id="artifact"
+        >
+          <img src={angelcannon} className="h-[350px] xl:h-[500px] floating" alt="/" />
+        </motion.div>
 
         <div className="floating">
           <div className="select-non max-w-[1240px] flex justify-end">
