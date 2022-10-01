@@ -30,7 +30,7 @@ const Guma = () => {
                         bg-[url('images/guma/Ground.webp')] bg-cover bg-center bg-no-repeat"
         />
 
-        <div className="absolute left-0 bottom-[6%] sm:bottom-[5%] z-[4]">
+        <div className="absolute left-0 bottom-[0%] z-[4]">
           <img
             className="w-[150px] sm:w-[250px] lg:w-[400px] xl:w-[500px]"
             src={leftrock}
@@ -38,7 +38,7 @@ const Guma = () => {
           />
         </div>
 
-        <div className="absolute right-0 bottom-[6%] sm:bottom-[5%] z-[3]">
+        <div className="absolute right-0 bottom-[0] z-[3]">
           <img
             className="w-[150px] sm:w-[250px] lg:w-[400px] xl:w-[500px]"
             src={rightrock}
