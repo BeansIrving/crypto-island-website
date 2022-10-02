@@ -16,19 +16,12 @@ const Modal = ({ open, onClose }) => {
   return (
     <div
       className="flex justify-center items-center
-               bg-slate-900/50 
+               bg-slate-900/60 
                  h-[112vh] w-[100%] z-[5] absolute faded-edges"
       ref={constraintsRef}
     >
       <div className="nft-content h-[112vh]">
-        <motion.div
-          className="absolute bottom-20 left-20 xl:bottom-[30%] xl:left-10 z-[6]"
-          drag
-          dragConstraints={constraintsRef}
-          id="artifact"
-        >
-          <img src={angelcannon} className="h-[350px] xl:h-[500px] floating" alt="/" />
-        </motion.div>
+     
 
         <div className="floating">
           <div className="select-non max-w-[1240px] flex justify-end">

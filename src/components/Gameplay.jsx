@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
-import gameplay from "../images/gameplay/gameplay_asset_landscape.webp";
-import mobile from "../images/gameplay/gameplay_asset_portrait.webp";
+import gameplay from "../images/gameplay/Game_mechanics_landscape.webp";
+import mobile from "../images/gameplay/Game_mechanics_portrait.webp";
 
 const Gameplay = () => {
   return (
