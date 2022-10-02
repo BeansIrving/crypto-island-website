@@ -64,7 +64,7 @@ const Guma = () => {
 
         {/* <div className="absolute bottom-[8%] left-[12%] z-[3]">
               </div> */}
-        <div className="flex flex-col lg:flex lg:flex-row items-center justify-center gap-10 z-[5] pb-[20rem]">
+        <div className="flex flex-col lg:flex lg:flex-row items-center justify-center gap-10 z-[5] pb-[10rem]">
           <div className="order-2 lg:order-1">
             <img
               className="w-[350px] lg:w-[450px] floating"
