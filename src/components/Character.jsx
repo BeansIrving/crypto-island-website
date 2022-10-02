@@ -199,7 +199,7 @@ const Character = () => {
           <div className="my-0 sm:my-10">
             <h1
               className="text-center font-[bluenight] text-[#652706] text-2xl uppercase
-            px-[25rem] sm:px-[20rem] md:px-[15rem] frame-anim"
+            px-[25rem] sm:px-[20rem] md:px-[15rem] text-anim opacity-0"
             >
               Play as your favorite crypto personalities in different game
               modes!
@@ -232,7 +232,7 @@ const Character = () => {
                     <div key={item} className="px-7">
                       <div
                         className="flex justify-center 
-                        py-5 frame-anim opacity-0"
+                        py-5 text-anim opacity-0"
                       >
                         <img
                           className="h-[100px] w-[100px] sm:h-[500px]"
