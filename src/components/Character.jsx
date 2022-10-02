@@ -232,7 +232,7 @@ const Character = () => {
                     <div key={item} className="px-7">
                       <div
                         className="flex justify-center 
-                        py-5 frame-anim"
+                        py-5 frame-anim opacity-0"
                       >
                         <img
                           className="h-[100px] w-[100px] sm:h-[500px]"
@@ -241,7 +241,7 @@ const Character = () => {
                         ></img>
                       </div>
 
-                      <div className="text-anim">
+                      <div className="text-anim opacity-0">
                         <h1 className="font-[bluenight] uppercase tracking-widest text-[#652706]">
                           {item.name}
                         </h1>

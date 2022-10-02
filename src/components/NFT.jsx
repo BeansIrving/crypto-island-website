@@ -53,6 +53,7 @@ const NFT = () => {
       },
       scale: 1,
       x: 0,
+      opacity:1,
       duration: 2,
       ease: "elastic",
     });
@@ -93,7 +94,7 @@ const NFT = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[4] bitboy">
+        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[4] opacity-0 bitboy">
           <img
             className="w-[150px] lg:w-[200px] 2xl:w-[300px]"
             src={bitboy}

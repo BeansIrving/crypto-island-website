@@ -25,6 +25,7 @@ const Ecosystem = () => {
       },
       scale: 1,
       duration: 2,
+      opacity:1,
       ease: "elastic",
     });
   };
@@ -48,7 +49,7 @@ const Ecosystem = () => {
           <div className="bg-[url('images/ecosystem/ecosystem_mobile.webp')] sm:bg-[url('images/ecosystem/ecosystem_pc.webp')] select-none bg-center bg-contain bg-no-repeat flex justify-center items-center text-center w-[500px] sm:w-[800px] h-[100%] lg:w-[800px] mx-6">
       
           </div>
-          <div className="guma mt-12">
+          <div className="guma mt-12 opacity-0">
             <img
               className="h-[100%] w-[250px] pt:[20px] lg:relative lg:top-[10vh] lg:left-[-10vh] lg:w-[450px]"
               src={guma}
