@@ -52,13 +52,14 @@ const PlayNow = () => {
       { scale: 0 },
       {
         scrollTrigger: {
-          trigger: play.current,
-          start: "-500 center",
+          trigger: element,
+          start: "-500% center",
           end: "center center",
           markers: false,
+         
         },
         scale: 1,
-        duration:1.5,
+        duration:1,
         ease: "bounce",
       }
     );
@@ -164,21 +165,6 @@ const PlayNow = () => {
   }, []);
 
   useEffect(() => {
-    gsap.fromTo(
-      play.current,
-      { scale: 0 },
-      {
-        scrollTrigger: {
-          trigger: play.current,
-          start: "-500 center",
-          end: "center center",
-          markers: false,
-        },
-        scale: 1,
-        ease: "bounce",
-      }
-    );
-
     springIn(".springIn");
   }, []);
 
@@ -230,7 +216,7 @@ const PlayNow = () => {
           }}
         />
         <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[5%] justify-center ">
-          <div className="flex flex-col gap-5 justify-center items-center">
+          <div className="flex flex-col gap-5 justify-center items-center springIn">
             <motion.div
               className="springIn"
               whileHover={{ scale: 1.05 }}
@@ -248,7 +234,7 @@ const PlayNow = () => {
 
             {/* Input Swiper Here */}
             <motion.div
-              className="springIn"
+       
             >
               <Swiper
                 slidesPerView={3}

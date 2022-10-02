@@ -15,12 +15,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // borders
 
-import borderright from "../images/character/RightBorder.webp";
-import borderleft from "../images/character/Left_border.webp";
+import borderright from "../images/character/right-border-full.webp";
+import borderleft from "../images/character/left-border-full.webp";
 import vinesright from "../images/character/vines2.webp";
 import vinesleft from "../images/character/vines1.webp";
 
 import Signage from "../images/roadmap/Signage.webp";
+import swipeleft from "../images/character/swipe-left.webp";
+import swiperight from "../images/character/swipe-right.webp";
 
 // Character Images
 
@@ -172,9 +174,9 @@ const Character = () => {
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
-      h-[1250px] z-40"
+      h-[1300px] z-40"
     >
-      <div className="nft-content h-[1250px]">
+      <div className="nft-content h-[1300px]">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.webp')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.webp')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -255,13 +257,18 @@ const Character = () => {
           </div>
         </div>
 
-        {showResults ? (
-          <div className="absolute bottom-[5%] ml-2 inline-grid z-[4] floating">
-            <img src={Signage} className="w-[150px]" alt="/" />
-          </div>
-        ) : (
-          ""
-        )}
+        <div className="absolute left-[12%] bottom-[50%] ml-2 inline-grid z-[4] floating-x">
+          <img src={swipeleft} className="w-[150px] hidden 4xl:inline-block text-anim" alt="/" />
+        </div>
+
+        <div className="absolute right-[12%] bottom-[50%] ml-2 inline-grid z-[4] floating-x">
+          <img src={swiperight} className="w-[150px] hidden 4xl:inline-block text-anim" alt="/" />
+        </div>
+
+        <div className="absolute  bottom-[5%] ml-2 inline-grid z-[4] floating-x">
+          <img src={Signage} className="w-[150px] inline-block 4xl:hidden text-anim" alt="/" />
+        </div>
+        
       </div>
     </div>
   );

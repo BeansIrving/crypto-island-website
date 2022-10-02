@@ -50,7 +50,7 @@ const Guma = () => {
           <img src={sea} alt="/" />
         </div>
 
-        <div className="absolute left-[20%] bottom-[0%] z-[10]">
+        <div className="absolute left-[10%] 3xl:left-[15%] 4xl:left-[20%] bottom-[0%] z-[10]">
           <img
             src={markcuban}
             className="h-[auto] sm:h-[auto] md:h-[900px]"
