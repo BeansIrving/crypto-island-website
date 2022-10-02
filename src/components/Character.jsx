@@ -258,15 +258,15 @@ const Character = () => {
         </div>
 
         <div className="absolute left-[12%] bottom-[50%] ml-2 inline-grid z-[4] floating-x">
-          <img src={swipeleft} className="w-[150px] hidden 4xl:inline-block text-anim" alt="/" />
+          <img src={swipeleft} className="w-[150px] hidden 4xl:inline-block text-anim opacity-0" alt="/" />
         </div>
 
         <div className="absolute right-[12%] bottom-[50%] ml-2 inline-grid z-[4] floating-x">
-          <img src={swiperight} className="w-[150px] hidden 4xl:inline-block text-anim" alt="/" />
+          <img src={swiperight} className="w-[150px] hidden 4xl:inline-block text-anim opacity-0" alt="/" />
         </div>
 
         <div className="absolute  bottom-[5%] ml-2 inline-grid z-[4] floating-x">
-          <img src={Signage} className="w-[150px] inline-block 4xl:hidden text-anim" alt="/" />
+          <img src={Signage} className="w-[150px] inline-block 4xl:hidden text-anim opacity-0" alt="/" />
         </div>
         
       </div>
