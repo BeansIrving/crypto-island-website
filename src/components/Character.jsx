@@ -131,8 +131,8 @@ const Character = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "1500% center",
-        end: "1500% center",
+        start: "1640% center",
+        end: "1640% center",
         markers: false,
         scrub: false,
       },

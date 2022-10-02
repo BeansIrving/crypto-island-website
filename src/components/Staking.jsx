@@ -79,13 +79,17 @@ const Staking = () => {
 
   return (
     <div
-      className="flex justify-center items-center bg-[url('images/backgrounds/bg-staking.webp')] h-[130vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[90vh]"
+      className="flex justify-center items-center bg-[url('images/backgrounds/bg-staking.webp')] 
+      h-[130vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[90vh]"
       id="staking-section"
     >
+      
       <div className="max-w-[1240px] flex flex-col justify-center items-center gap-10 p-5 sm:p-5">
+        
         {/* <div className="w-[300px]">
           <img src={StakingImg} alt="/" />
         </div> */}
+        
         <div className="flex gap-14 flex-wrap flex-row justify-center">
           <motion.div
             ref={item1}
