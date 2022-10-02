@@ -207,7 +207,7 @@ const Roadmap = () => {
       id="roadmap-section"
     >
       <div className="nft-content h-[140vh] mb:h-[100vh] ">
-        <div className="absolute top-0 mt-[200px]">
+        <div className="absolute top-[5%] z-[5]">
           <img src={Banner} className="w-[200px]" alt="/" />
         </div>
 

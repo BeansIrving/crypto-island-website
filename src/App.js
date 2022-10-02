@@ -1,5 +1,3 @@
-
-
 import Character from "./components/Character";
 import Cryptobridge from "./components/Cryptobridge";
 import Ecosystem from "./components/Ecosystem";
@@ -17,23 +15,24 @@ import PlayNow from "./components/PlayNow";
 import Roadmap from "./components/Roadmap";
 import Staking from "./components/Staking";
 import Tokenomics from "./components/Tokenomics";
+import TokenomicsP2 from "./components/TokenomicsP2";
 
 function App() {
-
   return (
     <>
       <Navbar />
       <Hero />
       <Cryptobridge />
-      <PlayNow/>
+      <PlayNow />
       <Gameplay />
       <Character /> 
-      <Guma />
       <Ecosystem />
-      <NFT />
+      <Guma />
+      <NFT /> 
       <Staking/>
       <Roadmap />
       <Tokenomics/>
+      <TokenomicsP2/>
       <Partners/>
       <Footer/>
     </>

@@ -83,9 +83,9 @@ const Staking = () => {
       id="staking-section"
     >
       <div className="max-w-[1240px] flex flex-col justify-center items-center gap-10 p-5 sm:p-5">
-        <div className="w-[300px]">
+        {/* <div className="w-[300px]">
           <img src={StakingImg} alt="/" />
-        </div>
+        </div> */}
         <div className="flex gap-14 flex-wrap flex-row justify-center">
           <motion.div
             ref={item1}

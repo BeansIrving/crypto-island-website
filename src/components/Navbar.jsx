@@ -62,17 +62,6 @@ const Navbar = () => {
             </LinkS>
 
             <LinkS
-              to="staking-section"
-              smooth={true}
-              duration={1000}
-              spy={true}
-              exact="true"
-              offset={0}
-            >
-              <li>Staking</li>
-            </LinkS>
-
-            <LinkS
               to="roadmap-section"
               smooth={true}
               duration={1000}
@@ -183,17 +172,7 @@ const Navbar = () => {
           >
             <li className="border-b-2 border-zinc-300 w-full">NFTS</li>
           </LinkS>
-          <LinkS
-            to="staking-section"
-            smooth={true}
-            duration={1000}
-            spy={true}
-            exact="true"
-            offset={0}
-            onClick={handleClick}
-          >
-            <li className="border-b-2 border-zinc-300 w-full">Staking</li>
-          </LinkS>
+
           <LinkS
             to="roadmap-section"
             smooth={true}

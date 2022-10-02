@@ -183,7 +183,7 @@
     justify-content: center;
   }
 
-  @media screen and (max-width: 811px) {
+  @media screen and (max-width: 1077px) {
     .border-lr {
       visibility: hidden;
     }

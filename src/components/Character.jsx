@@ -20,6 +20,8 @@ import borderleft from "../images/character/Left_border.webp";
 import vinesright from "../images/character/vines2.webp";
 import vinesleft from "../images/character/vines1.webp";
 
+import Signage from "../images/roadmap/Signage.webp";
+
 // Character Images
 
 import characterone from "../images/character/characterframe1.webp";
@@ -37,6 +39,9 @@ import johnmcafee from "../images/character/johnmcafee.webp";
 
 const Character = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const [showResults, setShowResults] = React.useState(true);
+  const onClick = () => setShowResults(false);
 
   const character = [
     {
@@ -165,9 +170,9 @@ const Character = () => {
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
-      h-[130vh] sm:h-[105vh] z-40"
+      h-[1250px] z-40"
     >
-      <div className="nft-content h-[130vh] sm:h-[105vh]">
+      <div className="nft-content h-[1250px]">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.webp')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.webp')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -192,7 +197,7 @@ const Character = () => {
           <div className="my-0 sm:my-10">
             <h1
               className="text-center font-[bluenight] text-[#652706] text-2xl uppercase
-            px-[25rem] sm:px-[25rem] frame-anim"
+            px-[25rem] sm:px-[20rem] md:px-[15rem] frame-anim"
             >
               Play as your favorite crypto personalities in different game
               modes!
@@ -205,6 +210,7 @@ const Character = () => {
               spaceBetween={30}
               effect={"coverflow"}
               grabCursor={true}
+              navigation={true}
               loop={true}
               centeredSlides={true}
               coverflowEffect={{
@@ -224,7 +230,7 @@ const Character = () => {
                     <div key={item} className="px-7">
                       <div
                         className="flex justify-center 
-                        py-0 sm:py-5 frame-anim"
+                        py-5 frame-anim"
                       >
                         <img
                           className="h-[100px] w-[100px] sm:h-[500px]"
@@ -246,6 +252,14 @@ const Character = () => {
             </Swiper>
           </div>
         </div>
+
+        {showResults ? (
+          <div className="absolute bottom-[5%] ml-2 inline-grid z-[4] floating">
+            <img src={Signage} className="w-[150px]" alt="/" />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import BuyTax from "../images/tokenomics/BuyTax.webp";
-import SellTax from "../images/tokenomics/SellTax.webp";
+
 import SymbolOne from "../images/tokenomics/SymbolOne.webp";
 import SymbolTwo from "../images/tokenomics/SymbolTwo.webp";
 // images
@@ -11,7 +10,9 @@ import Banner from "../images/tokenomics/banner.webp";
 const Tokenomics = () => {
   return (
     <div
-      className=" w-full h-[160vh] md:h-[170vh] lg:h-[120vh] bg-cover bg-[url(images/backgrounds/bg-tokenomics.webp)] bg-no-repeat bg-bottom flex justify-center py-20"
+      className=" w-full h-[160vh] md:h-[170vh] lg:h-[120vh] 
+      bg-cover bg-[url(images/backgrounds/bg-tokenomics.webp)] 
+      bg-no-repeat bg-bottom flex justify-center py-20"
       id="tokenomics-section"
     >
       <div className="nft-content h-[140vh] md:h-[140vh] lg:h-[120vh]">
@@ -41,7 +42,7 @@ const Tokenomics = () => {
               className=" w-[auto] h-[auto]
           md:w-[500px]  md:h-[400px] flex-col flex relative mt-[5rem] lg:mt-[8rem]"
             >
-              <div className="flex justify-center items-start">
+              {/* <div className="flex justify-center items-start">
                 <div className="w-full flex flex-col justify-center items-center font-[geliofasolada] text-white text-2xl text-center tracking-wider gap-2 z-[1]">
                   <img
                     src={BuyTax}
@@ -73,14 +74,18 @@ const Tokenomics = () => {
                     <span className="text-3xl">2</span>%Liquidity
                   </h1>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="flex justify-center items-center font-[geliofasolada] text-white text-2xl text-center tracking-wider gap-[8rem] z-[1] my-[5rem] mx-0">
+              <div className="flex flex-col justify-center items-start 
+                              font-[geliofasolada] 
+                              text-white text-2xl text-left tracking-wider 
+                              gap-[1rem] z-[1] my-[5rem] mx-0">
                 <h1 className="text-shadow">
-                  <span className="text-3xl"></span>liquidity locked
+                  <span className="text-3xl"></span>Total supply 270 million
+                  tokens
                 </h1>
                 <h1 className="text-shadow">
-                  <span className="text-3xl"></span>low tax 5%
+                  <span className="text-3xl"></span>liquidity locked
                 </h1>
               </div>
               {/* <div className="w-full flex flex-col justify-center items-center font-[geliofasolada]  text-white text-2xl text-center tracking-wider gap-2 z-[1]">

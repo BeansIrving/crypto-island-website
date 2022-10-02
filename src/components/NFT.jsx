@@ -115,7 +115,7 @@ const NFT = () => {
 
         <div className="absolute left-0 bottom-[0%] z-[4]">
           <img
-            className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]"
+            className="w-[100%] h-[200px] md:h-[300px] lg:h-[300px]"
             src={grassleft}
             alt="/"
           />
@@ -123,7 +123,7 @@ const NFT = () => {
 
         <div className="absolute right-0 bottom-[0%] z-[4]">
           <img
-            className="w-[100%] h-[200px] sm:h-[300px] lg:h-[400px]"
+            className="w-[100%] h-[200px] md:h-[300px] lg:h-[300px]"
             src={grassright}
             alt="/"
           />

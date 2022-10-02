@@ -183,8 +183,8 @@ const PlayNow = () => {
   }, []);
 
   return (
-    <div className="h-[180vh] mb:h-[140vh]  md:h-[125vh] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
-      <div className="nft-content h-[180vh] mb:h-[140vh]  md:h-[125vh]">
+    <div className="h-[1300px] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
+      <div className="nft-content h-[1300px]">
         <div
           className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover bg-top bg-no-repeat z-[5]"
           ref={opacity}
@@ -212,7 +212,7 @@ const PlayNow = () => {
         >
           <img
             src={[Satoshi]}
-            className="w-[100px] lg:w-[275px] xl:w-[350px]"
+            className="w-[100px] sm:w-[170px] lg:w-[275px] xl:w-[350px]"
           />
         </div>
 
@@ -220,7 +220,7 @@ const PlayNow = () => {
           className="z-[10] md:flex absolute right-0 bottom-[50px]"
           ref={right}
         >
-          <img src={[Right]} className="w-[300px] lg:w-[700px] xl:w-[950px]" />
+          <img src={[Right]} className="w-[300px] sm:w-[400px] lg:w-[700px] xl:w-[950px]" />
         </div>
 
         <VideoModal
@@ -229,7 +229,7 @@ const PlayNow = () => {
             setOpen(false);
           }}
         />
-        <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[1%] justify-center ">
+        <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[5%] justify-center ">
           <div className="flex flex-col gap-5 justify-center items-center">
             <motion.div
               className="springIn"
@@ -242,7 +242,7 @@ const PlayNow = () => {
                 }}
                 alt="/"
                 src={Play}
-                className="w-[450px] cursor-pointer active:scale-[90%] duration-75"
+                className="w-[400px] cursor-pointer active:scale-[90%] duration-75"
               />
             </motion.div>
 
@@ -272,13 +272,13 @@ const PlayNow = () => {
                 {videoimages.map((item) => {
                   return (
                     <SwiperSlide className="mySwiperGame-slide">
-                      <div key={item} className="px-7">
+                      <div key={item} className="px-10">
                         <div
                           className="flex justify-center 
                         py-0 sm:py-5"
                         >
                           <img
-                            className="border-[6px]"
+                            className="border-[8px]"
                             src={item.videoimage}
                             alt="/"
                           ></img>

@@ -15,18 +15,17 @@ const Guma = () => {
   return (
     <div
       className="flex justify-center items-center
-                
-                h-[120vh] w-[100%]
+                h-[1200px] w-[100%]
                 bg-[url('images/backgrounds/sky.webp')] bg-cover bg-center bg-no-repeat"
     >
-      <div className="hero-content h-[120vh] w-[100%]">
-        <div
+      <div className="hero-content h-[1200px] w-[100%]">
+        {/* <div
           className="absolute left-0 bottom-[0%] z-[5] h-[140px] w-[100%]
                         bg-[url('images/character/Lower_border.webp')] bg-cover bg-center bg-no-repeat"
-        />
+        /> */}
 
         <div
-          className="absolute left-0 bottom-[0%] z-[3] h-[20vh] w-[100%]
+          className="absolute left-0 bottom-[0%] z-[3] h-[230px] w-[100%]
                         bg-[url('images/guma/Ground.webp')] bg-cover bg-center bg-no-repeat"
         />
 
@@ -50,8 +49,8 @@ const Guma = () => {
           <img src={sea} alt="/" />
         </div>
 
-        <div className="absolute bottom-[0%] z-[3]">
-          <img src={markcuban} className="h-[500px]" alt="/" />
+        <div className="absolute left-[20%] bottom-[0%] z-[10]">
+          <img src={markcuban} className="h-[auto] sm:h-[auto] md:h-[900px]" alt="/" />
         </div>
 
         <div className="absolute  top-[11%] sm:top-[8%] lg:top-[5%] z-[2] floating">
@@ -61,9 +60,9 @@ const Guma = () => {
         {/* <div className="absolute bottom-[8%] left-[12%] z-[3]">
               </div> */}
         <div className="flex flex-col lg:flex lg:flex-row items-center justify-center gap-10 z-[5] pb-[20rem]">
-          <div className="order-1 lg:order-1">
+          <div className="order-2 lg:order-1">
             <img
-              className="w-[250px] lg:w-[450px] floating"
+              className="w-[350px] lg:w-[450px] floating"
               src={gumanucleos}
               alt="/"
             />
