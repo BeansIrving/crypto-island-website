@@ -125,15 +125,16 @@ const Character = () => {
 
   const fadeInDown = (element) => {
     gsap.from(element, {
-      y: -300,
+      y: -400,
       opacity: 0,
     });
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "1050% center",
-        end: "1050%",
+        start: "1500% center",
+        end: "1500% center",
         markers: false,
+        scrub: false,
       },
       opacity: 1,
       y: 0,
@@ -150,9 +151,10 @@ const Character = () => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "-550% center",
-        end: "-547%",
+        start: "-350% center",
+        end: "-350% center",
         markers: false,
+        scrub: false,
       },
       opacity: 1,
       y: 0,
