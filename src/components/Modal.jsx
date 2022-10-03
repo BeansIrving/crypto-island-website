@@ -10,7 +10,7 @@ import angelcannon from "../images/cryptobridge/Vitalik_Angel_Cannon.webp";
 import { motion } from "framer-motion";
 
 const Modal = ({ open, onClose }) => {
-  const constraintsRef = useRef(null);
+
 
   if (!open) return null;
   return (
@@ -18,7 +18,7 @@ const Modal = ({ open, onClose }) => {
       className="flex justify-center items-center
                bg-slate-900/60 
                  h-[112vh] w-[100%] z-[5] absolute faded-edges"
-      ref={constraintsRef}
+
     >
       <div className="nft-content h-[112vh]">
      
