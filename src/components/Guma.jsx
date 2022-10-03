@@ -30,7 +30,7 @@ const Guma = () => {
                         bg-[url('images/guma/Ground.webp')] bg-cover bg-center bg-no-repeat"
         />
 
-        <div className="absolute left-0 bottom-[0%] z-[4]">
+        <div className="absolute left-0 bottom-[0%] z-[7]">
           <img
             className="w-[150px] sm:w-[250px] lg:w-[400px] xl:w-[500px]"
             src={leftrock}
@@ -50,7 +50,7 @@ const Guma = () => {
           <img src={sea} alt="/" />
         </div>
 
-        <div className="absolute left-[10%] 3xl:left-[15%] 4xl:left-[20%] bottom-[0%] z-[10]">
+        <div className="absolute left-[10%] 3xl:left-[15%] 4xl:left-[20%] bottom-[0%] z-[6]">
           <img
             src={markcuban}
             className="h-[auto] sm:h-[auto] md:h-[900px]"

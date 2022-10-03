@@ -94,7 +94,7 @@ const Tokenomics = () => {
 
               <img
                 src={SymbolOne}
-                className="absolute w-[80px] z-[0] bottom-[230px] sm:bottom-[80px] md:right-[80px] right-[0px] opacity-[0.5] sm:opacity-[1]"
+                className="absolute w-[80px] z-[0] bottom-[80px] sm:bottom-[80px] md:right-[80px] right-[0px] opacity-[0.5] sm:opacity-[1]"
               />
 
               <img

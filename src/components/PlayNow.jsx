@@ -198,7 +198,7 @@ const PlayNow = () => {
         >
           <img
             src={[Satoshi]}
-            className="w-[100px] sm:w-[170px] lg:w-[275px] xl:w-[350px]"
+            className="hidden mv:inline-block mv:w-[100px] sm:w-[170px] lg:w-[275px] xl:w-[350px]"
           />
         </div>
 
