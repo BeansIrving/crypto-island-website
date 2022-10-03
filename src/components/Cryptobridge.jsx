@@ -194,7 +194,7 @@ const Cryptobridge = () => {
           className="select-none z-[2]"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setIsOpen((state) => !state)}
+          onClick={() => setIsOpen((state) => !state) || setVisible(true) }
           id="crypto-bridge"
         >
           <div className="floating">
@@ -204,6 +204,7 @@ const Cryptobridge = () => {
                 id="crypto-bridge"
                 src={title}
                 alt="/"
+           
               />
             ) : (
               <img
@@ -211,7 +212,7 @@ const Cryptobridge = () => {
                 id="crypto-bridge"
                 src={titleClick}
                 alt="/"
-                onClick={() => setIsOpen((state) => !state)}
+      
               />
             )}
           </div>
