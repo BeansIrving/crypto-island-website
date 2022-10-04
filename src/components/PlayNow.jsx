@@ -233,11 +233,25 @@ const PlayNow = () => {
           transition={{ type: "spring", stiffness: 100 }}
           className="modal"
         >
+          <div className="absolute top-[10%] right-[5%] lg:top-[5%] lg:right-[5%] z-[9999999999999]">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <img
+                className="w-[40px] sm:w-[80px] lg:w-[100px] cursor-pointer drop-shadow-2xl"
+                src={cross}
+                alt="/"
+                onClick={() =>
+                  setIsOpen((state) => !state) || playVideo.current.pause()
+                }
+              />
+            </motion.div>
+          </div>
           <div
             className="flex justify-center items-center
               bg-slate-900/50 
               h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute"
-              onClick={() => setIsOpen((state) => !state) || playVideo.current.pause()}
+              onClick={() =>
+                setIsOpen((state) => !state) || playVideo.current.pause()
+              }
           >
             <div className="nft-content">
               <div>
@@ -271,7 +285,9 @@ const PlayNow = () => {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <img
-                onClick={() => setIsOpen((state) => !state) || playVideo.current.play()}
+                onClick={() =>
+                  setIsOpen((state) => !state) || playVideo.current.play()
+                }
                 alt="/"
                 src={Play}
                 className="w-[400px] cursor-pointer active:scale-[90%] duration-75"
@@ -382,7 +398,7 @@ const videoimages = [
 //   return (
 //     <div
 //       className="flex justify-center items-center
-//               bg-slate-900/50 
+//               bg-slate-900/50
 //               h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute faded-edgesv2"
 //       onClick={onClose}
 //     >
@@ -390,7 +406,7 @@ const videoimages = [
 //         <div>
 //           <div className="select-non max-w-[1240px] flex justify-center h-[50vh] md:h-[auto] md:mt-[0] items-center">
 //             <div
-//               className=" bg-[#cfba89] m-5 sm:m-12 
+//               className=" bg-[#cfba89] m-5 sm:m-12
 //                  sm:h-[250px] md:h-[350px]
 //                 h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
 //             >
