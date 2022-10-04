@@ -194,7 +194,7 @@ const Cryptobridge = () => {
           className="select-none z-[2]"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setIsOpen((state) => !state) || setVisible(true) }
+          onClick={() => setIsOpen((state) => !state) || setVisible(true)}
           id="crypto-bridge"
         >
           <div className="floating">

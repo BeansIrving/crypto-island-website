@@ -43,6 +43,21 @@ const PlayNow = () => {
   const right = useRef(null);
   const play = useRef(null);
 
+  const playVideo = useRef(null);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuVariants = {
+    opened: {
+      top: 0,
+      opacity: 1,
+    },
+    closed: {
+      top: "-105vh",
+      opacity: 0,
+    },
+  };
+
   const [open, setOpen] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -56,10 +71,9 @@ const PlayNow = () => {
           start: "-500% center",
           end: "center center",
           markers: false,
-         
         },
         scale: 1,
-        duration:1,
+        duration: 1,
         ease: "bounce",
       }
     );
@@ -206,15 +220,49 @@ const PlayNow = () => {
           className="z-[10] md:flex absolute right-0 bottom-[50px]"
           ref={right}
         >
-          <img src={[Right]} className="w-[300px] sm:w-[400px] lg:w-[700px] xl:w-[950px]" />
+          <img
+            src={[Right]}
+            className="w-[300px] sm:w-[400px] lg:w-[700px] xl:w-[950px]"
+          />
         </div>
 
-        <VideoModal
+        <motion.div
+          initial={false}
+          variants={menuVariants}
+          animate={isOpen ? "opened" : "closed"}
+          transition={{ type: "spring", stiffness: 100 }}
+          className="modal"
+        >
+          <div
+            className="flex justify-center items-center
+              bg-slate-900/50 
+              h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute"
+              onClick={() => setIsOpen((state) => !state) || playVideo.current.pause()}
+          >
+            <div className="nft-content">
+              <div>
+                <div className="select-non max-w-[1240px] flex justify-center h-[50vh] md:h-[auto] md:mt-[0] items-center">
+                  <div
+                    className=" bg-[#cfba89] m-5 sm:m-12 
+                 sm:h-[250px] md:h-[350px]
+                h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
+                  >
+                    <div className="custom-video-player flex justify-center items-center">
+                      <video ref={playVideo} controls src={Video}></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* <VideoModal
           open={open}
           onClose={() => {
             setOpen(false);
           }}
-        />
+        /> */}
         <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[5%] justify-center ">
           <div className="flex flex-col gap-5 justify-center items-center springIn">
             <motion.div
@@ -223,9 +271,7 @@ const PlayNow = () => {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <img
-                onClick={() => {
-                  setOpen(true);
-                }}
+                onClick={() => setIsOpen((state) => !state) || playVideo.current.play()}
                 alt="/"
                 src={Play}
                 className="w-[400px] cursor-pointer active:scale-[90%] duration-75"
@@ -233,9 +279,7 @@ const PlayNow = () => {
             </motion.div>
 
             {/* Input Swiper Here */}
-            <motion.div
-       
-            >
+            <motion.div>
               <Swiper
                 slidesPerView={3}
                 spaceBetween={10}
@@ -333,30 +377,30 @@ const videoimages = [
   },
 ];
 
-const VideoModal = ({ open, onClose }) => {
-  if (!open) return null;
-  return (
-    <div
-      className="flex justify-center items-center
-              bg-slate-900/50 
-              h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute faded-edgesv2"
-      onClick={onClose}
-    >
-      <div className="nft-content">
-        <div>
-          <div className="select-non max-w-[1240px] flex justify-center h-[50vh] md:h-[auto] md:mt-[0] items-center">
-            <div
-              className=" bg-[#cfba89] m-5 sm:m-12 
-                 sm:h-[250px] md:h-[350px]
-                h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
-            >
-              <div className="custom-video-player flex justify-center items-center">
-                <video controls src={Video} autoPlay></video>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const VideoModal = ({ open, onClose }) => {
+//   if (!open) return null;
+//   return (
+//     <div
+//       className="flex justify-center items-center
+//               bg-slate-900/50 
+//               h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute faded-edgesv2"
+//       onClick={onClose}
+//     >
+//       <div className="nft-content">
+//         <div>
+//           <div className="select-non max-w-[1240px] flex justify-center h-[50vh] md:h-[auto] md:mt-[0] items-center">
+//             <div
+//               className=" bg-[#cfba89] m-5 sm:m-12 
+//                  sm:h-[250px] md:h-[350px]
+//                 h:-[200px] lg:w-[900px] lg:h-[auto] rounded-lg"
+//             >
+//               <div className="custom-video-player flex justify-center items-center">
+//                 <video controls src={Video}></video>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
