@@ -21,7 +21,7 @@ const Partners = () => {
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] rotate-180 h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
-        <div className="w-full max-w-[1240px] h-full flex flex-col justify-center items-center p-10 gap-10">
+        <div className="w-full max-w-[1300px] h-full flex flex-col justify-center items-center p-10 gap-10">
           <div>
             <img src={Partner} className="w-[250px] h-auto" alt="/" />
           </div>
