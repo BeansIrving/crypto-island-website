@@ -12,12 +12,12 @@ import KFSG from "../images/partners/KFSG.png";
 const Partners = () => {
   return (
     <div
-      className="w-full h-[100vh] md:h-[80vh] 
+      className="w-full h-[1000px] md:h-[80vh] 
       bg-[url('images/backgrounds/bg-tokenomics-p2.webp')] bg-cover bg-center bg-no-repeat flex justify-center
       "
       id="partner-section"
     >
-      <div className="nft-content w-full h-[100vh] md:h-[80vh]">
+      <div className="nft-content w-full h-[1000px] md:h-[80vh]">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] rotate-180 h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 

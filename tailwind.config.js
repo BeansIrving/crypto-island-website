@@ -28,6 +28,10 @@ module.exports = {
 
       '4xl': '1700px',
       // => @media (min-width: 1536px) { ... }
+
+      '5xl': '1940px',
+
+      '6xl': '2400px'
     },
     
   },

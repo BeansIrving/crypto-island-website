@@ -3,8 +3,12 @@ import StakingImg from "../images/staking/Staking and Yield.webp";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import OwnLandText from "../images/staking/OwnLandText.webp";
 import PlayingText from "../images/staking/PlayingText.webp";
+
+import digitalland from "../images/staking/DigitalLand.webp"
+import moku from "../images/staking/Moku.webp"
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -80,31 +84,44 @@ const Staking = () => {
   return (
     <div
       className="flex justify-center items-center bg-[url('images/backgrounds/bg-staking.webp')] 
-      h-[130vh] w-full bg-no-repeat bg-cover bg-top pt-20 lg:h-[90vh]"
+      bg-no-repeat bg-cover bg-top  h-[1200px] w-full  lg:h-[90vh]"
       id="staking-section"
     >
-      
-      <div className="max-w-[1240px] flex flex-col justify-center items-center gap-10 p-5 sm:p-5">
-        
-        {/* <div className="w-[300px]">
+      <div className="nft-content h-[1200px] w-full  lg:h-[90vh]">
+
+        <div className="absolute bottom-0 left-0 sm:left-20 z-[5]">
+          <img src={digitalland} className="h-[320px]" alt="/" />
+        </div>
+
+        <div className="absolute bottom-0 right-0 sm:right-20 z-[5]">
+          <img src={moku} className="h-[320px]" alt="/" />
+        </div>
+
+        <div className="max-w-[1240px] flex flex-col justify-center items-center gap-10 p-5 sm:p-5">
+          {/* <div className="w-[300px]">
           <img src={StakingImg} alt="/" />
         </div> */}
-        
-        <div className="flex gap-14 flex-wrap flex-row justify-center">
-          <motion.div
-            ref={item1}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
-            <img src={OwnLandText} className="md:w-[450px] w-[350px]" />
-          </motion.div>
-          <motion.div
-            ref={item1}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
-            <img src={PlayingText} className="md:w-[450px] w-[350px]" ref={item2} />
-          </motion.div>
+
+          <div className="flex gap-14 flex-wrap flex-row justify-center">
+            <motion.div
+              ref={item1}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <img src={OwnLandText} className="md:w-[450px] w-[350px]" />
+            </motion.div>
+            <motion.div
+              ref={item1}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <img
+                src={PlayingText}
+                className="md:w-[450px] w-[350px]"
+                ref={item2}
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
@@ -112,6 +129,3 @@ const Staking = () => {
 };
 
 export default Staking;
-
-
-

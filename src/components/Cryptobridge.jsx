@@ -168,8 +168,7 @@ const Cryptobridge = () => {
         className="hero-content h-[112vh] sm:h-[112vh] w-[100%]"
         id="section-bridge"
       >
-        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[60px] lg:h-[70px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
-
+   
         <motion.button
           className="select-none z-[2] hidden lg:inline-block"
           whileHover={{ scale: 1.1 }}
