@@ -30,28 +30,30 @@ const Partners = () => {
                     w-full gap-10 md:gap-5 lg:gap-20 p-5 "
           >
             <img
-              src={Coingecko}
-              className="md:w-[250px] w-[150px] h-auto md:order-1 order-2"
-              alt="/"
-            />
-            <img
               src={Cmc}
-              className="lg:w-[150px] w-[80px] h-auto md:order-2 order-1"
+              className="lg:w-[150px] w-[80px] h-auto "
               alt="/"
             />
+
+            <img
+              src={Coingecko}
+              className="md:w-[250px] w-[150px] h-auto "
+              alt="/"
+            />
+
             <img
               src={Bsc}
-              className="w-[150px] h-auto md:order-3 order-3"
+              className="w-[150px] h-auto"
               alt="/"
             />
             <img
               src={IRWT}
-              className=" w-[150px] h-auto md:order-3 order-3"
+              className=" w-[150px] h-auto "
               alt="/"
             />
             <img
               src={KFSG}
-              className=" w-[150px] h-auto md:order-3 order-3"
+              className=" w-[150px] h-auto "
               alt="/"
             />
           </div>
