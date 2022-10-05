@@ -3,6 +3,8 @@ import BuyTax from "../images/tokenomics/BuyTax.webp";
 import SellTax from "../images/tokenomics/SellTax.webp";
 import { motion } from "framer-motion";
 import buy from "../images/tokenomics/Buy.webp";
+import borderleft from "../images/character/Left_border.webp";
+import borderright from "../images/character/RightBorder.webp";
 const TokenomicsP2 = () => {
   return (
     <div
@@ -11,6 +13,13 @@ const TokenomicsP2 = () => {
               bg-[url('images/backgrounds/bg-tokenomics-p2.webp')] bg-cover bg-center bg-no-repeat"
     >
       <div className="nft-content  h-[700px] w-[100%]">
+        <div className="absolute right-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderright} alt="/" />
+        </div>
+
+        <div className="absolute left-0 top-[0%] z-[4] border-lr">
+          <img className="w-[100%]" src={borderleft} alt="/" />
+        </div>
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[120px] lg:h-[90px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
         <div className="flex flex-col justify-center items-center gap-10">
           <div className="flex flex-col md:flex-row justify-center items-start gap-10 mt-[5rem]">
@@ -44,11 +53,7 @@ const TokenomicsP2 = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <img
                 alt="/"
                 src={buy}
@@ -56,7 +61,6 @@ const TokenomicsP2 = () => {
               />
             </a>
           </motion.div>
-
         </div>
       </div>
     </div>
