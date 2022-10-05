@@ -65,7 +65,8 @@ const NFT = () => {
 
   return (
     <motion.div
-      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.webp')] h-[150vh] sm:h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
+      className="flex justify-center items-center  lg:pb-0 bg-[url('images/backgrounds/bg-nft.webp')] 
+      h-[150vh] sm:h-[130vh] w-[100%] bg-cover bg-center bg-no-repeat"
       ref={constraintsRef}
       id="nft-section"
     >
@@ -80,7 +81,7 @@ const NFT = () => {
             id="nft-card"
           >
             <div
-              className="py-12 px-12 sm:px-[5rem] lg:mx-[5rem]
+              className="py-12 px-12 sm:px-[5rem] lg:mx-[5rem] xl:ml-[10rem] 3xl:mx-[5rem]
                     md:px-[12rem] lg:px-[10rem] sm:border-0 
                     bg-[url('images/nft/NFT_Banner_Mobile.webp')] 
                     lg:bg-[url('images/nft/NFT_Banner.webp')] select-none bg-center
@@ -94,9 +95,9 @@ const NFT = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[4] opacity-0 bitboy">
+        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[6] opacity-0 bitboy">
           <img
-            className="w-[150px] lg:w-[200px] 2xl:w-[300px]"
+            className="w-[300px] lg:w-[300px] 2xl:w-[400px]"
             src={bitboy}
             alt="/"
           />

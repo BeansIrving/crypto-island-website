@@ -24,6 +24,12 @@ import Sc5 from "../images/playnow/screenshots/sc5.webp";
 import Sc6 from "../images/playnow/screenshots/sc6.webp";
 import Sc7 from "../images/playnow/screenshots/sc7.webp";
 import Sc8 from "../images/playnow/screenshots/sc8.webp";
+import Sc9 from "../images/playnow/screenshots/sc9.webp";
+import Sc10 from "../images/playnow/screenshots/sc10.webp";
+import Sc11 from "../images/playnow/screenshots/sc11.webp";
+import Sc12 from "../images/playnow/screenshots/sc12.webp";
+import Sc13 from "../images/playnow/screenshots/sc13.webp";
+import Sc14 from "../images/playnow/screenshots/sc14.webp";
 
 import Right from "../images/playnow/beepleandmcfeecannon.webp";
 
@@ -183,7 +189,10 @@ const PlayNow = () => {
   }, []);
 
   return (
-    <div className="h-[1300px] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]">
+    <div
+      className="h-[1300px] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]"
+      id="gameplay-section"
+    >
       <div className="nft-content h-[1300px]">
         <div
           className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover bg-top bg-no-repeat z-[5]"
@@ -249,9 +258,9 @@ const PlayNow = () => {
             className="flex justify-center items-center
               bg-slate-900/50 
               h-[180vh] mb:h-[140vh]  md:h-[125vh] w-[100%] z-[199] absolute"
-              onClick={() =>
-                setIsOpen((state) => !state) || playVideo.current.pause()
-              }
+            onClick={() =>
+              setIsOpen((state) => !state) || playVideo.current.pause()
+            }
           >
             <div className="nft-content">
               <div>
@@ -391,6 +400,25 @@ const videoimages = [
   {
     videoimage: Sc8,
   },
+  {
+    videoimage: Sc9,
+  },
+  {
+    videoimage: Sc10,
+  },
+  {
+    videoimage: Sc11,
+  },
+  {
+    videoimage: Sc12,
+  },
+  {
+    videoimage: Sc13,
+  },
+  {
+    videoimage: Sc14,
+  },
+
 ];
 
 // const VideoModal = ({ open, onClose }) => {

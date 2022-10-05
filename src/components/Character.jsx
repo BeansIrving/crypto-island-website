@@ -174,9 +174,9 @@ const Character = () => {
     <div
       className="flex justify-center items-center 
       bg-[url('images/backgrounds/bg-character.webp')] bg-cover bg-center
-      h-[1300px] z-40"
+      h-[1000px] z-40"
     >
-      <div className="nft-content h-[1300px]">
+      <div className="nft-content h-[1000px] ">
         <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/character/Upper.webp')] h-[100px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
 
         <div className="absolute left-0 bottom-[0%] z-[5] bg-[url('images/character/Lower_border.webp')] h-[165px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
@@ -265,8 +265,8 @@ const Character = () => {
           <img src={swiperight} className="w-[150px] hidden 4xl:inline-block text-anim opacity-0" alt="/" />
         </div>
 
-        <div className="absolute  bottom-[5%] ml-2 inline-grid z-[4] floating-x">
-          <img src={Signage} className="w-[150px] inline-block 4xl:hidden text-anim opacity-0" alt="/" />
+        <div className="absolute left-[10%] lg:left-[20%] bottom-[5%] ml-2 inline-grid z-[4] floating">
+          <img src={Signage} className="w-[110px] md:w-[150px] inline-block 4xl:hidden text-anim opacity-0" alt="/" />
         </div>
         
       </div>

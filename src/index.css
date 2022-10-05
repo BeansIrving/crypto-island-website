@@ -357,3 +357,7 @@ body {
   align-items: center;
   z-index: 999999;
 }
+
+.sea{
+  object-fit: cover;
+}

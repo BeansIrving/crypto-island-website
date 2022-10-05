@@ -46,9 +46,15 @@ const Guma = () => {
           />
         </div>
 
-        <div className="absolute right-0 bottom-[11%] sm:bottom-[8%] lg:bottom-[5%] z-[2]">
-          <img src={sea} alt="/" />
-        </div>
+        <div
+          className="absolute left-0 bottom-[0%] z-[2] h-[30%] lg:h-[40%] w-[100%]
+                        bg-[url('images/guma/sea.webp')] bg-contain 4xl:bg-cover bg-center bg-no-repeat"
+        />
+
+
+        {/* <div className="absolute right-0 bottom-[11%] sm:bottom-[8%] lg:bottom-[5%] z-[2]">
+          <img src={sea} className="sea" alt="/" />
+        </div> */}
 
         <div className="absolute left-[10%] 3xl:left-[15%] 4xl:left-[20%] bottom-[0%] z-[6]">
           <img

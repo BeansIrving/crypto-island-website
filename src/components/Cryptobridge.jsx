@@ -16,27 +16,19 @@ import { motion } from "framer-motion";
 //
 import cross from "../images/cryptobridge/cross.webp";
 
-
-
 const Cryptobridge = () => {
-
-
   const [isOpen, setIsOpen] = useState(false);
 
   const [visible, setVisible] = useState(false);
-
-  
 
   const menuVariants = {
     opened: {
       top: 0,
       opacity: 1,
- 
     },
     closed: {
       top: "-105vh",
       opacity: 0,
-   
     },
   };
 
@@ -176,6 +168,8 @@ const Cryptobridge = () => {
         className="hero-content h-[112vh] sm:h-[112vh] w-[100%]"
         id="section-bridge"
       >
+        <div className="absolute left-0 top-[0%] z-[5] bg-[url('images/nft/Borderupper.webp')] h-[60px] lg:h-[70px] w-[100%] bg-cover bg-center bg-no-repeat"></div>
+
         <motion.button
           className="select-none z-[2] hidden lg:inline-block"
           whileHover={{ scale: 1.1 }}
@@ -206,7 +200,6 @@ const Cryptobridge = () => {
                 id="crypto-bridge"
                 src={title}
                 alt="/"
-           
               />
             ) : (
               <img
@@ -214,7 +207,6 @@ const Cryptobridge = () => {
                 id="crypto-bridge"
                 src={titleClick}
                 alt="/"
-      
               />
             )}
           </div>
