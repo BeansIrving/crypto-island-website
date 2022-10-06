@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OwnLandText from "../images/staking/OwnLandText.webp";
-import PlayingText from "../images/staking/PlayingText.webp";
+import mokutext from "../images/staking/mokutext.webp";
 
 import digitalland from "../images/staking/DigitalLand.webp"
 import moku from "../images/staking/Moku.webp"
@@ -116,7 +116,7 @@ const Staking = () => {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <img
-                src={PlayingText}
+                src={mokutext}
                 className="md:w-[450px] w-[350px]"
                 ref={item2}
               />
