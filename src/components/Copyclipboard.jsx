@@ -25,7 +25,7 @@ const Copyclipboard = () => {
       opacity: 1,
       rotateX: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
       },
       display: "block",
     },
@@ -33,7 +33,7 @@ const Copyclipboard = () => {
       opacity: 0,
       rotateX: -15,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         delay: 0.3,
       },
       transitionEnd: {
@@ -56,8 +56,8 @@ const Copyclipboard = () => {
           className="bg-stone-900/50 text-white py-2 px-5 rounded-xl 
                     flex justify-center items-center"
         >
-          <span className="mr-2">Sample Address</span>
-          <CopyToClipboard text="Hello!" className="z-[9999999999999]">
+          <span className="mr-2">0xbb4CdB9CB...</span>
+          <CopyToClipboard text="0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c" className="z-[9999999999999]">
             <button className="cursor-pointer" onClick={copied}>
               <img src={copy} alt="/" />
             </button>
