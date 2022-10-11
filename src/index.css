@@ -360,3 +360,11 @@ body {
 .sea{
   object-fit: cover;
 }
+
+.div-center{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99999999999999999999999999999999;
+}

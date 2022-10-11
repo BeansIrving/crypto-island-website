@@ -1,4 +1,5 @@
 import Character from "./components/Character";
+import Copyclipboard from "./components/Copyclipboard";
 import Cryptobridge from "./components/Cryptobridge";
 import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { Link as LinkS } from "react-scroll";
 
 import { motion } from "framer-motion";
+import Copyclipboard from "./Copyclipboard";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -44,6 +45,7 @@ const Navbar = () => {
                 lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
       id="fadeIn"
     >
+      <Copyclipboard />
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
         <div className="flex items-center justify-center">
           <ul className="hidden lg:flex mt-[7%]">

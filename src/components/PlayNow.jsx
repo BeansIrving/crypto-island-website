@@ -352,7 +352,7 @@ const PlayNow = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <a
-                  href="https://drive.google.com/drive/folders/1vvubABAltwRvvPDRT9lGvDRNyljkX70r?usp=sharing"
+                  href="https://drive.google.com/uc?export=download&id=1tK7pUa_fscS2Y3dBXOh0uyW9LUe8Q962"
                   target="_blank"
                   rel="noreferrer"
                 >
