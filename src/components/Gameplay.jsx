@@ -8,8 +8,8 @@ const Gameplay = () => {
   return (
     <div
       className="flex justify-center items-center mt-[5rem]
-      bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-center
-      h-[auto]  w-[100%] px-[2rem] lg:px-[10rem] py-[5rem]"
+      bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-top
+      h-[1375px]  2xl:h-[1375px] px-[2rem] lg:px-[2rem]"
     >
       <div className="flex-col justify-center items-center">
         <div>

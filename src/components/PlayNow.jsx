@@ -191,11 +191,11 @@ const PlayNow = () => {
   return (
     <div
       className="h-[1300px] relative mb-[-82px] 3xl:mb-[-157px] 4xl:mb-[-82px]"
-      id="gameplay-section"
+
     >
       <div className="nft-content h-[1300px]">
         <div
-          className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover bg-top bg-no-repeat z-[5]"
+          className="w-full h-full flex absolute top-[-65px] bg-[url(images/playnow/playnowbg.webp)] bg-cover bg-top bg-no-repeat z-[4]"
           ref={opacity}
         ></div>
 
@@ -240,12 +240,12 @@ const PlayNow = () => {
           variants={menuVariants}
           animate={isOpen ? "opened" : "closed"}
           transition={{ type: "spring", stiffness: 100 }}
-          className="modal"
+          className="modal z-[999999999]"
         >
-          <div className="absolute top-[10%] right-[5%] lg:top-[5%] lg:right-[5%] z-[9999999999999]">
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <div className="absolute top-[10%] right-[5%] lg:top-[5%] lg:right-[5%] z-[999]">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
               <img
-                className="w-[40px] sm:w-[80px] lg:w-[100px] cursor-pointer drop-shadow-2xl"
+                className="w-[40px] sm:w-[60px] lg:w-[60px] cursor-pointer drop-shadow-2xl"
                 src={cross}
                 alt="/"
                 onClick={() =>
@@ -286,7 +286,7 @@ const PlayNow = () => {
             setOpen(false);
           }}
         /> */}
-        <div className="flex flex-row z-[100] absolute top-[10%] lg:top-[5%] justify-center ">
+        <div className="flex flex-row z-[6] absolute top-[10%] lg:top-[5%] justify-center ">
           <div className="flex flex-col gap-5 justify-center items-center springIn">
             <motion.div
               className="springIn"

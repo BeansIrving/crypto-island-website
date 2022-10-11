@@ -105,13 +105,13 @@ const Hero = () => {
       <motion.div
         className="flex justify-center items-center 
         py-12 h-[120vh] w-[100%] z-40
-        bg-[url('images/backgrounds/bg-hero.webp')] bg-cover bg-bottom  bg-no-repeat"
+        bg-[url('images/backgrounds/BG-hero.webp')] bg-cover bg-bottom  bg-no-repeat"
         // ref={sectionRef}
       >
         <div className="hero-content h-[120vh] w-[100%]" id="section-hero">
 
           <div
-            className="absolute left-0 bottom-[-5.5%] z-[5] h-[140px]  5xl:h-[180px] 6xl:h-[230px] w-[100%]
+            className="absolute left-0 bottom-[0%] z-[5] h-[140px]  5xl:h-[180px] 6xl:h-[230px] w-[100%]
             bg-[url('images/character/Lower_border.webp')] bg-cover bg-bottom bg-no-repeat"
           ></div>
 

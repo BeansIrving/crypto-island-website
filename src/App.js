@@ -13,6 +13,7 @@ import Partners from "./components/Partners";
 import PlayNow from "./components/PlayNow";
 
 import Roadmap from "./components/Roadmap";
+import Socials from "./components/Socials";
 import Staking from "./components/Staking";
 import Tokenomics from "./components/Tokenomics";
 import TokenomicsP2 from "./components/TokenomicsP2";
@@ -20,6 +21,7 @@ import TokenomicsP2 from "./components/TokenomicsP2";
 function App() {
   return (
     <>
+      <Socials />
       <Navbar />
       <Hero />
       <Cryptobridge />

@@ -39,7 +39,9 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-[100%] h-[300px] z-[10] lg:bg-[url('images/navbar/navbar.webp')] bg-contain bg-no-repeat bg-center fixed lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
+      className="w-[100%] lg:h-[300px] z-[9999999999] lg:bg-[url('images/navbar/navbar.webp')] 
+                bg-contain bg-no-repeat bg-center fixed 
+                lg:absolute drop-shadow-lg sm:px-0 lg:px-10"
       id="fadeIn"
     >
       <div className="px-2 flex justify-end p-[15px] lg:justify-center lg:items-center lg:w-full lg:h-full">
@@ -113,7 +115,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className="lg:hidden bg-[#b88339] border-[#774e17] border-2 p-1 rounded-md"
+          className="lg:hidden bg-[#b88339] border-[#774e17] border-2 p-1 rounded-md z-[9999999999]"
           onClick={() => setIsOpen((state) => !state) || handleClick()}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}

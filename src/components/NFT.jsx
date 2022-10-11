@@ -95,7 +95,7 @@ const NFT = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-[10%] left-[5%] lg:left-[2%] z-[6] opacity-0 bitboy">
+        <div className="absolute bottom-[10%] left-[6%] 2xl:left-[2%] z-[6] opacity-0 bitboy">
           <img
             className="w-[200px] lg:w-[200px] 2xl:w-[300px]"
             src={bitboy}
@@ -134,7 +134,7 @@ const NFT = () => {
         {/* artifact 1 */}
 
         <motion.div
-          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] 
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[22%] 
           left-[15%] lg:left-[25%] z-[6]"
           drag
           dragConstraints={constraintsRef}
@@ -162,7 +162,7 @@ const NFT = () => {
         {/* artifact 2 */}
 
         <motion.div
-          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[35%] lg:left-[40%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[22%] left-[35%] lg:left-[40%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -186,7 +186,7 @@ const NFT = () => {
         {/* artifact 3 */}
 
         <motion.div
-          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[52%] 2xl:left-[55%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[22%] left-[52%] 2xl:left-[55%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >
@@ -210,7 +210,7 @@ const NFT = () => {
         {/* artifact 4 */}
 
         <motion.div
-          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[20%] left-[70%] z-[6]"
+          className="absolute bottom-[8%] sm:bottom-[13%] 2xl:bottom-[22%] left-[70%] z-[6]"
           drag
           dragConstraints={constraintsRef}
         >

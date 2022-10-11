@@ -115,7 +115,7 @@ const Cryptobridge = () => {
         variants={menuVariants}
         animate={isOpen ? "opened" : "closed"}
         transition={{ type: "spring", stiffness: 100 }}
-        className="modal"
+        className="modal z-[9999999999]"
       >
         <div
           className="flex justify-center items-center
@@ -134,7 +134,7 @@ const Cryptobridge = () => {
                       className="w-[40px] sm:w-[50px] cursor-pointer drop-shadow-2xl"
                       src={cross}
                       alt="/"
-                      onClick={() => setIsOpen((state) => !state)}
+                      onClick={() => setIsOpen((stateModal) => !stateModal)}
                     />
                   </motion.div>
                 </div>
@@ -145,17 +145,22 @@ const Cryptobridge = () => {
               lg:w-[800px] lg:h-[auto] rounded-lg"
                 >
                   <p className="text-[#563a20]  sm:text-justify font-[roboto] p-[3rem] text-xl sm:text-2xl">
-                    Team co-op getting help from another player carrying big and
-                    heavy artifact while dodging the cannon balls in the brige.
-                    Get hit, Die and take the cannon position (first person
-                    shooter) in an afterlife Angel form.
+                    Crypto Bridge is the first game to be released inside the
+                    Crypto Islands. This map features a bridge that separates
+                    two sides. Two teams are formed, one on each side of the
+                    bridge: players from both teams have to cross the bridge and
+                    collect NFT artefacts from the opposite side without getting
+                    hit along the way by the cannons! When you die, you take the
+                    cannon position as an Angel form and can still help your
+                    team to win by taking down the opponents.
                     <br></br>
                     <br></br>
-                    Mission is, shooting the opposite team players that are
-                    crossing the bridge. Bridge players getting to the other
-                    side at redeem chaimber, redeeming artifacts and getting
-                    rewarded with GINA + MOKU Buying digital land with "OKU and
-                    lease it out to receive Gl-P•tA or BNB.
+                    The dynamic and non-stop action of the gameplay leads to a
+                    unique experience never seen before in a play-to-earn crypto
+                    game. 
+                    <br></br>
+                    <br></br>
+                    Download and play the prototype!
                   </p>
                 </div>
               </div>
@@ -168,7 +173,6 @@ const Cryptobridge = () => {
         className="hero-content h-[112vh] sm:h-[112vh] w-[100%]"
         id="section-bridge"
       >
-   
         <motion.button
           className="select-none z-[2] hidden lg:inline-block"
           whileHover={{ scale: 1.1 }}
