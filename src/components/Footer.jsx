@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="w-full h-[8vh] flex justify-center items-center bg-[#b38b65]">
       <div>
         <h1 className=" text-[#854c2b] tracking-widest font-[geliofasolada]">
-          Ⓒ 2022 CryptoIsland. All rights reserved.
+          Ⓒ 2022 Crypto Islands. All rights reserved.
         </h1>
       </div>
     </div>
