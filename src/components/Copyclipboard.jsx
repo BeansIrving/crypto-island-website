@@ -56,7 +56,7 @@ const Copyclipboard = () => {
           className="bg-stone-900/50 text-white py-2 px-5 rounded-xl 
                     flex justify-center items-center"
         >
-          <span className="mr-2">0xbb4CdB9CB...</span>
+          <span className="mr-2">0x2dd82aF67...</span>
           <CopyToClipboard text="0x2dd82aF67548F7a5085B77109f929a287337a814" className="z-[9999999999999]">
             <button className="cursor-pointer" onClick={copied}>
               <img src={copy} alt="/" />
