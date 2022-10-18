@@ -3,7 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import copy from "../images/socials/copy.png";
 import copyplaceholder from "../images/socials/copyplaceholder.webp";
 import copiedplaceholder from "../images/socials/copied.webp";
-import bsc from "../images/socials/bsc.png"
+import bsc from "../images/socials/bsc.png";
 import { motion } from "framer-motion";
 
 const Copyclipboard = () => {
@@ -57,12 +57,18 @@ const Copyclipboard = () => {
           className=" 
                     flex justify-center items-center"
         >
-          <div className="bg-stone-900/50 text-white py-2 px-5 rounded-xl flex justify-center items-center w-[50%]">
-
-            <img src={bsc} className="w-[20%] h-[10%]" alt="" />
+          <div
+            className="bg-stone-900/50 text-white 
+                          py-2 px-5 rounded-xl 
+                          flex justify-center items-center"
+          >
+            <img src={bsc} className="w-[50px] h-[50px]" alt="" />
             <p className="m-2">0x2dd82aF67...</p>
 
-            <CopyToClipboard text="0x2dd82aF67548F7a5085B77109f929a287337a814" className="z-[9999999999999]">
+            <CopyToClipboard
+              text="0x2dd82aF67548F7a5085B77109f929a287337a814"
+              className="z-[9999999999999]"
+            >
               <button className="cursor-pointer" onClick={copied}>
                 <img src={copy} alt="/" />
               </button>
@@ -70,7 +76,7 @@ const Copyclipboard = () => {
           </div>
         </div>
       </motion.div>
-      
+
       <motion.div
         className="sub-menu"
         initial="exit"
