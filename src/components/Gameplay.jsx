@@ -10,6 +10,7 @@ const Gameplay = () => {
       className="flex justify-center items-center mt-[5rem]
       bg-[url('images/backgrounds/BG_portrait.webp')] md:bg-[url('images/backgrounds/BG_landscape.webp')] bg-cover bg-no-repeat bg-top
       h-[1375px]  2xl:h-[1375px] px-[2rem] lg:px-[2rem]"
+      id="section-gameplay"
     >
       <div className="flex-col justify-center items-center">
         <div>

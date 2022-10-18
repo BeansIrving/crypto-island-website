@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center">
           <ul className="hidden lg:flex mt-[7%]">
             <LinkS
-              to="gameplay-section"
+              to="section-gameplay"
               smooth={true}
               duration={1000}
               spy={true}
@@ -164,7 +164,7 @@ const Navbar = () => {
         <ul>
           <div className="absolute w-full left-0 navbar-li">
             <LinkS
-              to="gameplay-section"
+              to="section-gameplay"
               smooth={true}
               duration={1000}
               spy={true}
